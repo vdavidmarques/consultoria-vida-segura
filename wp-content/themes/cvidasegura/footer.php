@@ -1,6 +1,7 @@
 </main>
 </div>
-<footer>
+<footer class="my-20">
+    footer
     <div class="bg-blue text-white">
         <div class="container">
             <?php custom_footer_menu(); ?>

@@ -626,6 +626,11 @@ body {
   }
 }
 
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
 .h-auto {
   height: auto;
 }
@@ -812,6 +817,11 @@ body {
   border-color: rgb(38 38 38 / 0.95);
 }
 
+.bg-blue {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 105 177 / var(--tw-bg-opacity));
+}
+
 .bg-blue-dark {
   --tw-bg-opacity: 1;
   background-color: rgb(27 44 79 / var(--tw-bg-opacity));
@@ -990,14 +1000,13 @@ body {
   background-color: rgb(38 38 38 / 0.95);
 }
 
-.bg-blue {
-  --tw-bg-opacity: 1;
-  background-color: rgb(22 105 177 / var(--tw-bg-opacity));
-}
-
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.pb-20 {
+  padding-bottom: 5rem;
 }
 
 .font-montserrat {

@@ -12,7 +12,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <header>
+    <header class="pb-20">
         <div class="header-top">
             <div class="container">
                 <?php
