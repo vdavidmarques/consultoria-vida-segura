@@ -17,5 +17,3 @@ To run TailwindCSS, navigate to the `wp-content/themes/cvidasegura` directory an
 
 ```bash
 npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch
-
-    
