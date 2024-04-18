@@ -12,7 +12,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <?php wp_body_open(); ?>
     <header>
         <div class="header-top">
             <div class="container">
@@ -74,9 +73,7 @@
         </div>
         <div>
             <img src="<?php echo  get_template_directory_uri() . '/library/images/consultoria-vida-segura-logo.webp' ?>" alt="Consultoria Vida Segura" class="w-40 h-auto object-cover">
-            <nav>
-                <?php do_action( 'custom_menu_hook' ); ?>
-            </nav>
+            <?php custom_header_menu(); ?>
         </div>
     </header>
     <div>

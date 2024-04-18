@@ -1,11 +1,4 @@
 <?php
-    add_action('wp_enqueue_scripts', 'blankslate_enqueue');
-    function blankslate_enqueue()
-    {
-        wp_enqueue_style('blankslate-style', get_stylesheet_uri());
-        wp_enqueue_script('jquery');
-    }
-
     function enqueue_tailwind_css() {
         wp_enqueue_style( 'output', get_template_directory_uri() . '/src/css/output.css', array(), '1.0.0' );
     }
@@ -16,80 +9,118 @@
         Menu
     ********************************/
 
-    // Função para registrar o menu principal
-    function custom_menu_customize_register( $wp_customize ) {
-        // Seção para o menu principal
-        $wp_customize->add_section( 'custom_menu_section', array(
-            'title'    => __( 'Menu principal', 'consultoria-vida-segura' ),
+    // Função para registrar os menus personalizados
+    function custom_menus_customize_register( $wp_customize ) {
+        // Seção para o menu do header
+        $wp_customize->add_section( 'custom_header_menu_section', array(
+            'title'    => __( 'Menu do Header', 'consultoria-vida-segura' ),
             'priority' => 30,
         ) );
 
-        // Configuração para adicionar itens ao menu
-        for ( $i = 1; $i <= 50; $i++ ) { // Defina o número máximo de itens do menu
-            $wp_customize->add_setting( 'custom_menu_item_' . $i, array(
+        // Configuração para adicionar itens ao menu do header
+        for ( $i = 1; $i <= 10; $i++ ) { // Defina o número máximo de itens do menu
+            $wp_customize->add_setting( 'custom_header_menu_item_' . $i, array(
                 'default'           => '',
                 'sanitize_callback' => 'sanitize_text_field',
             ) );
 
-            $wp_customize->add_control( 'custom_menu_item_' . $i, array(
+            $wp_customize->add_control( 'custom_header_menu_item_' . $i, array(
                 'label'    => __( 'Item ' . $i, 'consultoria-vida-segura' ),
-                'section'  => 'custom_menu_section',
+                'section'  => 'custom_header_menu_section',
                 'type'     => 'text',
                 'priority' => $i,
             ) );
 
-            $wp_customize->add_setting( 'custom_menu_item_url_' . $i, array(
+            $wp_customize->add_setting( 'custom_header_menu_item_url_' . $i, array(
                 'default'           => '',
                 'sanitize_callback' => 'esc_url_raw',
             ) );
 
-            $wp_customize->add_control( 'custom_menu_item_url_' . $i, array(
+            $wp_customize->add_control( 'custom_header_menu_item_url_' . $i, array(
                 'label'    => __( 'URL do Item ' . $i, 'consultoria-vida-segura' ),
-                'section'  => 'custom_menu_section',
+                'section'  => 'custom_header_menu_section',
                 'type'     => 'url',
                 'priority' => $i + 10,
             ) );
         }
+
+        // Seção para o menu do footer
+        $wp_customize->add_section( 'custom_footer_menu_section', array(
+            'title'    => __( 'Menu do Footer', 'consultoria-vida-segura' ),
+            'priority' => 31,
+        ) );
+
+        // Configuração para adicionar itens ao menu do footer
+        for ( $j = 1; $j <= 10; $j++ ) { // Defina o número máximo de itens do menu
+            $wp_customize->add_setting( 'custom_footer_menu_item_' . $j, array(
+                'default'           => '',
+                'sanitize_callback' => 'sanitize_text_field',
+            ) );
+
+            $wp_customize->add_control( 'custom_footer_menu_item_' . $j, array(
+                'label'    => __( 'Item ' . $j, 'consultoria-vida-segura' ),
+                'section'  => 'custom_footer_menu_section',
+                'type'     => 'text',
+                'priority' => $j,
+            ) );
+
+            $wp_customize->add_setting( 'custom_footer_menu_item_url_' . $j, array(
+                'default'           => '',
+                'sanitize_callback' => 'esc_url_raw',
+            ) );
+
+            $wp_customize->add_control( 'custom_footer_menu_item_url_' . $j, array(
+                'label'    => __( 'URL do Item ' . $j, 'consultoria-vida-segura' ),
+                'section'  => 'custom_footer_menu_section',
+                'type'     => 'url',
+                'priority' => $j + 10,
+            ) );
+        }
     }
-    add_action( 'customize_register', 'custom_menu_customize_register' );
+    add_action( 'customize_register', 'custom_menus_customize_register' );
 
-    // Função para imprimir o menu principal
-    function custom_menu() {
+    // Função para imprimir o menu do header
+    function custom_header_menu() {
         ?>
-        <nav id="custom-menu">
-            <ul>
-                <?php
-                for ( $i = 1; $i <= 50; $i++ ) { // Deve corresponder ao número definido acima
-                    $menu_item = get_theme_mod( 'custom_menu_item_' . $i );
-                    $menu_item_url = get_theme_mod( 'custom_menu_item_url_' . $i );
-
-                    if ( ! empty( $menu_item ) ) {
-                        echo '<li><a href="' . esc_url( $menu_item_url ) . '">' . esc_html( $menu_item ) . '</a></li>';
-                    }
-                }
-                ?>
-            </ul>
+        <nav id="custom-header-menu">
+            <?php
+            wp_nav_menu( array(
+                'theme_location' => 'custom_header_menu',
+                'menu_id'        => 'custom-header-menu',
+                'fallback_cb'    => '__return_false',
+            ) );
+            ?>
         </nav>
         <?php
     }
 
-    // Adicionar o menu ao tema
-    function register_custom_menu() {
-        register_nav_menu( 'custom_menu', __( 'Menu principal', 'consultoria-vida-segura' ) );
+    // Função para imprimir o menu do footer
+    function custom_footer_menu() {
+        ?>
+        <nav id="custom-footer-menu">
+            <?php
+            wp_nav_menu( array(
+                'theme_location' => 'custom_footer_menu',
+                'menu_id'        => 'custom-footer-menu',
+                'fallback_cb'    => '__return_false',
+            ) );
+            ?>
+        </nav>
+        <?php
     }
-    add_action( 'after_setup_theme', 'register_custom_menu' );
 
-    // Adicionar o menu principal ao tema
-    function custom_menu_hook() {
-        wp_nav_menu( array(
-            'theme_location' => 'custom_menu',
-            'menu_id'        => 'custom-menu',
-            'fallback_cb'    => 'custom_menu',
-        ) );
+    // Adicionar os menus personalizados ao tema
+    function register_custom_menus() {
+        register_nav_menus(
+            array(
+                'custom_header_menu' => __( 'Menu do Header', 'consultoria-vida-segura' ),
+                'custom_footer_menu' => __( 'Menu do Footer', 'consultoria-vida-segura' ),
+            )
+        );
     }
-    add_action( 'custom_menu_hook', 'custom_menu_hook' );
+    add_action( 'after_setup_theme', 'register_custom_menus' );
 
-    
+
 
     /*******************************
         Creating Informações Page

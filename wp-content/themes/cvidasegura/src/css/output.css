@@ -990,6 +990,11 @@ body {
   background-color: rgb(38 38 38 / 0.95);
 }
 
+.bg-blue {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 105 177 / var(--tw-bg-opacity));
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1179,6 +1184,11 @@ body {
 
 .text-gray-dark\/95 {
   color: rgb(38 38 38 / 0.95);
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .before\:border-blue-dark::before {
