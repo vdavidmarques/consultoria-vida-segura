@@ -21,24 +21,24 @@
         <div class="header-top">
             <div class="container">
                 <?php
-                $args = array(
-                    'name' => 'informacoes',
-                    'post_type' => 'page',
-                );
+                    $args = array(
+                        'name' => 'informacoes',
+                        'post_type' => 'page',
+                    );
 
-                $query = new WP_Query($args);
-                while ($query->have_posts()) {
-                    $query->the_post();
-                    $whatsapp = get_field('whatsapp');
-                    $whatsappNumber = get_field('whatsappNumber');
-                    $whatsappMessage = get_field('whatsappMessage');
-                    $phone = get_field('phone');
-                    $email = get_field('e-mail');                        
-                    $instagram = get_field('instagram');
-                    $facebook = get_field('facebook');
+                    $query = new WP_Query($args);
+                    while ($query->have_posts()) {
+                        $query->the_post();
+                        $whatsapp = get_field('whatsapp');
+                        $whatsappNumber = get_field('whatsappNumber');
+                        $whatsappMessage = get_field('whatsappMessage');
+                        $phone = get_field('phone');
+                        $email = get_field('e-mail');                        
+                        $instagram = get_field('instagram');
+                        $facebook = get_field('facebook');
                 ?>
-                    <!-- Social Links Section -->
-                    <div class="social_icon">
+                    <!-- Pre Header Links Section -->
+                    <div>
                         <div>
                             <div class="fb-icon">
                                 <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber ?>&text=<?php echo $whatsappMessage ?>">
@@ -73,7 +73,7 @@
                         </div>
                     </div>
                 <?php } ?>
-                    <!-- End Social Links Section -->
+                    <!-- End Pre Header Links Section -->
             </div>
         </div>
         <div>
