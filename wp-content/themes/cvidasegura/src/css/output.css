@@ -631,12 +631,20 @@ body {
   margin-bottom: 5rem;
 }
 
+.flex {
+  display: flex;
+}
+
 .h-auto {
   height: auto;
 }
 
 .w-40 {
   width: 10rem;
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .border-blue-dark {
