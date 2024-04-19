@@ -18,7 +18,7 @@
 
         add_action('admin_menu', 'linked_url');
         function linked_url() {
-            add_menu_page('linked_url','Informações','read','post.php?post=8&action=edit','', 'dashicons-admin-generic',  90);
+            add_menu_page('linked_url','Informações Gerais','read','post.php?post=8&action=edit','', 'dashicons-admin-generic',  90);
         }
 
         /*******************************
