@@ -1,4 +1,4 @@
-<article class="we-experts py-20">
+<article class="we-experts py-20" itemscope itemprop="articleBody">
     <?php
         $bgImage = get_field("we-experts-image", "63");
         $logo = get_field("we-experts-logo", "63");
@@ -10,8 +10,8 @@
 
     <?php echo $bgImage ?>
     <?php echo $logo ?>
-    <p><?php echo $title ?> </p>
-    <p><?php echo $text ?> </p>
-    <p><?php echo $wppLabelButton ?> </p>
-    <p><?php echo $emailLabelButton ?> </p>
+    <p itemprop="articleBody"><?php echo $title ?> </p>
+    <p itemprop="articleBody"><?php echo $text ?> </p>
+    <p itemprop="articleBody"><?php echo $wppLabelButton ?> </p>
+    <p itemprop="articleBody"><?php echo $emailLabelButton ?> </p>
 </article>

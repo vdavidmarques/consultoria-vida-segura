@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR" itemscope itemtype="http://schema.org/WebPage">
 
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width">
+    <meta itemprop="description" content="Consultoria Vida Segura - Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida">
     <?php wp_head(); ?>
+    <title itemprop="name">
+        Consultoria Vida Segura <?php if (wp_title()) :  ' | ' . wp_title(); endif; ?>
+    </title>
+    <link itemprop="url" href="https://www.consultoriavidasegura.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -12,7 +17,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <header class="pb-20">
+    <header class="pb-20" itemscope itemtype="http://schema.org/WPHeader">
         <div class="header-top">
             <div class="container">
                 <?php
@@ -67,14 +72,13 @@
                             </a>
                         </div>
                     </div>
-                    <?php } ?>
+                <?php } ?>
                     <!-- End Social Links Section -->
             </div>
         </div>
         <div>
-            <img src="<?php echo  get_template_directory_uri() . '/library/images/consultoria-vida-segura-logo.webp' ?>" alt="Consultoria Vida Segura" class="w-40 h-auto object-cover">
+            <img src="<?php echo  get_template_directory_uri() . '/library/images/consultoria-vida-segura-logo.webp' ?>" alt="Consultoria Vida Segura - Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" class="w-40 h-auto object-cover" itemprop="image">
             <?php custom_header_menu(); ?>
         </div>
     </header>
-    <div>
-        <main>
+        <main itemprop="mainContentOfPage">

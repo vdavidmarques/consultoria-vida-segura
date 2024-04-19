@@ -11,9 +11,9 @@
             $linkSecondServiceBlockTwo = $secondServiceBlockTwo['link']['url'];
 ?>
 <div class="image-service">
-    <img src="<?php echo $imageFirstServiceBlockTwo ?>" alt="<?php echo $titleFirstServiceBlockOne ?>">
+    <img src="<?php echo $imageFirstServiceBlockTwo ?>" alt="<?php echo $titleFirstServiceBlockOne ?>" itemprop="image">
     
-    <p>
+    <p itemprop="articleBody">
         <?php echo $titleFirstServiceBlockTwo ?>
         <?php echo $descriptionFirstServiceBlockTwo ?>
         <?php echo $linkFirstServiceBlockTwo ?>

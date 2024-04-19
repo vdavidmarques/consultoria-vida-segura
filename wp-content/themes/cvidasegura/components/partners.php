@@ -18,7 +18,7 @@
                     <?php while ($query->have_posts()) : $query->the_post(); ?>
                         <?php if (has_post_thumbnail()) : ?>
                             <div class="partners-item">
-                                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+                                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" itemprop="name">
                                     <?php the_post_thumbnail('thumbnail'); ?>
                                 </a>
                             </div>
@@ -28,7 +28,7 @@
                 <?php
                 wp_reset_postdata();
             else :
-                echo '<p>Nenhum parceiro encontrado.</p>';
+                echo '<p itemprop="articleBody">Nenhum parceiro encontrado.</p>';
             endif;
         ?>
     </div>

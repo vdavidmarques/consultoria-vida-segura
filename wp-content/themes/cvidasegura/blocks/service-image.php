@@ -11,7 +11,7 @@
         $imageFirstServiceBlockOne =  $blockOne['image'];
  ?>
 <div class="service-image">
-    <p>
+    <p itemprop="articleBody">
     
     <?php echo $titleFirstServiceBlockOne ?>
     <?php echo $descriptionFirstServiceBlockOne ?>
@@ -20,5 +20,5 @@
     <?php echo $descriptionSecondServiceBlockOne ?>
     <?php echo $linkSecondServiceBlockOne ?>
     </p>
-    <img src="<?php echo $imageFirstServiceBlockOne ?>" alt="<?php echo $titleFirstServiceBlockOne ?>">
+    <img src="<?php echo $imageFirstServiceBlockOne ?>" alt="<?php echo $titleFirstServiceBlockOne ?>" itemprop="image">
 </div>

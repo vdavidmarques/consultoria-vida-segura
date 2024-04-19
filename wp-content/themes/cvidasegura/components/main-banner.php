@@ -12,15 +12,15 @@
         $buttonLink = $mainBannerButton['link']['url'];
     ?>
 
-<img src="<?php echo $mainBannerImage ?>" alt="">
+<img src="<?php echo $mainBannerImage ?>" alt="" itemprop="image">
         
-    <p>
+    <p itemprop="articleBody">
 
         <?php echo $firtText ?>
         <?php echo $mainText ?>
         <?php echo $lastText ?>
 
-        <a href="<?php echo $buttonLink ?>">
+        <a href="<?php echo $buttonLink ?>" itemprop="name">
             <?php echo $buttonLabel ?>
         </a>
     </p>
