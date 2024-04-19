@@ -3,7 +3,7 @@
         <h1 itemprop="name">
             <?php the_archive_title(); ?>
         </h1>
-        <div class="flex flex-row">
+        <div class="flex flex-col">
             <?php
                 $args = array(
                     'post_type' => 'planos_odontologicos',
@@ -43,18 +43,48 @@
                         $email = get_field('e-mail');        
 
                         $dentalPlans = get_field('dental-plans');
-                    
+                        
+                        //Banner
+                        $bgImage = $dentalPlans['image']; 
+                        $bannerTitle = $dentalPlans['title'];
+                        $bannerText = $dentalPlans['text'];
+                        $bannerButtonLink = $dentalPlans['botao']['url'];
+                        $bannerButtonLabel = $dentalPlans['botao']['title'];
+
+                        //Quadro descritivo
+                        $imageListTitle = $dentalPlans['image-list-main-title'];
+                        $imageListImage = $dentalPlans['image-list-left-image'];
+                        $imageListItem1 = $dentalPlans['image-list-item-1'];
+                        $imageListItem2 = $dentalPlans['image-list-item-2'];
+                        $imageListItem3 = $dentalPlans['image-list-item-3'];
+                        $imageListItem4 = $dentalPlans['image-list-item-4'];
+
+                        //Call to action
                         $title = $dentalPlans['call-to-action-main-title'];
                         $text = $dentalPlans['call-to-action-description'];
                         $wppLabel = $dentalPlans['call-to-action-wpp-label'];
                         $emailLabel = $dentalPlans['call-to-action-email-label'];
                         
-                        $title = get_field('call-to-action-main-title');
-                        $text = get_field('call-to-action-description');
-                        $wppLabel = get_field('call-to-action-wpp-label');
-                        $emailLabel = get_field('call-to-action-email-label');
+                       
             ?>
-                <article itemscope itemprop="articleBody">
+                <article itemscope itemprop="articleBody" class="banner mt-20">
+                    <?php echo $bgImage ?>
+                    <?php echo $bannerTitle ?>
+                    <?php echo $bannerText ?>
+                    <a href="<?php echo $bannerButtonLink ?>" alt="" itemprop="name">
+                        <?php echo $bannerButtonLabel ?>
+                    </a>
+                </article>
+
+                <article itemscope itemprop="articleBody" class="image-list mt-20">
+                    <?php echo $imageListTitle ?>
+                    <?php echo $imageListImage ?>
+                    <?php echo $imageListItem1 ?>
+                    <?php echo $imageListItem2 ?>
+                    <?php echo $imageListItem3 ?>
+                    <?php echo $imageListItem4 ?>
+                </article>
+                <article itemscope itemprop="articleBody" class="call-to-action mt-20">
                     <h3 itemprop="headline"><?php echo $title ?>
                         <br /> 
                         <strong> <?php the_archive_title(); ?></strong>

@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-    <section itemscope itemtype="http://schema.org/Article" class="archive-planos-de-saude">
+    <section itemscope itemtype="http://schema.org/Article" class="archive-health-insurance">
         <h1 itemprop="name">
             <?php the_archive_title(); ?>
         </h1>
@@ -43,22 +43,56 @@
                     $email = get_field('e-mail');   
                     
                     $healthInsurance = get_field('health-insurance');
-                    
+
+                    //Banner
+                    $bgImage = $healthInsurance['image']; 
+                    $bannerTitle = $healthInsurance['title'];
+                    $bannerText = $healthInsurance['text'];
+                    $bannerButtonLink = $healthInsurance['botao']['url'];
+                    $bannerButtonLabel = $healthInsurance['botao']['title'];
+
+                    //Quadro descritivo
+                    $imageListTitle = $healthInsurance['image-list-main-title'];
+                    $imageListImage = $healthInsurance['image-list-left-image'];
+                    $imageListItem1 = $healthInsurance['image-list-item-1'];
+                    $imageListItem2 = $healthInsurance['image-list-item-2'];
+                    $imageListItem3 = $healthInsurance['image-list-item-3'];
+                    $imageListItem4 = $healthInsurance['image-list-item-4'];
+
+                    //Call to action
                     $title = $healthInsurance['call-to-action-main-title'];
                     $text = $healthInsurance['call-to-action-description'];
                     $wppLabel = $healthInsurance['call-to-action-wpp-label'];
                     $emailLabel = $healthInsurance['call-to-action-email-label'];
         ?>
-            <article itemscope itemprop="articleBody">
+            <article itemscope itemprop="articleBody" class="banner mt-20">
+                <?php echo $bgImage ?>
+                <?php echo $bannerTitle ?>
+                <?php echo $bannerText ?>
+                <a href="<?php echo $bannerButtonLink ?>" alt="" itemprop="name">
+                    <?php echo $bannerButtonLabel ?>
+                </a>
+            </article>
+
+            <article itemscope itemprop="articleBody" class="image-list mt-20">
+                <?php echo $imageListTitle ?>
+                <?php echo $imageListImage ?>
+                <?php echo $imageListItem1 ?>
+                <?php echo $imageListItem2 ?>
+                <?php echo $imageListItem3 ?>
+                <?php echo $imageListItem4 ?>
+            </article>
+
+            <article itemscope itemprop="articleBody" class="call-to-action mt-20">
                 <h3 itemprop="headline"><?php echo $title ?>
                     <br /> 
                     <strong> <?php the_archive_title(); ?></strong>
                 </h3>
                 <p itemprop="description"><?php echo $text ?></p>
-                <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo     $whatsappNumber ?>&text=<?php echo $whatsappMessage ?>">
+                <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo     $whatsappNumber ?>&text=<?php echo $whatsappMessage ?>" itemprop="name">
                     <?php echo $wppLabel ?>
                 </a>
-                <a target="_blank" href="mailto:<?php echo $email ?>">
+                <a target="_blank" href="mailto:<?php echo $email ?>" itemprop="name">
                     <?php echo $emailLabel ?>
                 </a>
             </article>
