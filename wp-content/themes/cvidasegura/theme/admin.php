@@ -47,4 +47,13 @@
             add_image_size( 'category-thumb', 300, 9999 ); //300 pixels wide (and unlimited height)
         }
 
+        /*******************************
+        Remove "Category:", "Tag:", "Author:" from the_archive_title function. This case, only form post-type archive
+        ********************************/
+        add_filter('get_the_archive_title', function ($title) {
+            if (is_post_type_archive()) {
+                $title = post_type_archive_title('', false);
+            }
+            return $title;
+        });
 ?>
