@@ -32,7 +32,7 @@
             'hierarchical'       => false,
             'menu_position'      => null,
             'menu_icon'          => 'dashicons-businessman',
-            'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
+            'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields'),
         );
         
         register_post_type( 'parceiros', $args );
@@ -70,7 +70,7 @@
             'has_archive'        => true,
             'hierarchical'       => false,
             'menu_position'      => null,
-            'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
+            'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields'),
             'menu_icon'          => 'dashicons-heart' //Planos de Saúde
         );
         
@@ -109,7 +109,7 @@
             'has_archive'        => true,
             'hierarchical'       => false,
             'menu_position'      => null,
-            'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
+            'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields'),
             'menu_icon'          => 'dashicons-shield' //Seguros de Vida
         );
         
@@ -148,7 +148,7 @@
             'has_archive'        => true,
             'hierarchical'       => false,
             'menu_position'      => null,
-            'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
+            'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields'),
             'menu_icon'          => 'dashicons-smiley' //Planos Odontológicos
         );
         
@@ -187,7 +187,7 @@
             'has_archive'        => true,
             'hierarchical'       => false,
             'menu_position'      => null,
-            'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
+            'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields'),
             'menu_icon'          => 'dashicons-marker' //Planos Funeral
         );
         
