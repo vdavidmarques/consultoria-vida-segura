@@ -9,9 +9,15 @@ This repository is a Wordpress template for a company specializing in health ins
 - [WordPress](https://wordpress.org/)
 - [JavaScript](https://www.javascript.com/)
 
-## Installation and Setup
+## Wordpress nstallation and Setup
 
 Install all [Wordpress](https://wordpress.org/) presets normally
+
+### Required Plugins
+
+- [ACF - Advanced Custom Fields](https://www.advancedcustomfields.com/) - Free Version Used
+- [SAVE SVG](https://wordpress.org/plugins/safe-svg/)
+- [Contact Form 7](https://contactform7.com/)
 
 ### TailwindCSS
 
