@@ -6,7 +6,7 @@
         <div class="flex flex-col">
             <?php
                 $args = array(
-                    'post_type' => 'seguros_vida',
+                    'post_type' => 'seguros-vida',
                     'posts_per_page' => -1,
                     'post_status' => 'publish',
                 );

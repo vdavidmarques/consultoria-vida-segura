@@ -1,12 +1,12 @@
 <?php get_header(); ?>
-    <section itemscope itemtype="http://schema.org/Article" class="archive-planos-odontologicos">
+    <section itemscope itemtype="http://schema.org/Article" class="archive-plano-funeral">
         <h1 itemprop="name">
             <?php the_archive_title(); ?>
         </h1>
         <div class="flex flex-col">
             <?php
                 $args = array(
-                    'post_type' => 'planos_odontologicos',
+                    'post_type' => 'planos-funeral',
                     'posts_per_page' => -1,
                     'post_status' => 'publish',
                 );
@@ -28,7 +28,7 @@
                     <?php
                     wp_reset_postdata();
                 else :
-                    echo '<p itemprop="articleBody">Nenhum Plano odontológico encontrado.</p>';
+                    echo '<p itemprop="articleBody">Nenhum Plano funeral encontrado.</p>';
                 endif;
                 $args = array(
                     'name' => 'informacoes',
@@ -41,31 +41,32 @@
                         $whatsappNumber = get_field('whatsappNumber');
                         $whatsappMessage = get_field('whatsappMessage');
                         $email = get_field('e-mail');        
+                        $title = get_field('call-to-action-main-title');
 
-                        $dentalPlans = get_field('dental-plans');
+                        $funeralPlans = get_field('funeral-plans');
                         
                         //Banner
-                        $bgImage = $dentalPlans['image']; 
-                        $bannerTitle = $dentalPlans['title'];
-                        $bannerText = $dentalPlans['text'];
-                        $bannerButtonLink = $dentalPlans['botao']['url'];
-                        $bannerButtonLabel = $dentalPlans['botao']['title'];
+                        $bgImage = $funeralPlans['image']; 
+                        $bannerTitle = $funeralPlans['title'];
+                        $bannerText = $funeralPlans['text'];
+                        $bannerButtonLink = $funeralPlans['botao']['url'];
+                        $bannerButtonLabel = $funeralPlans['botao']['title'];
 
                         //Quadro descritivo
-                        $imageListTitle = $dentalPlans['image-list-main-title'];
-                        $imageListImage = $dentalPlans['image-list-left-image'];
-                        $imageListItem1 = $dentalPlans['image-list-item-1'];
-                        $imageListItem2 = $dentalPlans['image-list-item-2'];
-                        $imageListItem3 = $dentalPlans['image-list-item-3'];
-                        $imageListItem4 = $dentalPlans['image-list-item-4'];
-
-                        //Call to action
-                        $title = $dentalPlans['call-to-action-main-title'];
-                        $text = $dentalPlans['call-to-action-description'];
-                        $wppLabel = $dentalPlans['call-to-action-wpp-label'];
-                        $emailLabel = $dentalPlans['call-to-action-email-label'];
+                        $imageListTitle = $funeralPlans['image-list-main-title'];
+                        $imageListImage = $funeralPlans['image-list-left-image'];
+                        $imageListItem1 = $funeralPlans['image-list-item-1'];
+                        $imageListItem2 = $funeralPlans['image-list-item-2'];
+                        $imageListItem3 = $funeralPlans['image-list-item-3'];
+                        $imageListItem4 = $funeralPlans['image-list-item-4'];
                         
-                       
+                        //Call to action
+                        $title = $funeralPlans['call-to-action-main-title'];
+                        $text = $funeralPlans['call-to-action-description'];
+                        $wppLabel = $funeralPlans['call-to-action-wpp-label'];
+                        $emailLabel = $funeralPlans['call-to-action-email-label'];
+
+                      
             ?>
                 <article itemscope itemprop="articleBody" class="banner mt-20">
                     <?php echo $bgImage ?>
@@ -84,7 +85,8 @@
                     <?php echo $imageListItem3 ?>
                     <?php echo $imageListItem4 ?>
                 </article>
-                <article itemscope itemprop="articleBody" class="call-to-action mt-20">
+
+                <article itemscope itemprop="articleBody call-to-action mt-20">
                     <h3 itemprop="headline"><?php echo $title ?>
                         <br /> 
                         <strong> <?php the_archive_title(); ?></strong>

@@ -74,7 +74,7 @@
             'menu_icon'          => 'dashicons-heart' //Planos de Saúde
         );
         
-        register_post_type( 'planos_saude', $args );
+        register_post_type( 'planos-de-saude', $args );
     }
     add_action( 'init', 'registrar_planos_saude_custom_post' );
 
@@ -113,7 +113,7 @@
             'menu_icon'          => 'dashicons-shield' //Seguros de Vida
         );
         
-        register_post_type( 'seguros_vida', $args );
+        register_post_type( 'seguros-de-vida', $args );
     }
     add_action( 'init', 'registrar_seguros_vida_custom_post' );
 
@@ -152,7 +152,7 @@
             'menu_icon'          => 'dashicons-smiley' //Planos Odontológicos
         );
         
-        register_post_type( 'planos_odontologicos', $args );
+        register_post_type( 'planos-odontologicos', $args );
     }
     add_action( 'init', 'registrar_planos_odontologicos_custom_post' );
 
@@ -191,7 +191,7 @@
             'menu_icon'          => 'dashicons-marker' //Planos Funeral
         );
         
-        register_post_type( 'planos_funeral', $args );
+        register_post_type( 'planos-funeral', $args );
     }
     add_action( 'init', 'registrar_planos_funeral_custom_post' );
 

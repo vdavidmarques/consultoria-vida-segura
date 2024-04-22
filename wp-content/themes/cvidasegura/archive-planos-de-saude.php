@@ -5,7 +5,7 @@
         </h1>
         <?php
             $args = array(
-                'post_type' => 'planos_saude',
+                'post_type' => 'planos-de-saude',
                 'posts_per_page' => -1,
                 'post_status' => 'publish',
             );
