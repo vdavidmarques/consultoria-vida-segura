@@ -13,7 +13,7 @@
             $query = new WP_Query($args);
 
             if ($query->have_posts()) : ?>
-                <div class="partners-list flex flex-row">
+                <div class="partners-list-swiper flex flex-row">
                     <?php while ($query->have_posts()) : $query->the_post(); ?>
                         <?php if (has_post_thumbnail()) : ?>
                             <div class="partners-item">

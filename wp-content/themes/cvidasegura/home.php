@@ -1,4 +1,5 @@
-<?php get_header(); ?>        
+<?php get_header(); ?>   
+home.php    
     <section class="home" itemscope itemtype="http://schema.org/Article">      
         <?php include 'components/main-banner.php'  ?>
         <?php include 'components/our-services.php' ?>
