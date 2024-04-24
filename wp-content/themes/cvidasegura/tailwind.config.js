@@ -26,7 +26,14 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'swiper-button-navigation': 'url("/src/icon/arrow-right-circle.svg")',
+        'swiper-button-navigation': 'url("../../library/icons/arrow-right-circle.svg")',
+        'facebook': 'url("../../library/icons/facebook-consultoria-vida-segura-white.svg")',
+        'instagram': 'url("../../library/icons/instagram-consultoria-vida-segura-white.svg")',
+        'email': 'url("../../library/icons/email-consultoria-vida-segura-white.svg")',
+        'phone': 'url("../../library/icons/phone-consultoria-vida-segura-white.svg")',
+        'whatsapp': 'url("../../library/icons/whatsapp-consultoria-vida-segura-white.svg")',
+        'menu-mobile': 'url("../../library/icons/menu-icon.svg")',
+        'close-menu-mobile': 'url("../../library/icons/close-menu-icon.svg")',
       }
     },
     fontFamily: {
@@ -38,6 +45,10 @@ module.exports = {
   safelist: [
     'font-roboto',
     'font-montserrat',
+    '!flex',
+    '!overflow-hidden',
+    'gay-y-5',
+    'gap-y-0',    
     {
       pattern:
         /(bg|text|border)-(gray|blue)-(light|dark|meidum|ultradark)/,

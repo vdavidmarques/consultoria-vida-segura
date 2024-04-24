@@ -42,4 +42,10 @@
         @apply font-roboto font-bold text-4xl lg:text-[3.4375rem]
     }
     
+    .social-icon img{
+        @apply object-cover bg-no-repeat bg-cover size-7 lg:size-8 fill-white
+    }
+    .social-icon.menu img{
+        @apply w-8 h-5 object-contain
+    }
 }
