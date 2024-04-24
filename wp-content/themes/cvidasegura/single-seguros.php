@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-single-seguros-de-vida.php
-<section class="single-seguros-de-vida">
+single-seguros.php
+<section class="single-seguros">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <?php the_title() ?>
         <?php echo get_field('single-banner-image') ?>
@@ -70,7 +70,7 @@ single-seguros-de-vida.php
     <?php
         $postID = $post->ID; 
         $args = array(
-            'post_type' => 'seguros-de-vida',
+            'post_type' => 'seguros',
             'posts_per_page' => -1,
             'post_status' => 'publish',
             'post__not_in' => array($postID),

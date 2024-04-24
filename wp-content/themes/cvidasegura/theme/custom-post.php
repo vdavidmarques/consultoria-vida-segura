@@ -78,23 +78,23 @@
     }
     add_action( 'init', 'registrar_planos_saude_custom_post' );
 
-    // Registrar Custom Post Type Seguros de Vida
+    // Registrar Custom Post Type Seguros
     function registrar_seguros_vida_custom_post() {
         $labels = array(
-            'name'               => 'Seguros de Vida',
-            'singular_name'      => 'Seguro de Vida',
-            'menu_name'          => 'Seguros de Vida',
-            'name_admin_bar'     => 'Seguro de Vida',
+            'name'               => 'Seguros',
+            'singular_name'      => 'Seguro',
+            'menu_name'          => 'Seguros',
+            'name_admin_bar'     => 'Seguro',
             'add_new'            => 'Adicionar Novo',
-            'add_new_item'       => 'Adicionar Novo Seguro de Vida',
-            'new_item'           => 'Novo Seguro de Vida',
-            'edit_item'          => 'Editar Seguro de Vida',
-            'view_item'          => 'Ver Seguro de Vida',
-            'all_items'          => 'Todos os Seguros de Vida',
-            'search_items'       => 'Pesquisar Seguros de Vida',
-            'parent_item_colon'  => 'Seguros de Vida Pai:',
-            'not_found'          => 'Nenhum seguro de vida encontrado.',
-            'not_found_in_trash' => 'Nenhum seguro de vida encontrado na lixeira.'
+            'add_new_item'       => 'Adicionar Novo Seguro',
+            'new_item'           => 'Novo Seguro',
+            'edit_item'          => 'Editar Seguro',
+            'view_item'          => 'Ver Seguro',
+            'all_items'          => 'Todos os Seguros',
+            'search_items'       => 'Pesquisar Seguros',
+            'parent_item_colon'  => 'Seguros Pai:',
+            'not_found'          => 'Nenhum seguro encontrado.',
+            'not_found_in_trash' => 'Nenhum seguro encontrado na lixeira.'
         );
         
         $args = array(
@@ -104,16 +104,16 @@
             'show_ui'            => true,
             'show_in_menu'       => true,
             'query_var'          => true,
-            'rewrite'            => array( 'slug' => 'seguros-de-vida' ),
+            'rewrite'            => array( 'slug' => 'seguros' ),
             'capability_type'    => 'post',
             'has_archive'        => true,
             'hierarchical'       => false,
             'menu_position'      => null,
             'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields'),
-            'menu_icon'          => 'dashicons-shield' //Seguros de Vida
+            'menu_icon'          => 'dashicons-shield' //Seguros
         );
         
-        register_post_type( 'seguros-de-vida', $args );
+        register_post_type( 'seguros', $args );
     }
     add_action( 'init', 'registrar_seguros_vida_custom_post' );
 
