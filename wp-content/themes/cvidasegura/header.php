@@ -77,13 +77,14 @@
                 <?php } ?>
             </div>
         </div>
-        <img src="<?php echo  get_template_directory_uri() . '/library/images/consultoria-vida-segura-logo.webp' ?>" alt="Consultoria Vida Segura - Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" class="w-64 lg:w-40 h-auto object-cover mb-5 lg:mb-0 mx-auto" itemprop="image">
-        
-        <div class="absolute bg-white top-0 h-full w-full pt-20 pb-10 px-6 lg:p-0 z-10 lg:relative navbar hidden text-blue font-bold font-roboto lg:block gap-y-5 lg:gap-y-0">
-            <?php custom_header_menu(); ?>
-            <button onclick="closeMenu()" class="text-9999 bg-close-menu-mobile bg-no-repeat bg-center overflow-hidden pl-8 -indent-[624.9375rem] absolute top-7 right-6 lg:hidden w-9 h-9">
-                Fechar menu
-            </button>
+        <div class="lg:flex lg:container lg:items-center lg:gap-x-14">
+            <img src="<?php echo  get_template_directory_uri() . '/library/images/consultoria-vida-segura-logo.webp' ?>" alt="Consultoria Vida Segura - Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" class="w-64 h-auto object-cover mb-5 lg:mb-0 mx-auto" itemprop="image">
+            <div class="absolute bg-white top-0 h-full w-full pt-20 pb-10 px-6 lg:p-0 z-10 lg:relative navbar hidden font-bold font-roboto lg:block lg:mt-4 gap-y-5">
+                <?php custom_header_menu(); ?>
+                <button onclick="closeMenu()" class="text-9999 bg-close-menu-mobile bg-no-repeat bg-center overflow-hidden pl-8 -indent-[624.9375rem] absolute top-7 right-6 lg:hidden w-9 h-9">
+                    Fechar menu
+                </button>
+            </div>
         </div>
      </header>
         <main itemprop="mainContentOfPage">

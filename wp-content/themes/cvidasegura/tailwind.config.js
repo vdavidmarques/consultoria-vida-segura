@@ -7,12 +7,12 @@ module.exports = {
       black: '#000',
       gray: {
         DEFAULT: "#D9D9D9",
-        medium: '#005791',
         dark: '#262626',
       },
       green: '#61CE70',
       blue: {
         DEFAULT: '#1669B1',
+        medium: '#315398',
         dark: '#1b2c4f',
       },
     },
