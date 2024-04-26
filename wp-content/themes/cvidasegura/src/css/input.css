@@ -5,7 +5,7 @@
 
 @layer base {
     .container{
-        @apply mx-auto px-4 lg:px-8
+        @apply mx-auto px-4 lg:px-8 xl:px-0
     }
     
     body{
@@ -22,24 +22,29 @@
         @apply font-montserrat text-base lg:text-lg
     }
 
+    /* 14px */
+     .heading-title-sm{
+        @apply font-roboto font-bold text-sm uppercase
+    }
+
     /* 16px */
-    .heading-title-lg{
-        @apply font-roboto font-bold text-base
+    .heading-title-md{
+        @apply font-roboto font-bold text-base uppercase
     }
 
     /* 20px */
     .heading-title-lg{
-        @apply font-roboto font-bold text-base lg:text-[1.25rem] tracking-[0.4375rem]
+        @apply font-roboto font-bold text-base lg:text-[1.25rem] tracking-[0.4375rem] uppercase
     }
 
     /* 35px */
-    .heading-title-lg{
-        @apply font-roboto font-bold text-xl lg:text-[2.1875rem] leading-6
+    .heading-title-xl{
+        @apply font-roboto font-bold text-xl lg:text-[2.1875rem] leading-6 uppercase
     }
 
     /* 55px */
-    .heading-title-lg{
-        @apply font-roboto font-bold text-4xl lg:text-[3.4375rem]
+    .heading-title-2xl{
+        @apply font-roboto font-bold text-4xl lg:text-[3.4375rem] uppercase
     }
     
     .social-icon img{
@@ -51,5 +56,29 @@
 
     nav ul li a{
         @apply text-blue hover:text-blue-medium transition-colors
-    }    
+    }   
 }
+
+.button-first{
+    @apply bg-white text-blue font-bold heading-title-sm lg:heading-title-md hover:bg-blue hover:text-white transition-colors w-fit uppercase p-3
+}
+.sub-menu{
+    @apply hidden
+} 
+
+.default-heading-title h1, .default-heading-title h2, .default-heading-title h3{
+    @apply font-roboto font-bold text-4xl leading-[3.5rem] lg:text-[3.4375rem]
+}
+
+.main-banner .default-heading-title h1, .main-banner .default-heading-title h2, .main-banner .default-heading-title h3{
+    @apply lg:w-[55%] mb-4 uppercase
+}
+
+.main-banner .default-heading-title p{
+    @apply lg:w-[40%]
+}
+
+.bg-blue-hard-light{
+    @apply bg-blue-medium w-full h-full absolute top-0 left-0 opacity-80 mix-blend-hard-light z-10
+}
+

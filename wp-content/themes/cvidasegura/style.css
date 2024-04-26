@@ -180,3 +180,27 @@ section {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
 }
+
+.arrow-swiper{
+  width: 60px!important;
+  height: 60px!important;
+}
+
+.arrow-swiper::after{
+  content: ''!important;
+  background-image: url('./library/icons/arrow-right-circle.svg');
+  height: 60px;
+  width: 60px;
+}
+
+.swiper-button-next.arrow-swiper-next{
+  right: 30px;
+}
+
+.swiper-button-prev.arrow-swiper-prev{
+  left: 30px;
+}
+
+.arrow-swiper-prev::after{
+  transform: rotate(180deg);
+}
