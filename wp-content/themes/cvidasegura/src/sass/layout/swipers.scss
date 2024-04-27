@@ -1,0 +1,28 @@
+@import '../helpers/variables.scss';
+@import '../helpers/mixins.scss';
+
+.arrow-swiper{
+    width: 3.75rem!important;
+  }
+  
+  .arrow-swiper::after{
+    content: ''!important;
+    background-image: url('./library/icons/arrow-right-circle.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 2.8125rem;
+    width: 2.8125rem;
+  }
+  
+  .swiper-button-next.arrow-swiper-next{
+    right: 1.875rem;
+  }
+  
+  .swiper-button-prev.arrow-swiper-prev{
+    left: 1.875rem;
+  }
+  
+  .arrow-swiper-prev::after{
+    transform: rotate(180deg);
+  }
+  

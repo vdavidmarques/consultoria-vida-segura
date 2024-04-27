@@ -1,0 +1,122 @@
+@mixin font-montserrat {
+    font-family: 'MontSerrat', sans-serif; 
+}
+
+@mixin font-roboto {
+    font-family: 'Roboto', sans-serif;
+} 
+
+@mixin mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+@mixin text-sm{
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.25rem; /* 20px */
+}
+
+@mixin text-base{
+    font-size: 1rem; /* 16px */
+    line-height: 1.5rem; /* 24px */
+}
+
+@mixin text-lg{
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.75rem; /* 28px */
+}
+@mixin text-xl{
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.75rem; /* 28px */
+}
+
+@mixin text-4xl {
+    font-size: 2.25rem; /* 36px */
+    line-height: 2.5rem; /* 40px */
+}
+
+
+
+/* 14px */
+@mixin heading-text-sm{
+    @include font-montserrat;
+    @include text-sm
+}
+
+/* 18px */
+@mixin heading-text-md{
+    @include font-montserrat;
+    @include text-base;
+
+    @media screen and (min-width: $breakpoint-lg){
+        @include text-lg;
+    }
+}
+
+@mixin heading-titles{
+    text-transform: uppercase;
+    font-weight: bold;
+    @include font-roboto;
+
+}
+
+/* 14px */
+@mixin heading-title-sm{
+    @include text-sm;
+    @include heading-titles;
+}
+
+/* 16px */
+@mixin heading-title-md{
+    @include heading-titles;
+    @include text-base
+}
+
+/* 20px */
+@mixin heading-title-lg{
+    @include text-base;
+    letter-spacing: 0.4375rem;
+    @media screen and (min-width: $breakpoint-lg){
+        font-size: 1.25rem;
+    }
+}
+
+/* 35px */
+@mixin heading-title-xl{
+    @include text-xl;
+    line-height: 1.5rem; /* 24px */
+    @media screen and (min-width: $breakpoint-lg){
+        font-size: 2.1875rem;
+    }
+}
+
+/* 55px */
+@mixin heading-title-2xl{
+    @include text-4xl;
+    @media screen and (min-width: $breakpoint-lg){
+        font-size: 3.4375rem;
+    }
+}
+
+@mixin transition-colors{
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+@mixin btn-menu-mobile{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    padding-left: 1.5rem;
+    text-indent: -624.9375rem;
+    border: none;
+}
+
+@mixin w-full{
+    width: 100%;
+}
+
+@mixin h-full{
+    width: 100%;
+}

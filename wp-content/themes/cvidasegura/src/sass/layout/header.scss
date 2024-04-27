@@ -1,0 +1,192 @@
+@import '../helpers/variables.scss';
+@import '../helpers/mixins.scss';
+
+.social-icon img {
+  object-fit: cover;
+  background-repeat: no-repeat;
+  fill: $white;
+  width: 1.75rem; /* 28px */
+  height: 1.75rem; /* 28px */
+  @media screen and (min-width: $breakpoint-lg) {
+    width: 2rem; /* 32px */
+    height: 2rem; /* 32px */
+  }
+}
+
+.social-icon.menu img {
+  width: 2.5rem;
+  height: 1.25rem;
+  object-fit: contain;
+}
+
+.header-top{
+    background-color: $blue;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    @media screen and (min-width: $breakpoint-lg) {
+        position: static;
+    }
+
+    .socials-and-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-left: -3.125rem;
+
+        @media screen and (min-width: $breakpoint-lg) {
+            margin-left: 0;
+        }
+        
+        .socials-icons{
+            position: relative;
+            column-gap: 2rem;
+            justify-content: center;
+            align-items: center;
+            padding: 0.75rem 0;
+            display: flex;
+
+            @media screen and (min-width: $breakpoint-lg) {
+                flex-direction: row;
+                column-gap: 4rem;
+                min-height: 3rem;
+            }
+
+            img{
+                width: 2.1875rem;
+                height: auto;
+                object-fit: cover;
+
+                @media screen and (min-width: $breakpoint-lg) {
+                    width: 2.1875rem;
+                    height: 2.1875rem;
+                }
+            }
+        }
+        .open-menu-mobile{
+            
+            .bg-menu-mobile{         
+                position: absolute;
+                top: 0;
+                right: 1rem;
+                background: url("../../library/icons/menu-icon.svg");
+                transform: translateY(1.5rem);
+                width: 2.0625rem;
+                height: 1.3125rem;
+                @include btn-menu-mobile;
+    
+                @media screen and (min-width: $breakpoint-lg) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.header-menu-itens{
+    padding: 0.75rem;
+    position: relative;
+    display: flex;
+
+    @media screen and (min-width: $breakpoint-lg) {
+        align-items: center;
+        column-gap: 1.5rem;
+    }
+
+    @media screen and (min-width: $breakpoint-xl) {
+        column-gap: 3.5rem;
+    }
+
+    .logo{
+        width: 11.25rem;
+        height: auto;
+        object-fit: cover;
+        @include mx-auto;
+        
+        @media screen and (min-width: $breakpoint-lg) {
+            width: 10rem;
+        }
+        @media screen and (min-width: $breakpoint-xl) {
+            width: 16rem;
+        }
+    }
+
+    .menu-items{
+        position: fixed;
+        background-color: $white;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+        padding: 1.5rem;
+        z-index: 10;
+        display: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        @include font-roboto;
+
+        @media screen and (min-width: $breakpoint-lg) {
+            padding: 0;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            row-gap: 1.25rem;
+        }
+
+        nav ul{
+            display: flex;
+            flex-direction: column;
+            row-gap: 1.25rem;
+            margin-top: 3.125rem;
+
+            @media screen and (min-width: $breakpoint-lg) {
+                flex-direction: row;
+                row-gap: 0;
+                column-gap: 1rem;
+                margin-top: 0;
+            }
+
+            @media screen and (min-width: $breakpoint-1_5xl) {
+                column-gap: 1.5rem;
+            }
+
+            @media screen and (min-width: $breakpoint-2xl) {
+                column-gap: 4rem;
+            }
+
+            li a {
+                color: $blue;
+                text-decoration: none;
+              
+                &:hover {
+                  color: $blue-medium;
+                }
+                @include transition-colors;
+            }
+
+            .sub-menu {
+                display: none;
+            }
+        }
+
+        .bg-close-menu-mobile{
+           @include btn-menu-mobile;
+           position: absolute;
+            top: 1.75rem;
+            right: 1rem;
+            width: 2.25rem;
+            height: 2.25rem;
+            background: url("../../library/icons/close-menu-icon.svg");
+            
+            @media screen and (min-width: $breakpoint-lg) {
+                display: none;
+            }
+        }        
+
+    }
+}
