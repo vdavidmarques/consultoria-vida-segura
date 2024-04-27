@@ -1,47 +1,53 @@
 <?php get_header();  ?>
 single planos-de-saude.php
 <section class="single-planos-de-saude">
+    <?php include get_template_directory() . '/components/main-banner.php'; ?>
+
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <?php the_title() ?>
-        <?php echo get_field('single-banner-image') ?>
-        <p><?php echo get_field('single-banner-texts') ?></p>
-        <p><?php echo get_field('descriptive-texts') ?></p>
-        <?php 
-            //Item 1
-            $itemF = get_field('icon-text-group-1');
-            if ($itemF) {
-                $iconF = $itemF['icone'];
-                $textF = $itemF['texto'];
-            }
+        <div class="mt-20 lg:mt-[12.5rem]">
+            
+            <?php the_title() ?>
+        
+            <p><?php echo get_field('single-banner-texts') ?></p>
+            <p><?php echo get_field('descriptive-texts') ?></p>
+            <?php 
+                //Item 1
+                $itemF = get_field('icon-text-group-1');
+                if ($itemF) {
+                    $iconF = $itemF['icone'];
+                    $textF = $itemF['texto'];
+                }
 
-            //Item 2
-            $itemS = get_field('icon-text-group-2');
-            if ($itemS) {
-                $iconS = $itemS['icone'];
-                $textS = $itemS['texto'];
-            }
+                //Item 2
+                $itemS = get_field('icon-text-group-2');
+                if ($itemS) {
+                    $iconS = $itemS['icone'];
+                    $textS = $itemS['texto'];
+                }
 
-            //Item 3
-            $itemT = get_field('icon-text-group-2');
-            if ($itemT) {
-                $iconT = $itemT['icone'];
-                $textT = $itemT['texto'];
-            }
-        ?>
-        <div class="itens">
-            <?php echo  $iconF ?>
-            <?php echo $textF ?>
+                //Item 3
+                $itemT = get_field('icon-text-group-2');
+                if ($itemT) {
+                    $iconT = $itemT['icone'];
+                    $textT = $itemT['texto'];
+                }
+            ?>
+            
+            <div class="itens">
+                <?php echo  $iconF ?>
+                <?php echo $textF ?>
 
-            <?php echo  $iconS ?>
-            <?php echo $textS ?>
+                <?php echo  $iconS ?>
+                <?php echo $textS ?>
 
-            <?php echo  $iconT ?>
-            <?php echo $textT ?>
-                        
-            <?php include get_template_directory() . '/components/accordion-first.php'; ?>
-            <?php include get_template_directory() . '/components/accordion-second.php'; ?>
-            <?php include get_template_directory() . '/components/accordion-third.php'; ?>
+                <?php echo  $iconT ?>
+                <?php echo $textT ?>
+                            
+                <?php include get_template_directory() . '/components/accordion-first.php'; ?>
+                <?php include get_template_directory() . '/components/accordion-second.php'; ?>
+                <?php include get_template_directory() . '/components/accordion-third.php'; ?>
 
+            </div>
         </div>
         
     <?php endwhile;

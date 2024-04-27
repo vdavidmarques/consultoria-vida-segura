@@ -34,15 +34,11 @@
     line-height: 2.5rem; /* 40px */
 }
 
-
-
-/* 14px */
 @mixin heading-text-sm{
     @include font-montserrat;
     @include text-sm
 }
 
-/* 18px */
 @mixin heading-text-md{
     @include font-montserrat;
     @include text-base;
@@ -59,19 +55,16 @@
 
 }
 
-/* 14px */
 @mixin heading-title-sm{
     @include text-sm;
     @include heading-titles;
 }
 
-/* 16px */
 @mixin heading-title-md{
     @include heading-titles;
     @include text-base
 }
 
-/* 20px */
 @mixin heading-title-lg{
     @include text-base;
     letter-spacing: 0.4375rem;
@@ -80,7 +73,6 @@
     }
 }
 
-/* 35px */
 @mixin heading-title-xl{
     @include text-xl;
     line-height: 1.5rem; /* 24px */
@@ -89,7 +81,6 @@
     }
 }
 
-/* 55px */
 @mixin heading-title-2xl{
     @include text-4xl;
     @media screen and (min-width: $breakpoint-lg){

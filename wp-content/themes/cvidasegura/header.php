@@ -23,7 +23,7 @@
 <body <?php body_class(); ?>>
     <header itemscope itemtype="http://schema.org/WPHeader">
         <div class="header-top">
-            <div class="container socials-and-menu">
+            <div class="socials-and-menu">
                 <?php
                     $args = array(
                         'name' => 'informacoes',

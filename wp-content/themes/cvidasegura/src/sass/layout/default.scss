@@ -239,3 +239,16 @@ img{
   object-fit: cover;
 }
   
+.show-desktop{
+  display: none;
+
+  @media screen and (min-width: $breakpoint-lg) {
+    display: block;
+  }
+}
+
+.show-mobile{
+  @media screen and (min-width: $breakpoint-lg) {
+    display: hidden;
+  }
+}

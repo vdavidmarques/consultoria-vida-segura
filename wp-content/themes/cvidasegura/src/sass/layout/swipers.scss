@@ -3,26 +3,62 @@
 
 .arrow-swiper{
     width: 3.75rem!important;
+   
   }
   
-  .arrow-swiper::after{
-    content: ''!important;
-    background-image: url('./library/icons/arrow-right-circle.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 2.8125rem;
-    width: 2.8125rem;
+.arrow-swiper::after{
+  content: ''!important;
+  background-image: url('../../library/icons/arrow-right-circle.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 2.8125rem;
+  width: 2.8125rem;
+}
+
+.swiper-button-next.arrow-swiper-next, .swiper-button-prev.arrow-swiper-prev{
+   display: none;
+
+    @media screen and (min-width: $breakpoint-lg){
+      display: flex;  
+    }
+}
+
+.swiper-button-next.arrow-swiper-next{
+  right: 1.875rem;
+}
+
+.swiper-button-prev.arrow-swiper-prev{
+  left: 1.875rem;
+}
+
+.arrow-swiper-prev::after{
+  transform: rotate(180deg);
+}
+
+.swiper-container{
+  position: relative;
+  height: 25rem;
+
+  @media screen and (min-width: $breakpoint-lg){
+    height: 31.25rem;
   }
-  
-  .swiper-button-next.arrow-swiper-next{
-    right: 1.875rem;
+
+  .swiper-slide{
+    
+    a{
+      margin-top: 24px;
+      text-decoration: none;
+    }
+
+    .default-heading-title{
+      color: $white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      justify-content: center;
+    }
+
   }
-  
-  .swiper-button-prev.arrow-swiper-prev{
-    left: 1.875rem;
-  }
-  
-  .arrow-swiper-prev::after{
-    transform: rotate(180deg);
-  }
-  
+}
