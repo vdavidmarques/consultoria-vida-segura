@@ -82,7 +82,7 @@
             wp_nav_menu( array(
                 'theme_location' => 'custom_header_menu',
                 'menu_id'        => 'custom-header-menu',
-                'menu_class'     => 'flex flex-col gap-y-5 lg:flex-row lg:gap-y-0 lg:gap-x-16',
+                'menu_class'     => 'flex flex-col gap-y-5 lg:flex-row xl:gap-y-0 lg:gap-x-6 xl:gap-x-16',
                 'fallback_cb'    => '__return_false',
             ) );
             ?>

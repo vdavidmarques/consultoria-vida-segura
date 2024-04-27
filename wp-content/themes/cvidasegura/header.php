@@ -10,16 +10,20 @@
         Consultoria Vida Segura <?php if (wp_title()) :  ' | ' . wp_title(); endif; ?>
     </title>
     <link itemprop="url" href="https://www.consultoriavidasegura.com">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 
 <body <?php body_class(); ?>>
-    <header class="pt-8 lg:pb-10 lg:pt-0" itemscope itemtype="http://schema.org/WPHeader">
-        <div class="header-top bg-blue fixed bottom-0 w-full lg:relative">
-            <div class="container">
+    <header itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-top">
+            <div class="container socials-and-menu">
                 <?php
                     $args = array(
                         'name' => 'informacoes',
@@ -37,54 +41,46 @@
                         $instagram = get_field('instagram');
                         $facebook = get_field('facebook');
                 ?>
-                    <div class="relative flex lg:flex-row gap-x-8 lg:gap-x-16 justify-center items-center lg:min-h-12 py-5 lg:py-3">
-                        <div class="social-icon">
-                            <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber ?>&text=<?php echo $whatsappMessage ?>">
-                                <img src="<?php echo  get_template_directory_uri() . '/library/icons/whatsapp-consultoria-vida-segura-white.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida"  itemprop="image">
-                            </a>
-                        </div>
-
-                        <div class="social-icon">
-                            <a target="_blank" href="tel:<?php echo $phone ?>"> 
-                                <img src="<?php echo  get_template_directory_uri() . '/library/icons/phone-consultoria-vida-segura-white.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida"  itemprop="image">
-                            </a>
-                        </div>
+                    <div class="socials-icons">
+                        <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber ?>&text=<?php echo $whatsappMessage ?>">
+                            <img src="<?php echo  get_template_directory_uri() . '/library/icons/whatsapp-consultoria-vida-segura-white.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida"  itemprop="image">
+                        </a>
                     
-                        <div class="social-icon">
-                            <a target="_blank" href="mailto:<?php echo $email ?>">
-                                <img src="<?php echo  get_template_directory_uri() . '/library/icons/email-consultoria-vida-segura-white.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida"  itemprop="image">
-                            </a>
-                        </div>
-
-                        <div class="social-icon">
-                            <a target="_blank" href="<?php echo $instagram ?>">
-                                <img src="<?php echo  get_template_directory_uri() . '/library/icons/instagram-consultoria-vida-segura-white.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida"  itemprop="image">
-                            </a>
-                        </div>
-
-                        <div class="social-icon">
-                            <a target="_blank" href="<?php echo $facebook ?>">
-                                <img src="<?php echo  get_template_directory_uri() . '/library/icons/facebook-consultoria-vida-segura-white.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida"  itemprop="image">
-                            </a>
-                        </div>
-
-                        <div class="social-icon menu lg:hidden">
-                            <button onclick="openMenu()" class="text-9999 bg-menu-mobile bg-no-repeat bg-center overflow-hidden pl-8 -indent-[624.9375rem]">
-                                Menu
-                            </button>
-                        </div>
+                        <a target="_blank" href="tel:<?php echo $phone ?>"> 
+                            <img src="<?php echo  get_template_directory_uri() . '/library/icons/phone-consultoria-vida-segura-white.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida"  itemprop="image">
+                        </a>
+                    
+                        <a target="_blank" href="mailto:<?php echo $email ?>">
+                            <img src="<?php echo  get_template_directory_uri() . '/library/icons/email-consultoria-vida-segura-white.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida"  itemprop="image">
+                        </a>
+                    
+                        <a target="_blank" href="<?php echo $instagram ?>">
+                            <img src="<?php echo  get_template_directory_uri() . '/library/icons/instagram-consultoria-vida-segura-white.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida"  itemprop="image">
+                        </a>
+                    
+                        <a target="_blank" href="<?php echo $facebook ?>">
+                            <img src="<?php echo  get_template_directory_uri() . '/library/icons/facebook-consultoria-vida-segura-white.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida"  itemprop="image">
+                        </a>
+                    </div>
+                    <div class="open-menu-mobile">
+                        <button onclick="openMenu()" class="bg-menu-mobile">
+                            Menu
+                        </button>
                     </div>
                 <?php } ?>
             </div>
         </div>
-        <div class="lg:flex lg:container lg:items-center lg:gap-x-14">
-            <img src="<?php echo  get_template_directory_uri() . '/library/images/consultoria-vida-segura-logo.webp' ?>" alt="Consultoria Vida Segura - Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" class="w-64 h-auto object-cover mb-5 lg:mb-0 mx-auto" itemprop="image">
-            <div class="absolute bg-white top-0 h-full w-full pt-20 pb-10 px-6 lg:p-0 z-10 lg:relative navbar hidden font-bold font-roboto lg:block lg:mt-4 gap-y-5">
+        <div class="header-menu-itens container">
+            <img src="<?php echo  get_template_directory_uri() . '/library/images/consultoria-vida-segura-logo.webp' ?>" alt="Consultoria Vida Segura - Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" class="logo" itemprop="image">
+
+            <div class="menu-items">
                 <?php custom_header_menu(); ?>
-                <button onclick="closeMenu()" class="text-9999 bg-close-menu-mobile bg-no-repeat bg-center overflow-hidden pl-8 -indent-[624.9375rem] absolute top-7 right-6 lg:hidden w-9 h-9">
+
+                <button onclick="closeMenu()" class="bg-close-menu-mobile">
                     Fechar menu
                 </button>
             </div>
+
         </div>
      </header>
         <main itemprop="mainContentOfPage">
