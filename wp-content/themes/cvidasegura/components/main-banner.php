@@ -37,7 +37,7 @@
                                 echo $mainTitleF;
                             endif;
 
-                            if ($buttonLabelF) : ?>
+                            if ($buttonLinkF && $buttonLabelF) : ?>
 
                                 <a href="<?php echo $buttonLinkF ?>" itemprop="name" class="mt-6 button-first">
                                     <?php echo $buttonLabelF ?>

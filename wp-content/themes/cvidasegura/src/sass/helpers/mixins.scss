@@ -1,9 +1,11 @@
+@import './variables.scss';
+
 @mixin font-montserrat {
     font-family: 'MontSerrat', sans-serif; 
 }
 
-@mixin font-roboto {
-    font-family: 'Roboto', sans-serif;
+@mixin font-rubik {
+    font-family: 'Rubik', sans-serif;
 } 
 
 @mixin mx-auto {
@@ -11,27 +13,27 @@
     margin-right: auto;
 }
 @mixin text-sm{
-    font-size: 0.875rem; /* 14px */
-    line-height: 1.25rem; /* 20px */
+    font-size: 14px; 
+    line-height: 20px; 
 }
 
 @mixin text-base{
-    font-size: 1rem; /* 16px */
-    line-height: 1.5rem; /* 24px */
+    font-size: 16px; 
+    line-height: 24px;
 }
 
 @mixin text-lg{
-    font-size: 1.125rem; /* 18px */
-    line-height: 1.75rem; /* 28px */
+    font-size: 18px; 
+    line-height: 28px;
 }
 @mixin text-xl{
-    font-size: 1.25rem; /* 20px */
-    line-height: 1.75rem; /* 28px */
+    font-size: 20px; 
+    line-height: 28px; 
 }
 
 @mixin text-4xl {
-    font-size: 2.25rem; /* 36px */
-    line-height: 2.5rem; /* 40px */
+    font-size: 36px; 
+    line-height: 2.5rem; 
 }
 
 @mixin heading-text-sm{
@@ -51,7 +53,8 @@
 @mixin heading-titles{
     text-transform: uppercase;
     font-weight: bold;
-    @include font-roboto;
+    color: $blue;
+    @include font-rubik;
 
 }
 
@@ -69,7 +72,7 @@
     @include text-base;
     letter-spacing: 0.4375rem;
     @media screen and (min-width: $breakpoint-lg){
-        font-size: 1.25rem;
+        font-size: 20px;
     }
 }
 
@@ -77,14 +80,17 @@
     @include text-xl;
     line-height: 1.5rem; /* 24px */
     @media screen and (min-width: $breakpoint-lg){
-        font-size: 2.1875rem;
+        font-size: 35px;
     }
 }
 
 @mixin heading-title-2xl{
+    @include heading-titles;
+
     @include text-4xl;
     @media screen and (min-width: $breakpoint-lg){
-        font-size: 3.4375rem;
+        font-size: 55px;
+        text-indent: -1px;
     }
 }
 
