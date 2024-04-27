@@ -1,119 +1,200 @@
-@import './variables.scss';
+@import "./variables.scss";
 
 @mixin font-montserrat {
-    font-family: 'MontSerrat', sans-serif; 
+  font-family: "MontSerrat", sans-serif;
 }
 
 @mixin font-rubik {
-    font-family: 'Rubik', sans-serif;
-} 
+  font-family: "Rubik", sans-serif;
+}
 
 @mixin mx-auto {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
-@mixin text-sm{
-    font-size: 14px; 
-    line-height: 20px; 
-}
-
-@mixin text-base{
-    font-size: 16px; 
-    line-height: 24px;
+@mixin text-sm {
+  font-size: 14px;
+  line-height: 20px;
 }
 
-@mixin text-lg{
-    font-size: 18px; 
-    line-height: 28px;
+@mixin text-base {
+  font-size: 16px;
+  line-height: 24px;
 }
-@mixin text-xl{
-    font-size: 20px; 
-    line-height: 28px; 
+
+@mixin text-lg {
+  font-size: 18px;
+  line-height: 28px;
+}
+@mixin text-xl {
+  font-size: 20px;
+  line-height: 28px;
 }
 
 @mixin text-4xl {
-    font-size: 36px; 
-    line-height: 2.5rem; 
+  font-size: 36px;
+  line-height: 2.5rem;
 }
 
-@mixin heading-text-sm{
-    @include font-montserrat;
-    @include text-sm
+@mixin heading-text-sm {
+  @include font-montserrat;
+  @include text-sm;
 }
 
-@mixin heading-text-md{
-    @include font-montserrat;
-    @include text-base;
+@mixin heading-text-md {
+  @include font-montserrat;
+  @include text-base;
 
-    @media screen and (min-width: $breakpoint-lg){
-        @include text-lg;
-    }
+  @media screen and (min-width: $breakpoint-lg) {
+    @include text-lg;
+  }
 }
 
-@mixin heading-titles{
-    text-transform: uppercase;
-    font-weight: bold;
-    color: $blue;
-    @include font-rubik;
-
+@mixin heading-titles {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $blue;
+  @include font-rubik;
 }
 
-@mixin heading-title-sm{
-    @include text-sm;
-    @include heading-titles;
+@mixin heading-title-sm {
+  @include text-sm;
+  @include heading-titles;
 }
 
-@mixin heading-title-md{
-    @include heading-titles;
-    @include text-base
+@mixin heading-title-md {
+  @include heading-titles;
+  @include text-base;
 }
 
-@mixin heading-title-lg{
-    @include text-base;
-    letter-spacing: 0.4375rem;
-    @media screen and (min-width: $breakpoint-lg){
-        font-size: 20px;
-    }
+@mixin heading-title-lg {
+  @include heading-titles;
+  @include text-base;
+  @media screen and (min-width: $breakpoint-lg) {
+    font-size: 20px;
+  }
 }
 
-@mixin heading-title-xl{
-    @include text-xl;
-    line-height: 1.5rem; /* 24px */
-    @media screen and (min-width: $breakpoint-lg){
-        font-size: 35px;
-    }
+@mixin heading-title-xl {
+  @include heading-titles;
+  @include text-xl;
+  @media screen and (min-width: $breakpoint-lg) {
+    font-size: 35px;
+  }
 }
 
-@mixin heading-title-2xl{
-    @include heading-titles;
-
-    @include text-4xl;
-    @media screen and (min-width: $breakpoint-lg){
-        font-size: 55px;
-        text-indent: -1px;
-    }
+@mixin heading-title-2xl {
+  @include heading-titles;
+  @include text-4xl;
+  @media screen and (min-width: $breakpoint-lg) {
+    font-size: 55px;
+    text-indent: -1px;
+  }
 }
 
-@mixin transition-colors{
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
+@mixin transition-colors {
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
-@mixin btn-menu-mobile{
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    overflow: hidden;
-    padding-left: 1.5rem;
-    text-indent: -624.9375rem;
-    border: none;
+@mixin transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
-@mixin w-full{
-    width: 100%;
+@mixin btn-menu-mobile {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  padding-left: 1.5rem;
+  text-indent: -624.9375rem;
+  border: none;
 }
 
-@mixin h-full{
-    width: 100%;
+@mixin w-full {
+  width: 100%;
+}
+
+@mixin h-full {
+  width: 100%;
+}
+
+@mixin col-span-1 {
+  grid-column: span 1 / span 1;
+}
+@mixin col-span-2 {
+  grid-column: span 2 / span 2;
+}
+@mixin col-span-3 {
+  grid-column: span 3 / span 3;
+}
+@mixin col-span-4 {
+  grid-column: span 4 / span 4;
+}
+@mixin col-span-5 {
+  grid-column: span 5 / span 5;
+}
+@mixin col-span-6 {
+  grid-column: span 6 / span 6;
+}
+@mixin col-span-7 {
+  grid-column: span 7 / span 7;
+}
+@mixin col-span-8 {
+  grid-column: span 8 / span 8;
+}
+@mixin col-span-9 {
+  grid-column: span 9 / span 9;
+}
+@mixin col-span-10 {
+  grid-column: span 10 / span 10;
+}
+@mixin col-span-11 {
+  grid-column: span 11 / span 11;
+}
+@mixin col-span-12 {
+  grid-column: span 12 / span 12;
+}
+@mixin col-start-inherit {
+  grid-column-start: inherit;
+}
+@mixin col-start-1 {
+  grid-column-start: 1;
+}
+@mixin col-start-2 {
+  grid-column-start: 2;
+}
+@mixin col-start-3 {
+  grid-column-start: 3;
+}
+@mixin col-start-4 {
+  grid-column-start: 4;
+}
+@mixin col-start-5 {
+  grid-column-start: 5;
+}
+@mixin col-start-6 {
+  grid-column-start: 6;
+}
+@mixin col-start-7 {
+  grid-column-start: 7;
+}
+@mixin col-start-8 {
+  grid-column-start: 8;
+}
+@mixin col-start-9 {
+  grid-column-start: 9;
+}
+@mixin col-start-10 {
+  grid-column-start: 10;
+}
+@mixin col-start-11 {
+  grid-column-start: 11;
+}
+@mixin col-start-12 {
+  grid-column-start: 12;
 }

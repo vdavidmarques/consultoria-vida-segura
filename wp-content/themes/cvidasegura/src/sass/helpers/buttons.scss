@@ -11,8 +11,8 @@
     }
   
     &:hover {
-      background-color: $blue;
-      color: $white;
+      background-color: $blue-dark;
+      color: $white!important;
     }
     
     @include transition-colors;

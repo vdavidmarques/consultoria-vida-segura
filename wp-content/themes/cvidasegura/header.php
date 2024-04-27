@@ -53,7 +53,7 @@
                         </a>
                     
                         <a target="_blank" href="mailto:<?php echo $email ?>">
-                            <img src="<?php echo  get_template_directory_uri() . '/library/icons/email-consultoria-vida-segura-white.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida"  itemprop="image">
+                            <img src="<?php echo  get_template_directory_uri() . '/library/icons/email-consultoria-vida-segura-white.svg' ?>" alt="Email - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida"  itemprop="image">
                         </a>
                     
                         <a target="_blank" href="<?php echo $instagram ?>">
