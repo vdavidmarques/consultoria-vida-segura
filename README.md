@@ -15,7 +15,7 @@ Install all [Wordpress](https://wordpress.org/) presets normally
 
 ### Required Plugins
 
-- [ACF - Advanced Custom Fields](https://www.advancedcustomfields.com/) - Free Version Used
+- [ACF - Advanced Custom Fields](https://www.advancedcustomfields.com/) - Pro Version Used
 - [SAVE SVG](https://wordpress.org/plugins/safe-svg/)
 - [Contact Form 7](https://contactform7.com/)
 
