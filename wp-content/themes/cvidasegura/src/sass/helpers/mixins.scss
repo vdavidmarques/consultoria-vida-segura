@@ -12,6 +12,12 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+@mixin text-xs {
+  font-size: 12px;
+  line-height: 20px;
+}
+
 @mixin text-sm {
   font-size: 14px;
   line-height: 20px;
@@ -53,21 +59,20 @@
 @mixin heading-titles {
   text-transform: uppercase;
   font-weight: bold;
-  color: $blue;
   @include font-rubik;
 }
 
-@mixin heading-title-sm {
+@mixin heading-title-sm {//14px
   @include text-sm;
   @include heading-titles;
 }
 
-@mixin heading-title-md {
+@mixin heading-title-md {//16px
   @include heading-titles;
   @include text-base;
 }
 
-@mixin heading-title-lg {
+@mixin heading-title-lg {//16px e 20px
   @include heading-titles;
   @include text-base;
   @media screen and (min-width: $breakpoint-lg) {
