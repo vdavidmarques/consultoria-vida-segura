@@ -903,11 +903,11 @@ footer .after-footer .designer {
 }
 
 .our-services {
-  padding: 80px 0;
+  padding: 5rem 0;
 }
 @media screen and (min-width: 1024px) {
   .our-services {
-    padding: 140px 0;
+    padding: 8.75rem 0;
   }
 }
 .our-services .content-text {
@@ -943,21 +943,24 @@ footer .after-footer .designer {
   line-height: 28px;
 }
 .our-services .service-image {
-  padding: 2.5rem 0;
-  column-gap: 10px;
+  padding: 2.5rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+@media screen and (min-width: 1024px) {
+  .our-services .service-image {
+    column-gap: 0.625rem;
+    padding: 5rem 0;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
 }
 .our-services .service-image a {
   color: #fff;
   text-decoration: none;
 }
-@media screen and (min-width: 1024px) {
-  .our-services .service-image {
-    padding: 5rem 0;
-  }
-}
 .our-services .service-image .images {
   width: auto;
-  height: 28.125rem;
+  height: 100%;
 }
 .our-services .service-image .images img {
   width: 100%;
@@ -973,7 +976,14 @@ footer .after-footer .designer {
   }
 }
 .our-services .service-image .images.image-1 img {
-  border-radius: 0 1.25rem 1.25rem 0;
+  border-radius: 1.25rem;
+  padding-bottom: 5rem;
+}
+@media screen and (min-width: 1024px) {
+  .our-services .service-image .images.image-1 img {
+    border-radius: 0 1.25rem 1.25rem 0;
+    padding-bottom: 0;
+  }
 }
 .our-services .service-image .images.image-2 {
   grid-column: span 12/span 12;
@@ -987,17 +997,14 @@ footer .after-footer .designer {
   border-radius: 1.25rem 0 0 1.25rem;
 }
 .our-services .service-image .services-cards {
-  grid-column: span 12/span 12;
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  column-gap: 0.625rem;
-  position: relative;
+  overflow: hidden;
 }
 @media screen and (min-width: 1024px) {
   .our-services .service-image .services-cards {
     grid-column: span 6/span 6;
     grid-template-columns: repeat(6, minmax(0, 1fr));
     padding: 0 0.625rem;
+    height: 25rem;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1006,16 +1013,9 @@ footer .after-footer .designer {
   }
 }
 .our-services .service-image .services-cards .card {
-  grid-column: span 12/span 12;
   background-color: #1b2c4f;
   color: #fff;
   border-radius: 0.625rem;
-  height: fit-content;
-}
-@media screen and (min-width: 1024px) {
-  .our-services .service-image .services-cards .card {
-    grid-column: span 3/span 3;
-  }
 }
 .our-services .service-image .services-cards .card .header {
   background-color: #1669B1;
