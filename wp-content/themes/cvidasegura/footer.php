@@ -33,12 +33,12 @@
 
                 <div class="contact">
                     <h4 class="title">Entre em contato</h4>
-                    <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber ?>&text=<?php echo $whatsappMessage ?>" class="button-first">
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber ?>&text=<?php echo $whatsappMessage ?>" class="button button-first">
                         <img src="<?php echo  get_template_directory_uri() . '/library/icons/whatsapp-consultoria-vida-segura-blue.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" itemprop="image" class="wpp-blue">
                         <img src="<?php echo  get_template_directory_uri() . '/library/icons/whatsapp-consultoria-vida-segura-white.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" itemprop="image" class="wpp-white">
                         Fale por WhatsApp
                     </a>
-                    <a target="_blank" href="mailto:<?php echo $email ?>" class="button-first email">
+                    <a target="_blank" href="mailto:<?php echo $email ?>" class="button button-first email">
                         <img src="<?php echo  get_template_directory_uri() . '/library/icons/email-consultoria-vida-segura-blue.svg' ?>" alt="Email - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida"  itemprop="image" class="email-blue">
                         <img src="<?php echo  get_template_directory_uri() . '/library/icons/email-consultoria-vida-segura-white.svg' ?>" alt="Email - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida"  itemprop="image" class="email-white">
                         Fale por e-mail
@@ -71,6 +71,16 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <?php 
+        if (is_home( '63' ) ): //homepage
+    ?>
+        <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/home.min.js" ?>"></script>
+            
+    <?php elseif( is_post_type_archive('planos-de-saude' )) : ?>
+        <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/health-insurance.min.js" ?>"></script>
+    <?php endif; ?>
+
     <?php
         $args = array(
             'name' => 'informacoes',

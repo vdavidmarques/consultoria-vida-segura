@@ -1,21 +1,33 @@
 @import './variables.scss';
 @import './mixins.scss';
 
+.button{
+  @include transition-colors;
+  width: fit-content;
+  padding: 12px;
+  text-decoration: none;
+  @include heading-title-sm;
+  @media screen and (min-width: $breakpoint-lg) {
+    @include heading-title-md;
+  }
+}
+
 .button-first {
-    background-color: $white;
-    color: $blue;
-    @include heading-title-sm;
-  
-    @media screen and (min-width: $breakpoint-lg) {
-      @include heading-title-md;
-    }
-  
-    &:hover {
-      background-color: $blue-dark;
-      color: $white!important;
-    }
-    
-    @include transition-colors;
-    width: fit-content;
-    padding: 12px;
+  background-color: $white;
+  color: $blue;
+
+  &:hover {
+    background-color: $blue-dark;
+    color: $white!important;
+  }
+}
+
+.button-second{
+  background-color: $white;
+  color: $blue;
+
+  &:hover {
+    background-color: $blue;
+    color: $white!important;
+  }
 }

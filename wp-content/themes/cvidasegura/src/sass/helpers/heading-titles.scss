@@ -11,49 +11,49 @@
 }
 
 // banners
-.main-banner .default-heading-title h1,
-.main-banner .default-heading-title h2,
-.main-banner .default-heading-title h3 {
+.banner .default-heading-title h1,
+.banner .default-heading-title h2,
+.banner .default-heading-title h3 {
   margin-bottom: 1rem;
   text-transform: uppercase;
 }
 
 @media screen and (min-width: $breakpoint-lg){
-  .main-banner .default-heading-title h1,
-  .main-banner .default-heading-title h2,
-  .main-banner .default-heading-title h3,
-  .main-banner .default-heading-title p,
-  .main-banner .button-first {
+  .banner .default-heading-title h1,
+  .banner .default-heading-title h2,
+  .banner .default-heading-title h3,
+  .banner .default-heading-title p,
+  .banner .button{
     margin-left: 8%;
   }
 
-  .main-banner .default-heading-title h1,
-  .main-banner .default-heading-title h2,
-  .main-banner .default-heading-title h3 {
+  .banner .default-heading-title h1,
+  .banner .default-heading-title h2,
+  .banner .default-heading-title h3 {
     width: 55%;
   }
 
-  .main-banner .default-heading-title p {
+  .banner .default-heading-title p {
     width: 40%;
   }
 }
 
 @media screen and (min-width: $breakpoint-xl){
-  .main-banner .default-heading-title h1,
-  .main-banner .default-heading-title h2,
-  .main-banner .default-heading-title h3,
-  .main-banner .default-heading-title p,
-  .main-banner .button-first {
+  .banner .default-heading-title h1,
+  .banner .default-heading-title h2,
+  .banner .default-heading-title h3,
+  .banner .default-heading-title p,
+  .banner .button {
     margin-left: 5%;
   }
 }
 
 @media screen and (min-width: $breakpoint-1_5xl) {
-  .main-banner .default-heading-title h1,
-  .main-banner .default-heading-title h2,
-  .main-banner .default-heading-title h3,
-  .main-banner .default-heading-title p,
-  .main-banner .button-first {
+  .banner .default-heading-title h1,
+  .banner .default-heading-title h2,
+  .banner .default-heading-title h3,
+  .banner .default-heading-title p,
+  .banner .button {
     margin-left: 0;
   }
 }

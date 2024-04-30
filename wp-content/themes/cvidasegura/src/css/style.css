@@ -7,64 +7,63 @@
   line-height: 2.5rem;
 }
 
-.main-banner .default-heading-title h1,
-.main-banner .default-heading-title h2,
-.main-banner .default-heading-title h3 {
+.banner .default-heading-title h1,
+.banner .default-heading-title h2,
+.banner .default-heading-title h3 {
   margin-bottom: 1rem;
   text-transform: uppercase;
 }
 
 @media screen and (min-width: 1024px) {
-  .main-banner .default-heading-title h1,
-  .main-banner .default-heading-title h2,
-  .main-banner .default-heading-title h3,
-  .main-banner .default-heading-title p,
-  .main-banner .button-first {
+  .banner .default-heading-title h1,
+  .banner .default-heading-title h2,
+  .banner .default-heading-title h3,
+  .banner .default-heading-title p,
+  .banner .button {
     margin-left: 8%;
   }
-  .main-banner .default-heading-title h1,
-  .main-banner .default-heading-title h2,
-  .main-banner .default-heading-title h3 {
+  .banner .default-heading-title h1,
+  .banner .default-heading-title h2,
+  .banner .default-heading-title h3 {
     width: 55%;
   }
-  .main-banner .default-heading-title p {
+  .banner .default-heading-title p {
     width: 40%;
   }
 }
 @media screen and (min-width: 1280px) {
-  .main-banner .default-heading-title h1,
-  .main-banner .default-heading-title h2,
-  .main-banner .default-heading-title h3,
-  .main-banner .default-heading-title p,
-  .main-banner .button-first {
+  .banner .default-heading-title h1,
+  .banner .default-heading-title h2,
+  .banner .default-heading-title h3,
+  .banner .default-heading-title p,
+  .banner .button {
     margin-left: 5%;
   }
 }
 @media screen and (min-width: 1440px) {
-  .main-banner .default-heading-title h1,
-  .main-banner .default-heading-title h2,
-  .main-banner .default-heading-title h3,
-  .main-banner .default-heading-title p,
-  .main-banner .button-first {
+  .banner .default-heading-title h1,
+  .banner .default-heading-title h2,
+  .banner .default-heading-title h3,
+  .banner .default-heading-title p,
+  .banner .button {
     margin-left: 0;
   }
 }
-.button-first {
-  background-color: #fff;
-  color: #1669B1;
-  font-size: 14px;
-  line-height: 20px;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-family: "Rubik", sans-serif;
+.button {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
   width: fit-content;
   padding: 12px;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
 }
 @media screen and (min-width: 1024px) {
-  .button-first {
+  .button {
     text-transform: uppercase;
     font-weight: bold;
     font-family: "Rubik", sans-serif;
@@ -72,47 +71,25 @@
     line-height: 24px;
   }
 }
+
+.button-first {
+  background-color: #fff;
+  color: #1669B1;
+}
 .button-first:hover {
   background-color: #1b2c4f;
   color: #fff !important;
 }
 
-.offcontainer-left {
-  float: right;
-  left: auto;
-  transform: none;
+.button-second {
+  background-color: #fff;
+  color: #1669B1;
 }
-@media screen and (min-width: 1280px) {
-  .offcontainer-left {
-    max-width: none;
-  }
+.button-second:hover {
+  background-color: #1669B1;
+  color: #fff !important;
 }
 
-.offcontainer-left,
-.offcontainer-right {
-  width: calc(100% + (100vw - 100%) / 2);
-}
-
-@media (min-width: 1024px) {
-  .offcontainer-left,
-  .offcontainer-right {
-    width: calc(100% + (100vw - 100%) / 2);
-  }
-}
-@media (max-width: 767px) {
-  .offcontainer-left {
-    width: 100vh;
-    transform: translateX(2rem);
-    max-width: none;
-  }
-}
-@media screen and (max-width: 767px) and (min-width: 640px) {
-  .offcontainer-left {
-    width: 100vh;
-    max-width: 100vh;
-    position: relative;
-  }
-}
 html,
 body,
 div,
@@ -787,8 +764,7 @@ footer .pre-footer .contact a {
   text-transform: uppercase;
   font-weight: bold;
   font-family: "Rubik", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 15px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -824,6 +800,12 @@ footer .pre-footer .contact img {
   width: 1.25rem;
   height: 1.25rem;
   object-fit: cover;
+}
+@media screen and (min-width: 1024px) {
+  footer .pre-footer .contact img {
+    width: 30px;
+    height: 30px;
+  }
 }
 footer .pre-footer .chris-contact {
   grid-column: span 12/span 12;
@@ -1096,8 +1078,8 @@ footer .after-footer .designer {
 }
 .our-services .service-image .services-cards .card .text {
   padding: 0.875rem;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 20px;
   text-align: center;
 }
 
@@ -1231,6 +1213,106 @@ footer .after-footer .designer {
   width: 15.625rem;
   height: 15.625rem;
   object-fit: contain;
+}
+
+.descriptive-table {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+@media screen and (min-width: 1024px) {
+  .descriptive-table {
+    padding-top: 12.5rem;
+    padding-bottom: 12.5rem;
+  }
+}
+.descriptive-table .tables {
+  column-gap: 2.5rem;
+  display: block;
+}
+@media screen and (min-width: 1024px) {
+  .descriptive-table .tables {
+    display: grid;
+  }
+}
+.descriptive-table .tables .title {
+  grid-column: span 12/span 12;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  color: #1669B1;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .descriptive-table .tables .title {
+    font-size: 35px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .descriptive-table .tables .title {
+    margin-bottom: 6.25rem;
+    grid-column: span 8/span 8;
+    grid-column-start: 3;
+    line-height: 2.5rem;
+  }
+}
+.descriptive-table .tables .image {
+  grid-column: span 12/span 12;
+  margin-bottom: 2.5rem;
+  height: 25rem;
+}
+@media screen and (min-width: 1024px) {
+  .descriptive-table .tables .image {
+    grid-column: span 7/span 7;
+    margin-bottom: 0;
+    height: inherit;
+  }
+}
+.descriptive-table .tables .image img {
+  height: 25rem;
+  position: absolute;
+  left: 0;
+}
+@media screen and (min-width: 1024px) {
+  .descriptive-table .tables .image img {
+    height: 40.625rem;
+    position: relative;
+  }
+}
+.descriptive-table .tables .itens {
+  grid-column: span 12/span 12;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.875rem;
+}
+@media screen and (min-width: 1024px) {
+  .descriptive-table .tables .itens {
+    grid-column: span 5/span 5;
+    justify-content: center;
+    row-gap: 3.125rem;
+  }
+}
+.descriptive-table .tables .itens .icon {
+  position: relative;
+}
+.descriptive-table .tables .itens .icon:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../../library/icons/plano-de-saude-importancia.svg");
+  width: 3.75rem;
+  height: 3.75rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.descriptive-table .tables .itens .text p {
+  padding-left: 5rem;
+}
+.descriptive-table .tables .itens .text p strong {
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */

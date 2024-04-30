@@ -1,0 +1,95 @@
+@import '../../helpers/variables.scss';
+@import '../../helpers/mixins.scss';
+
+.descriptive-table{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    @media screen and (min-width: $breakpoint-lg) {
+        padding-top: 12.5rem;
+        padding-bottom: 12.5rem;
+    }
+    .tables{
+        column-gap: 2.5rem;
+        display: block;
+        
+        @media screen and (min-width: $breakpoint-lg) {
+            display: grid;
+        }
+
+        .title{
+            @include col-span-12;
+            @include heading-title-xl;
+            color: $blue;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            
+            @media screen and (min-width: $breakpoint-lg) {
+                margin-bottom: 6.25rem;
+                @include col-span-8;
+                @include col-start-3;
+                line-height: 2.5rem;
+            }
+        }
+
+        .image{
+            @include col-span-12;
+            margin-bottom: 2.5rem;
+            height: 25rem;
+
+            @media screen and (min-width: $breakpoint-lg) {
+                @include col-span-7;
+                margin-bottom: 0;
+                height: inherit;
+            }
+
+            img{
+                height: 25rem;
+                position: absolute;
+                left: 0;
+
+                @media screen and (min-width: $breakpoint-lg) {
+                    height: 40.625rem;
+                    position: relative;
+                }
+            }
+        }
+    
+        .itens{
+            @include col-span-12;
+            display: flex;
+            flex-direction: column;
+            row-gap: 1.875rem;
+            
+            @media screen and (min-width: $breakpoint-lg) {
+                @include col-span-5;
+                justify-content: center;
+                row-gap: 3.125rem;
+            }
+
+            .icon{
+               position: relative;
+               
+               &:before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-image: url('../../library/icons/plano-de-saude-importancia.svg');
+                width: 3.75rem;
+                height: 3.75rem;
+                background-repeat: no-repeat;
+                background-size: contain;
+               }
+            }
+
+
+            .text p{
+                strong{
+                    font-weight: 700;
+                }
+                padding-left: 5rem;
+            }
+        }
+    }
+}

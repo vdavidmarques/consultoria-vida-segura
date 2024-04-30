@@ -1,6 +1,6 @@
-<section class="main-banner py-20">
+<section class="main-banner banner py-20">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <div class="swiper-container relative overflow-hidden h-[25rem] lg:h-[31.25rem]">
+            <div class="swiper-container relative overflow-hidden">
                 <div class="swiper-wrapper">
                     <div class="first-banner swiper-slide">
                         <?php
@@ -39,7 +39,7 @@
 
                             if ($buttonLinkF && $buttonLabelF) : ?>
 
-                                <a href="<?php echo $buttonLinkF ?>" itemprop="name" class="mt-6 button-first">
+                                <a href="<?php echo $buttonLinkF ?>" itemprop="name" class="mt-6 button button button-second">
                                     <?php echo $buttonLabelF ?>
                                 </a>
 
@@ -85,7 +85,7 @@
                             endif;
 
                             if ($buttonLinkS && $buttonLabelS) : ?>
-                                <a href="<?php echo $buttonLinkS ?>" itemprop="name" class="mt-6 button-first">
+                                <a href="<?php echo $buttonLinkS ?>" itemprop="name" class="mt-6 button button-first">
                                     <?php echo $buttonLabelS ?>
                                 </a>
                             <?php endif; ?>
@@ -130,7 +130,7 @@
 
                             if ($buttonLinkT && $buttonLabelT) : ?>
 
-                                <a href="<?php echo $buttonLinkT ?>" itemprop="name" class="mt-6 button-first">
+                                <a href="<?php echo $buttonLinkT ?>" itemprop="name" class="mt-6 button button-first">
                                     <?php echo $buttonLabelT ?>
                                 </a>
 
@@ -175,7 +175,7 @@
 
                             if ($buttonLinkFo && $buttonLabelFo) : ?>
 
-                                <a href="<?php echo $buttonLinkF ?>" itemprop="name" class="mt-6 button-first">
+                                <a href="<?php echo $buttonLinkF ?>" itemprop="name" class="mt-6 button button-first">
                                     <?php echo $buttonLabelFo ?>
                                 </a>
                             <?php endif; ?>
@@ -219,7 +219,7 @@
                             endif;
 
                             if ($buttonLinkFi && $buttonLabelFi) : ?>
-                                <a href="<?php echo $buttonLinkFi ?>" itemprop="name" class="mt-6 button-first">
+                                <a href="<?php echo $buttonLinkFi ?>" itemprop="name" class="mt-6 button button-first">
                                     <?php echo $buttonLabelFi ?>
                                 </a>
                             <?php endif; ?>

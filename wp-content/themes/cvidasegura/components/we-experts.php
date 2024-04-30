@@ -26,7 +26,7 @@
                 $whatsappNumber = get_field('whatsappNumber');
                 $whatsappMessage = get_field('whatsappMessage');
             ?>
-                <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber ?>&text=<?php echo $whatsappMessage ?>" class="button-first">
+                <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber ?>&text=<?php echo $whatsappMessage ?>" class="button button-first">
                     <?php echo $wppLabelButton ?>
                 </a>
             <?php } ?>

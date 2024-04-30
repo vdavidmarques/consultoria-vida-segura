@@ -142,7 +142,7 @@
                 }
                 .text{
                     padding: 0.875rem;
-                    @include text-base;
+                    @include text-sm;
                     text-align: center;
                 }
             }
