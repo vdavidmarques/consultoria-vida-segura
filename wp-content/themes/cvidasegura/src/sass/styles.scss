@@ -2,10 +2,12 @@
 @import "helpers/variables";
 @import "helpers/heading-titles";
 @import "helpers/buttons";
+@import "helpers/off-container";
 
 @import "layout/default";
 @import "layout/header";
 @import "layout/footer";
 @import "layout/swipers";
 
-@import "layout/components/our-services.scss";
+@import "layout/components/our-services";
+@import "layout/components/we-experts";

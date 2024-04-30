@@ -1,0 +1,36 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.offcontainer-left {
+  float: right;
+  left: auto;
+  transform: none;
+  @media screen and (min-width: $breakpoint-xl){
+    max-width: none;
+  }
+}
+
+.offcontainer-left,
+.offcontainer-right {
+  width: calc(100% + (100vw - 100%) / 2);
+}
+
+@media (min-width: 1024px) {
+  .offcontainer-left,
+  .offcontainer-right {
+    width: calc(100% + (100vw - 100%) / 2);
+  }
+}
+
+@media (max-width: 767px) {
+  .offcontainer-left {
+    width: 100vh;
+    transform: translateX(2rem);
+    max-width: none;
+    @media screen and (min-width: $breakpoint-sm){
+      width: 100vh;
+      max-width: 100vh;
+      position: relative;
+    }
+  }
+}
