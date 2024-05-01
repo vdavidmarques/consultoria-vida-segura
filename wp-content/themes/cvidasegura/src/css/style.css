@@ -1380,5 +1380,8 @@ footer .after-footer .designer {
   font-size: 18px;
   line-height: 28px;
 }
+.call-to-action .content .button-green, .call-to-action .content .button-white {
+  font-size: 1.125rem;
+}
 
 /*# sourceMappingURL=style.css.map */

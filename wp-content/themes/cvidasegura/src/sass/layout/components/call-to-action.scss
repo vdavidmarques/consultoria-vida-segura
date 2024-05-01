@@ -28,5 +28,9 @@
         p{
             @include text-lg;
         }
+
+        .button-green, .button-white{
+            font-size: 1.125rem;
+        }
     }
 }
