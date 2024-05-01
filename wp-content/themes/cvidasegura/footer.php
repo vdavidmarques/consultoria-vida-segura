@@ -76,9 +76,11 @@
         if (is_home( '63' ) ): //homepage
     ?>
         <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/home.min.js" ?>"></script>
+        <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/partners.min.js" ?>"></script>
             
     <?php elseif( is_post_type_archive('planos-de-saude' )) : ?>
         <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/health-insurance.min.js" ?>"></script>
+        <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/partners.min.js" ?>"></script>
     <?php endif; ?>
 
     <?php

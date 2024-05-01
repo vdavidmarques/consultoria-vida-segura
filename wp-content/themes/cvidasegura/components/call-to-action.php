@@ -14,7 +14,6 @@
 
         $healthInsurance = get_field('health-insurance');
 
-        //Call to action
         $title = $healthInsurance['call-to-action-main-title'];
         $text = $healthInsurance['call-to-action-description'];
         $wppLabel = $healthInsurance['call-to-action-wpp-label'];
