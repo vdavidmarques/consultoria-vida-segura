@@ -1,0 +1,32 @@
+@import '../../helpers/variables.scss';
+@import '../../helpers/mixins.scss';
+
+.call-to-action{
+    padding-bottom: 5rem;
+    color: $white;
+    background-color: $blue;
+
+    @media screen and (min-width: $breakpoint-lg) {
+        padding: 6.25rem 0;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.25rem;
+        align-items: center;
+        text-align: center;
+
+        .title{
+            @include heading-title-xl;
+            line-height: 2.8125rem;
+            color: $white;
+
+            @media screen and (min-width: $breakpoint-lg) {
+                max-width: 30rem;
+            }
+        }
+        p{
+            @include text-lg;
+        }
+    }
+}

@@ -31,3 +31,31 @@
     color: $white!important;
   }
 }
+
+.button-green{
+  background-color: $green;
+  color: $white;
+
+  &:hover {
+    background-color: $green-dark;
+  }
+}
+
+.button-blue{
+  background-color: $blue;
+  color: $white;
+
+  &:hover {
+    background-color: $blue-dark;
+  }
+}
+
+.button-white{
+  background-color: $white;
+  color: $blue;
+
+  &:hover {
+    background-color: $gray;
+    color: $blue-dark;
+  }
+}

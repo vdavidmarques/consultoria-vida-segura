@@ -90,6 +90,31 @@
   color: #fff !important;
 }
 
+.button-green {
+  background-color: #61CE70;
+  color: #fff;
+}
+.button-green:hover {
+  background-color: #1C7B29;
+}
+
+.button-blue {
+  background-color: #1669B1;
+  color: #fff;
+}
+.button-blue:hover {
+  background-color: #1b2c4f;
+}
+
+.button-white {
+  background-color: #fff;
+  color: #1669B1;
+}
+.button-white:hover {
+  background-color: #D9D9D9;
+  color: #1b2c4f;
+}
+
 html,
 body,
 div,
@@ -1313,6 +1338,47 @@ footer .after-footer .designer {
 }
 .descriptive-table .tables .itens .text p strong {
   font-weight: 700;
+}
+
+.call-to-action {
+  padding-bottom: 5rem;
+  color: #fff;
+  background-color: #1669B1;
+}
+@media screen and (min-width: 1024px) {
+  .call-to-action {
+    padding: 6.25rem 0;
+  }
+}
+.call-to-action .content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.25rem;
+  align-items: center;
+  text-align: center;
+}
+.call-to-action .content .title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  line-height: 2.8125rem;
+  color: #fff;
+}
+@media screen and (min-width: 1024px) {
+  .call-to-action .content .title {
+    font-size: 35px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .call-to-action .content .title {
+    max-width: 30rem;
+  }
+}
+.call-to-action .content p {
+  font-size: 18px;
+  line-height: 28px;
 }
 
 /*# sourceMappingURL=style.css.map */
