@@ -12,8 +12,21 @@
                 $whatsappMessage = get_field('whatsappMessage');
                 $email = get_field('e-mail');   
                 
-                $healthInsurance = get_field('health-insurance');
-                $banners = $healthInsurance['banners-health-insurance'];
+                //Checking archive types
+                if( is_post_type_archive('planos-de-saude' )) {
+                    $healthInsurance = get_field('health-insurance');
+                    $banners = $healthInsurance['banners-health-insurance'];
+                }elseif (is_post_type_archive('seguros' )) {
+                    $lifeInsurance = get_field('life-insurance');
+                    $banners = $lifeInsurance['banners-health-insurance'];
+                }elseif (is_post_type_archive('planos-odontologicos' )) {
+                    $dentalPlans = get_field('dental-plans');
+                    $banners = $dentalPlans['banners-health-insurance'];
+                }elseif (is_post_type_archive('planos-funeral' )) {
+                    $funeralPlans = get_field('funeral-plans');
+                    $banners = $funeralPlans['banners-health-insurance'];
+                }
+        $count = 0;
         if ($banners):
     ?>
             <div class="swiper-container relative overflow-hidden">
@@ -40,7 +53,7 @@
                                 echo $banner['text'];
                             endif;
 
-                            if ($banner['botao']['url'] &&  $banner['botao']['title']) : ?>
+                            if ($banner['botao']): ?>
 
                                 <a href="<?php echo $banner['botao']['url'] ?>" itemprop="name" class="mt-6 button button-second">
                                     <?php echo  $banner['botao']['title'] ?>
@@ -48,8 +61,13 @@
 
                             <?php endif; ?>
                         </div>
-                        <div class="swiper-button-prev arrow-swiper arrow-swiper-prev"></div>
-                        <div class="swiper-button-next arrow-swiper arrow-swiper-next"></div>
+                        <?php 
+                            $count = count($banners); 
+                            if ($count > 1):
+                        ?>
+                            <div class="swiper-button-prev arrow-swiper arrow-swiper-prev"></div>
+                            <div class="swiper-button-next arrow-swiper arrow-swiper-next"></div>
+                        <?php endif; ?>
                     </div>                             
                     <?php  endforeach; ?>
                 </div>
