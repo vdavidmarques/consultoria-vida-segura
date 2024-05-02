@@ -13,32 +13,32 @@
   margin-right: auto;
 }
 
-@mixin text-xs {
-  font-size: 12px;
-  line-height: 20px;
+@mixin text-xs {//12px
+  font-size: 0.75rem;
+  line-height: 1.25rem;
 }
 
-@mixin text-sm {
-  font-size: 14px;
-  line-height: 20px;
+@mixin text-sm {//14px
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
-@mixin text-base {
-  font-size: 16px;
-  line-height: 24px;
+@mixin text-base {//16px
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
-@mixin text-lg {
-  font-size: 18px;
-  line-height: 28px;
+@mixin text-lg {//18px
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
-@mixin text-xl {
-  font-size: 20px;
-  line-height: 28px;
+@mixin text-xl {//20px
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
-@mixin text-4xl {
-  font-size: 36px;
+@mixin text-4xl {//36px
+  font-size: 2.25rem;
   line-height: 2.5rem;
 }
 
@@ -76,23 +76,23 @@
   @include heading-titles;
   @include text-base;
   @media screen and (min-width: $breakpoint-lg) {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 
-@mixin heading-title-xl {
+@mixin heading-title-xl {//20px e 35px
   @include heading-titles;
   @include text-xl;
   @media screen and (min-width: $breakpoint-lg) {
-    font-size: 35px;
+    font-size: 2.1875rem;
   }
 }
 
-@mixin heading-title-2xl {
+@mixin heading-title-2xl {//36px e 55px
   @include heading-titles;
   @include text-4xl;
   @media screen and (min-width: $breakpoint-lg) {
-    font-size: 55px;
+    font-size: 3.4375rem;
     text-indent: -1px;
   }
 }
@@ -126,6 +126,14 @@
 
 @mixin h-full {
   width: 100%;
+}
+
+@mixin grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@mixin grid-cols-12 {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
 @mixin col-span-1 {

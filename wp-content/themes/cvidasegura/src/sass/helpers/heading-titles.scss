@@ -3,7 +3,7 @@
 
 .default-heading-title h1,
 .default-heading-title h2,
-.default-heading-title h3 {
+.default-heading-title h3 {//36px
   @include font-rubik;
   font-weight: bold;
   font-size: 2.25rem;

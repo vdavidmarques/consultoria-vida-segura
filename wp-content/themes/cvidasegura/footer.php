@@ -73,12 +73,13 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <?php 
+        $my_post_types_archives = array('planos-de-saude', 'seguros', 'planos-odontologicos', 'planos-funeral');
         if (is_home( '63' ) ): //homepage
     ?>
         <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/home.min.js" ?>"></script>
         <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/partners.min.js" ?>"></script>
             
-    <?php elseif( is_post_type_archive('planos-de-saude' )) : ?>
+    <?php elseif( is_post_type_archive($my_post_types_archives )) : ?>
         <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/health-insurance.min.js" ?>"></script>
         <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/partners.min.js" ?>"></script>
     <?php endif; ?>

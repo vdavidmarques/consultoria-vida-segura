@@ -1,0 +1,145 @@
+@import '../../helpers/variables.scss';
+@import '../../helpers/mixins.scss';
+
+.page-sobre{
+    .perfil .header-top{
+        position: relative;
+        height: auto;
+        text-align: center;
+
+        .socials-and-menu{
+            margin-left: 0;
+        }
+    }
+
+    .facilities{
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        
+        @media screen and (min-width: $breakpoint-lg) {
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+        }
+
+        .title{
+            @include col-span-12;
+            @include heading-title-xl;
+            color: $blue;
+            text-align: center;
+            margin-bottom: 2.5rem;
+
+            @media screen and (min-width: $breakpoint-lg) {            
+                margin-bottom: 5rem;
+            }
+        }
+
+        ul{
+            @include col-span-12;
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            row-gap: 2.5rem;
+
+            @media screen and (min-width: $breakpoint-lg) {
+                row-gap: 0;
+            }
+
+            .list{
+                @include col-span-12;
+                display: flex;
+                flex-direction: row;
+                @include heading-title-lg;
+                text-transform: none;
+                color: $blue;
+                position: relative;
+                padding-left: 3.75rem;
+    
+                &:before{
+                    content: '';
+                    background-image: url('../../library/icons/check.svg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                @media screen and (min-width: $breakpoint-lg) {
+                    @include col-span-6; 
+                }
+            }
+        }
+    }
+
+    .choose{
+        background-color: $blue;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        
+        @media screen and (min-width: $breakpoint-lg) {
+            padding-top: 6.25rem;
+            padding-bottom: 6.25rem;
+        }
+        
+        .cards{
+            display: grid;
+            column-gap: 0;
+            row-gap: 1.25rem;
+            @include grid-cols-12;
+            
+            @media screen and (min-width: $breakpoint-lg) {
+                column-gap: 1.25rem;
+                row-gap: 2.5rem;
+            }
+
+            .choosen{
+                background-color: $white;
+                color: $blue;
+                border-radius: 30px;
+                padding: 2.5rem 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                row-gap: 2.5rem;
+                text-align: center;
+                @include col-span-12;
+                
+                @media screen and (min-width: $breakpoint-lg) {
+                    @include col-span-4;    
+                }
+                
+                .circle{
+                    background-color: $blue;
+                    width: 6.25rem;
+                    height: 6.25rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 9999px;
+    
+                    .icon{
+                        width: 3.75rem;
+                        height: 3.75rem;
+                        object-fit: contain;
+                    }
+                }
+
+                .content{
+                    row-gap: 1.25rem;
+                    display: flex;
+                    flex-direction: column;
+
+                    h1, h2, h3, h4 {
+                        @include font-rubik;
+                        font-weight: bold;
+                        font-size: 2.25rem;
+                        line-height: 2.5rem;
+                        color: $blue;
+                    }
+                }
+            }
+        }
+    }
+}

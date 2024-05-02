@@ -56,8 +56,8 @@
   width: fit-content;
   padding: 12px;
   text-decoration: none;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   text-transform: uppercase;
   font-weight: bold;
   font-family: "Rubik", sans-serif;
@@ -67,8 +67,8 @@
     text-transform: uppercase;
     font-weight: bold;
     font-family: "Rubik", sans-serif;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -866,8 +866,8 @@ footer .pre-footer .chris-contact .title {
   text-transform: uppercase;
   font-weight: bold;
   font-family: "Rubik", sans-serif;
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
   line-height: 1.5rem; /* 24px */
   color: #fff !important;
   margin-bottom: 0.625rem;
@@ -885,8 +885,8 @@ footer .after-footer {
   padding: 1.25rem 0;
 }
 footer .after-footer .designer {
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
   color: #1669B1;
 }
 
@@ -972,20 +972,20 @@ footer .after-footer .designer {
   text-transform: uppercase;
   font-weight: bold;
   font-family: "Rubik", sans-serif;
-  font-size: 36px;
+  font-size: 2.25rem;
   line-height: 2.5rem;
   margin-bottom: 2rem;
   color: #1669B1;
 }
 @media screen and (min-width: 1024px) {
   .our-services .content-text .wrap .title {
-    font-size: 55px;
+    font-size: 3.4375rem;
     text-indent: -1px;
   }
 }
 .our-services .content-text .wrap .text {
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 .our-services .service-image {
   padding: 2.5rem 1rem;
@@ -1092,19 +1092,19 @@ footer .after-footer .designer {
     text-transform: uppercase;
     font-weight: bold;
     font-family: "Rubik", sans-serif;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 @media screen and (min-width: 1440px) and (min-width: 1024px) {
   .our-services .service-image .services-cards .card .header .title {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 .our-services .service-image .services-cards .card .text {
   padding: 0.875rem;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   text-align: center;
 }
 
@@ -1130,11 +1130,6 @@ footer .after-footer .designer {
   left: 0;
   z-index: 10;
   height: 25rem;
-}
-@media screen and (min-width: 640px) {
-  .we-experts .bg-image img {
-    height: 31.25rem;
-  }
 }
 @media screen and (min-width: 1024px) {
   .we-experts .bg-image img {
@@ -1218,14 +1213,14 @@ footer .after-footer .designer {
   text-transform: uppercase;
   font-weight: bold;
   font-family: "Rubik", sans-serif;
-  font-size: 36px;
+  font-size: 2.25rem;
   line-height: 2.5rem;
   color: #1669B1;
   margin-bottom: 2.5rem;
 }
 @media screen and (min-width: 1024px) {
   .partners .title {
-    font-size: 55px;
+    font-size: 3.4375rem;
     text-indent: -1px;
   }
 }
@@ -1264,15 +1259,15 @@ footer .after-footer .designer {
   text-transform: uppercase;
   font-weight: bold;
   font-family: "Rubik", sans-serif;
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
   color: #1669B1;
   text-align: center;
   margin-bottom: 2.5rem;
 }
 @media screen and (min-width: 1024px) {
   .descriptive-table .tables .title {
-    font-size: 35px;
+    font-size: 2.1875rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1361,14 +1356,14 @@ footer .after-footer .designer {
   text-transform: uppercase;
   font-weight: bold;
   font-family: "Rubik", sans-serif;
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
   line-height: 2.8125rem;
   color: #fff;
 }
 @media screen and (min-width: 1024px) {
   .call-to-action .content .title {
-    font-size: 35px;
+    font-size: 2.1875rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1377,11 +1372,164 @@ footer .after-footer .designer {
   }
 }
 .call-to-action .content p {
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 .call-to-action .content .button-green, .call-to-action .content .button-white {
   font-size: 1.125rem;
+}
+
+.page-sobre .perfil .header-top {
+  position: relative;
+  height: auto;
+  text-align: center;
+}
+.page-sobre .perfil .header-top .socials-and-menu {
+  margin-left: 0;
+}
+.page-sobre .facilities {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+@media screen and (min-width: 1024px) {
+  .page-sobre .facilities {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+}
+.page-sobre .facilities .title {
+  grid-column: span 12/span 12;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: #1669B1;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .page-sobre .facilities .title {
+    font-size: 2.1875rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .page-sobre .facilities .title {
+    margin-bottom: 5rem;
+  }
+}
+.page-sobre .facilities ul {
+  grid-column: span 12/span 12;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  row-gap: 2.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .page-sobre .facilities ul {
+    row-gap: 0;
+  }
+}
+.page-sobre .facilities ul .list {
+  grid-column: span 12/span 12;
+  display: flex;
+  flex-direction: row;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-transform: none;
+  color: #1669B1;
+  position: relative;
+  padding-left: 3.75rem;
+}
+@media screen and (min-width: 1024px) {
+  .page-sobre .facilities ul .list {
+    font-size: 1.25rem;
+  }
+}
+.page-sobre .facilities ul .list:before {
+  content: "";
+  background-image: url("../../library/icons/check.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media screen and (min-width: 1024px) {
+  .page-sobre .facilities ul .list {
+    grid-column: span 6/span 6;
+  }
+}
+.page-sobre .choose {
+  background-color: #1669B1;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+@media screen and (min-width: 1024px) {
+  .page-sobre .choose {
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+  }
+}
+.page-sobre .choose .cards {
+  display: grid;
+  column-gap: 0;
+  row-gap: 1.25rem;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+@media screen and (min-width: 1024px) {
+  .page-sobre .choose .cards {
+    column-gap: 1.25rem;
+    row-gap: 2.5rem;
+  }
+}
+.page-sobre .choose .cards .choosen {
+  background-color: #fff;
+  color: #1669B1;
+  border-radius: 30px;
+  padding: 2.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2.5rem;
+  text-align: center;
+  grid-column: span 12/span 12;
+}
+@media screen and (min-width: 1024px) {
+  .page-sobre .choose .cards .choosen {
+    grid-column: span 4/span 4;
+  }
+}
+.page-sobre .choose .cards .choosen .circle {
+  background-color: #1669B1;
+  width: 6.25rem;
+  height: 6.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+}
+.page-sobre .choose .cards .choosen .circle .icon {
+  width: 3.75rem;
+  height: 3.75rem;
+  object-fit: contain;
+}
+.page-sobre .choose .cards .choosen .content {
+  row-gap: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+.page-sobre .choose .cards .choosen .content h1, .page-sobre .choose .cards .choosen .content h2, .page-sobre .choose .cards .choosen .content h3, .page-sobre .choose .cards .choosen .content h4 {
+  font-family: "Rubik", sans-serif;
+  font-weight: bold;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  color: #1669B1;
 }
 
 /*# sourceMappingURL=style.css.map */
