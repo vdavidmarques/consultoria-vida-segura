@@ -175,6 +175,11 @@ body {
   @include font-montserrat;
   font-size: 1rem; /* 16px */
   line-height: 1.25rem;
+  overflow-x: hidden;
+}
+
+[aria-current]:not([aria-current="false"]) {
+  color: $blue-dark!important;
 }
 
 .container {
