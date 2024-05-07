@@ -1,0 +1,133 @@
+@import "../../helpers/variables.scss";
+@import "../../helpers/mixins.scss";
+
+.single {
+  .facilities .title {
+    line-height: 2.75rem;
+  }
+
+  .icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+
+  .tab {
+    overflow: hidden;
+        
+        .headers{
+            display: flex;
+            flex-direction: row;
+            .tab-header {
+                background-color: $blue;
+                color: $white;
+                padding: 1.25rem;
+                cursor: pointer;
+                @include heading-title-lg;
+                border: none;
+                outline: none;
+                transition: background-color 0.3s;
+        
+                &:hover,
+                &.active {
+                    background-color: $blue-dark;
+                }
+            }     
+        }
+  
+      .tab-body {
+        background-color: $blue-dark;
+        color: $white;
+        padding: 2.5rem;
+        clear: both;
+        display: none;
+
+        @media screen and (min-width: $breakpoint-lg) {
+            padding: 5rem;
+        }
+  
+        .descriptions-options {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 5rem;
+  
+          .title {
+            @include heading-title-xl;
+            margin-bottom: 40px;
+          }
+  
+          .title-and-icon-list {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 2.5rem;
+  
+            .icon-text {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              column-gap: 0.625rem;
+              @include heading-title-md;
+            }
+          }
+        }
+  
+        .packages {
+          display: flex;
+          flex-direction: column;
+          row-gap: 2.5rem;
+  
+          @media screen and (min-width: $breakpoint-lg) {
+            flex-direction: row;
+            column-gap: 1.25rem;
+            row-gap: 0;
+          }
+  
+          .packs {
+            background-color: $white;
+            color: $blue;
+            border-radius: 0.625rem 0.625rem 0 0;
+  
+            .title {
+                @include heading-text-sm; 
+                text-transform: none;
+
+                h1,
+                h2,
+                h3, 
+                h4 {
+                    @include heading-title-lg;
+                }
+                border-radius: 0.625rem 0.625rem 0 0;
+                background-color: $blue;
+                padding: 1.25rem;
+                text-align: center;
+                color: $white;
+            }
+  
+            p {
+              margin-bottom: 10px;
+              @include heading-text-md; 
+            }
+
+            .content {
+              display: flex;
+              flex-direction: row;
+              column-gap: 0.625rem;
+              margin-top: 1.25rem;
+              @include text-sm;
+              padding: 0 1.25rem 1.25rem;
+  
+              .icon {
+                width: 1.5625rem;
+                height: 1.5625rem;
+              }
+            }
+          }
+        }
+    }
+    
+  }
+}

@@ -461,6 +461,97 @@ img {
   z-index: 10;
 }
 
+.facilities {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+@media screen and (min-width: 1024px) {
+  .facilities {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+}
+.facilities .title {
+  grid-column: span 12/span 12;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: #1669B1;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .facilities .title {
+    font-size: 2.1875rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .facilities .title {
+    margin-bottom: 5rem;
+  }
+}
+.facilities .title p {
+  font-family: "MontSerrat", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-transform: none;
+}
+@media screen and (min-width: 1024px) {
+  .facilities .title p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+.facilities ul {
+  grid-column: span 12/span 12;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  row-gap: 2.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .facilities ul {
+    row-gap: 0;
+  }
+}
+.facilities ul .list {
+  grid-column: span 12/span 12;
+  display: flex;
+  flex-direction: row;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-transform: none;
+  color: #1669B1;
+  position: relative;
+  padding-left: 3.75rem;
+}
+@media screen and (min-width: 1024px) {
+  .facilities ul .list {
+    font-size: 1.25rem;
+  }
+}
+.facilities ul .list:before {
+  content: "";
+  background-image: url("../../library/icons/check.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media screen and (min-width: 1024px) {
+  .facilities ul .list {
+    grid-column: span 6/span 6;
+  }
+}
+
 .social-icon img {
   object-fit: cover;
   background-repeat: no-repeat;
@@ -596,7 +687,7 @@ img {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
   padding: 1.5rem;
-  z-index: 10;
+  z-index: 30;
   display: none;
   font-weight: bold;
   text-transform: uppercase;
@@ -1466,84 +1557,6 @@ footer .after-footer .designer {
 .page-sobre .perfil .header-top .socials-and-menu {
   margin-left: 0;
 }
-.page-sobre .facilities {
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-@media screen and (min-width: 1024px) {
-  .page-sobre .facilities {
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-  }
-}
-.page-sobre .facilities .title {
-  grid-column: span 12/span 12;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-family: "Rubik", sans-serif;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  color: #1669B1;
-  text-align: center;
-  margin-bottom: 2.5rem;
-}
-@media screen and (min-width: 1024px) {
-  .page-sobre .facilities .title {
-    font-size: 2.1875rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .page-sobre .facilities .title {
-    margin-bottom: 5rem;
-  }
-}
-.page-sobre .facilities ul {
-  grid-column: span 12/span 12;
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  row-gap: 2.5rem;
-}
-@media screen and (min-width: 1024px) {
-  .page-sobre .facilities ul {
-    row-gap: 0;
-  }
-}
-.page-sobre .facilities ul .list {
-  grid-column: span 12/span 12;
-  display: flex;
-  flex-direction: row;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-family: "Rubik", sans-serif;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  text-transform: none;
-  color: #1669B1;
-  position: relative;
-  padding-left: 3.75rem;
-}
-@media screen and (min-width: 1024px) {
-  .page-sobre .facilities ul .list {
-    font-size: 1.25rem;
-  }
-}
-.page-sobre .facilities ul .list:before {
-  content: "";
-  background-image: url("../../library/icons/check.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 2.5rem;
-  height: 2.5rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-@media screen and (min-width: 1024px) {
-  .page-sobre .facilities ul .list {
-    grid-column: span 6/span 6;
-  }
-}
 .page-sobre .choose {
   background-color: #1669B1;
   padding-top: 5rem;
@@ -1609,6 +1622,163 @@ footer .after-footer .designer {
   font-size: 2.25rem;
   line-height: 2.5rem;
   color: #1669B1;
+}
+
+.single .facilities .title {
+  line-height: 2.75rem;
+}
+.single .icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.single .tab {
+  overflow: hidden;
+}
+.single .tab .headers {
+  display: flex;
+  flex-direction: row;
+}
+.single .tab .headers .tab-header {
+  background-color: #1669B1;
+  color: #fff;
+  padding: 1.25rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s;
+}
+@media screen and (min-width: 1024px) {
+  .single .tab .headers .tab-header {
+    font-size: 1.25rem;
+  }
+}
+.single .tab .headers .tab-header:hover, .single .tab .headers .tab-header.active {
+  background-color: #002369;
+}
+.single .tab .tab-body {
+  background-color: #002369;
+  color: #fff;
+  padding: 2.5rem;
+  clear: both;
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .single .tab .tab-body {
+    padding: 5rem;
+  }
+}
+.single .tab .tab-body .descriptions-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+.single .tab .tab-body .descriptions-options .title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 1024px) {
+  .single .tab .tab-body .descriptions-options .title {
+    font-size: 2.1875rem;
+  }
+}
+.single .tab .tab-body .descriptions-options .title-and-icon-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2.5rem;
+}
+.single .tab .tab-body .descriptions-options .title-and-icon-list .icon-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.625rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.single .tab .tab-body .packages {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .single .tab .tab-body .packages {
+    flex-direction: row;
+    column-gap: 1.25rem;
+    row-gap: 0;
+  }
+}
+.single .tab .tab-body .packages .packs {
+  background-color: #fff;
+  color: #1669B1;
+  border-radius: 0.625rem 0.625rem 0 0;
+}
+.single .tab .tab-body .packages .packs .title {
+  font-family: "MontSerrat", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-transform: none;
+  border-radius: 0.625rem 0.625rem 0 0;
+  background-color: #1669B1;
+  padding: 1.25rem;
+  text-align: center;
+  color: #fff;
+}
+.single .tab .tab-body .packages .packs .title h1,
+.single .tab .tab-body .packages .packs .title h2,
+.single .tab .tab-body .packages .packs .title h3,
+.single .tab .tab-body .packages .packs .title h4 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .single .tab .tab-body .packages .packs .title h1,
+  .single .tab .tab-body .packages .packs .title h2,
+  .single .tab .tab-body .packages .packs .title h3,
+  .single .tab .tab-body .packages .packs .title h4 {
+    font-size: 1.25rem;
+  }
+}
+.single .tab .tab-body .packages .packs p {
+  margin-bottom: 10px;
+  font-family: "MontSerrat", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .single .tab .tab-body .packages .packs p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+.single .tab .tab-body .packages .packs .content {
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.625rem;
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: 0 1.25rem 1.25rem;
+}
+.single .tab .tab-body .packages .packs .content .icon {
+  width: 1.5625rem;
+  height: 1.5625rem;
 }
 
 /*# sourceMappingURL=style.css.map */
