@@ -1,4 +1,4 @@
-<section class="main-banner banner py-20">
+<article class="main-banner banner py-20">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <div class="swiper-container relative overflow-hidden">
                 <div class="swiper-wrapper">
@@ -231,4 +231,4 @@
                 </div>
         <?php endwhile;
     endif; ?>
-</section>
+</article>
