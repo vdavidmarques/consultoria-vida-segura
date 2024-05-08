@@ -55,7 +55,8 @@
   
           .title {
             @include heading-title-xl;
-            margin-bottom: 40px;
+            margin-bottom: 2.5rem;
+            line-height: 2.5rem;
           }
   
           .title-and-icon-list {
@@ -63,7 +64,12 @@
             align-items: center;
             justify-content: center;
             column-gap: 2.5rem;
-  
+            flex-direction: column;
+            
+            @media screen and (min-width: $breakpoint-lg) {
+                flex-direction: row;
+            }
+
             .icon-text {
               display: flex;
               align-items: center;
@@ -123,6 +129,7 @@
               .icon {
                 width: 1.5625rem;
                 height: 1.5625rem;
+                transform: translateY(0.3125rem);
               }
             }
           }

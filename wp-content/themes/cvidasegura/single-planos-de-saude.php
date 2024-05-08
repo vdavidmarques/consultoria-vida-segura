@@ -4,11 +4,9 @@
 
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <article>
-
-                <?php the_title() ?>
-
                 <div class="container facilities">
                     <div itemprop="articleBody" class="title">
+                        <h1 class="main-title"><?php the_title() ?></h1>
                         <?php echo get_field('facilities-title'); ?>
                     </div>
                     <?php include get_template_directory() . '/blocks/icons-and-texts.php'; ?>
