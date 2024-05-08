@@ -299,6 +299,22 @@ img {
   object-fit: cover;
 }
 
+.blue{
+  color: $blue;
+}
+
+.blue-dark{
+  color: $blue-dark;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+.mt-20{
+  margin-top: 5rem;
+}
+
 .show-desktop {
   display: none;
 
@@ -350,6 +366,11 @@ img {
       @include heading-text-md;
       text-transform: none;
     }
+
+    .main-title{
+      margin-bottom: 2.5rem;
+      color: $blue-dark;
+    }
   }
 
   ul {
@@ -388,5 +409,38 @@ img {
         @include col-span-6;
       }
     }
+  }
+}
+
+.button-primary{
+  width: fit-content;
+  height: fit-content;
+  @include heading-text-sm;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: $blue;
+  color: $white;
+  padding: 1.25rem;
+  font-weight: bold;
+
+  &:hover{
+    background-color: $blue-dark;
+    @include transition-colors;
+  }
+}
+
+.post-not-found{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1.25rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  .entry-title{
+    @include heading-title-lg;
+    color: $blue-dark;
   }
 }
