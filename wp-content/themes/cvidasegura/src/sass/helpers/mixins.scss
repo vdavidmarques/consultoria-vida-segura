@@ -211,3 +211,8 @@
 @mixin col-start-12 {
   grid-column-start: 12;
 }
+
+@mixin mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}

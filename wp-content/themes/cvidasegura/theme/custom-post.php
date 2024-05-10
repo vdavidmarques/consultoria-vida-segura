@@ -97,7 +97,7 @@
             'show_ui'           => true,
             'show_admin_column' => true,
             'query_var'         => true,
-            'rewrite'           => array( 'slug' => 'categoria-planos-de-saude' ),
+            'rewrite'           => array( 'slug' => 'plano-de-saude' ),
         );
         
         register_taxonomy( 'categoria_planos-de-saude', 'planos-de-saude', $args_taxonomy );
@@ -162,7 +162,7 @@
             'show_ui'           => true,
             'show_admin_column' => true,
             'query_var'         => true,
-            'rewrite'           => array( 'slug' => 'categoria-seguro' ),
+            'rewrite'           => array( 'slug' => 'seguro' ),
         );
         
         register_taxonomy( 'categoria_seguro', 'seguros', $args_taxonomy );

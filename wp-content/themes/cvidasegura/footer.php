@@ -24,10 +24,10 @@
                         $address = get_field('address');
                     ?>
                     <a target="_blank" href="<?php echo $instagram ?>">
-                        <img src="<?php echo  get_template_directory_uri() . '/library/icons/instagram-consultoria-vida-segura-white.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida"  itemprop="image">
+                        <img src="<?php echo  get_template_directory_uri() . '/library/icons/instagram-consultoria-vida-segura-white.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" itemprop="image">
                     </a>
                     <a target="_blank" href="<?php echo $facebook ?>">
-                        <img src="<?php echo  get_template_directory_uri() . '/library/icons/facebook-consultoria-vida-segura-white.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida"  itemprop="image">
+                        <img src="<?php echo  get_template_directory_uri() . '/library/icons/facebook-consultoria-vida-segura-white.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" itemprop="image">
                     </a>
                 </div>
 
@@ -76,12 +76,12 @@
         $my_post_types_archives = array('planos-de-saude', 'seguros', 'planos-odontologicos', 'planos-funeral');
         if (is_home( '63' ) ): //homepage
     ?>
-        <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/home.min.js" ?>"></script>
-        <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/partners.min.js" ?>"></script>
-            
+        <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/service-image.min.js" ?>"></script>
+        <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/banner.min.js" ?>"></script>
     <?php elseif( is_post_type_archive($my_post_types_archives )) : ?>
         <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/health-insurance.min.js" ?>"></script>
-        <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/partners.min.js" ?>"></script>
+    <?php elseif( is_tax()) : ?>
+        <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/banner.min.js" ?>"></script>
     <?php endif; ?>
 
     <?php
