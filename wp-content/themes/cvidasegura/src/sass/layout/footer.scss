@@ -217,4 +217,43 @@ footer{
             color: $blue;
         }
     }
+
+    .wpp-float{
+        width: 4.0625rem;
+        height: 4.0625rem;
+        object-fit: contain;
+        position: fixed;
+        z-index: 50;
+        @include anime-bounce;
+        bottom: 9.375rem;
+        right: 1.25rem;
+        
+        @media screen and (min-width: $breakpoint-lg) {
+            right: 2.5rem;
+            bottom: 6.25rem;
+        }
+    }
+
+    .scroll-to-top-btn{
+        background-position: center;
+        cursor: pointer;
+        overflow: hidden;
+        padding-left: 1.5rem;
+        text-indent: -624.9375rem;
+        border: none;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        position: fixed;
+        bottom: 4.875rem;
+        right: 1.875rem;
+        background: url("../../library/icons/up-arrow.svg");
+        width: 1.875rem;
+        height: 1.875rem;
+        object-fit: contain;
+        
+        @media screen and (min-width: $breakpoint-lg) {
+            right: 2.5rem;
+            bottom: 3.125rem;
+        }
+    }
 }

@@ -1125,6 +1125,55 @@ footer .after-footer .designer {
   line-height: 1.25rem;
   color: #1669B1;
 }
+footer .wpp-float {
+  width: 4.0625rem;
+  height: 4.0625rem;
+  object-fit: contain;
+  position: fixed;
+  z-index: 50;
+  animation: bounce 1s infinite;
+  bottom: 9.375rem;
+  right: 1.25rem;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer .wpp-float {
+    right: 2.5rem;
+    bottom: 6.25rem;
+  }
+}
+footer .scroll-to-top-btn {
+  background-position: center;
+  cursor: pointer;
+  overflow: hidden;
+  padding-left: 1.5rem;
+  text-indent: -624.9375rem;
+  border: none;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  position: fixed;
+  bottom: 4.875rem;
+  right: 1.875rem;
+  background: url("../../library/icons/up-arrow.svg");
+  width: 1.875rem;
+  height: 1.875rem;
+  object-fit: contain;
+}
+@media screen and (min-width: 1024px) {
+  footer .scroll-to-top-btn {
+    right: 2.5rem;
+    bottom: 3.125rem;
+  }
+}
 
 .arrow-swiper {
   width: 3.75rem !important;
