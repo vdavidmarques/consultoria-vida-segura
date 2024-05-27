@@ -50,7 +50,7 @@
 
                             <?php else : ?>
 
-                                <img src="<?php echo $banner["image"]['url'] ?>" alt="<?php echo $banner["image"]['alt'] ?>" itemprop="image" class="w-full h-full object-cover">
+                                <img src="<?php echo $banner["image"]['url'] ?>" alt="<?php echo $alt ?>" itemprop="image" class="w-full h-full object-cover">
 
                             <?php endif; ?>
 

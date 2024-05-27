@@ -47,18 +47,20 @@
         }
     ?>
     <div class="content container">
-        <h3 itemprop="headline" class="title">
-            <?php echo $title ?>
-            <br />
-            <strong> <?php the_archive_title(); ?></strong>
-        </h3>
-        <p itemprop="description"><?php echo $text ?></p>
-        <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber ?>&text=<?php echo $whatsappMessage ?>" itemprop="name" class="button button-green">
-            <?php echo $wppLabel ?>
-        </a>
-        <a target="_blank" href="mailto:<?php echo $email ?>" itemprop="name" class="button button-white">
-            <?php echo $emailLabel ?>
-        </a>
+        <div class="description">
+            <h3 itemprop="headline" class="title">
+                <?php echo $title ?>
+                <br />
+                <strong> <?php the_archive_title(); ?></strong>
+            </h3>
+            <p itemprop="description"><?php echo $text ?></p>
+            <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber ?>&text=<?php echo $whatsappMessage ?>" itemprop="name" class="button button-green">
+                <?php echo $wppLabel ?>
+            </a>
+            <a target="_blank" href="mailto:<?php echo $email ?>" itemprop="name" class="button button-white">
+                <?php echo $emailLabel ?>
+            </a>
+        </div>
     </div>
     <?php endwhile; ?>
 </article>

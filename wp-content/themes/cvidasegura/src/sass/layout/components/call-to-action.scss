@@ -2,7 +2,7 @@
 @import '../../helpers/mixins.scss';
 
 .call-to-action{
-    padding-bottom: 5rem;
+    padding: 5rem 0;
     color: $white;
     background-color: $blue;
 
@@ -10,11 +10,22 @@
         padding: 6.25rem 0;
     }
     .content{
-        display: flex;
-        flex-direction: column;
-        row-gap: 1.25rem;
-        align-items: center;
-        text-align: center;
+        display: grid;
+        @include grid-cols-12;
+
+        .description{
+            @include col-span-12;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            row-gap: 1.25rem;
+            align-items: center;
+            
+            @media screen and (min-width: $breakpoint-lg) {
+                @include col-span-8;
+                @include col-start-3;
+            }
+        }
 
         .title{
             @include heading-title-xl;

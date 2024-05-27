@@ -70,6 +70,13 @@
             .icon{
                position: relative;
                
+               p{
+                    strong {
+                        display: block;
+                        text-transform: uppercase;
+                    }
+               }
+               
                &:before{
                 content: '';
                 position: absolute;

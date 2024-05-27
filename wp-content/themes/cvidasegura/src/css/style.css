@@ -926,7 +926,7 @@ footer .pre-footer {
 }
 @media screen and (min-width: 1024px) {
   footer .pre-footer {
-    padding-top: 8.125rem;
+    padding-top: 5rem;
     padding-bottom: 5rem;
     flex-direction: row;
     align-items: center;
@@ -1608,6 +1608,10 @@ footer .scroll-to-top-btn {
 .descriptive-table .tables .itens .icon {
   position: relative;
 }
+.descriptive-table .tables .itens .icon p strong {
+  display: block;
+  text-transform: uppercase;
+}
 .descriptive-table .tables .itens .icon:before {
   content: "";
   position: absolute;
@@ -1627,7 +1631,7 @@ footer .scroll-to-top-btn {
 }
 
 .call-to-action {
-  padding-bottom: 5rem;
+  padding: 5rem 0;
   color: #fff;
   background-color: #1669B1;
 }
@@ -1637,11 +1641,22 @@ footer .scroll-to-top-btn {
   }
 }
 .call-to-action .content {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+.call-to-action .content .description {
+  grid-column: span 12/span 12;
+  text-align: center;
   display: flex;
   flex-direction: column;
   row-gap: 1.25rem;
   align-items: center;
-  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .call-to-action .content .description {
+    grid-column: span 8/span 8;
+    grid-column-start: 3;
+  }
 }
 .call-to-action .content .title {
   text-transform: uppercase;
