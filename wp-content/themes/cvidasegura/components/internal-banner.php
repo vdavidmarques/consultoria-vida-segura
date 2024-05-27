@@ -65,7 +65,11 @@
                                     <a href="<?php echo $banner['botao']['url'] ?>" itemprop="name" class="mt-6 button button-second">
                                         <?php echo  $banner['botao']['title'] ?>
                                     </a>
-
+                                    <?php
+                                else : ?>
+                                        <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber ?>&text=<?php echo $whatsappMessage ?>" itemprop="name" class="mt-6 button button-second">
+                                            Veja mais
+                                        </a>
                                 <?php endif; ?>
                             </div>
                             <?php
