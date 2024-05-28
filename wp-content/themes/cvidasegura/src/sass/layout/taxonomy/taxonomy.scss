@@ -1,0 +1,31 @@
+@import "../../helpers/variables.scss";
+@import "../../helpers/mixins.scss";
+
+.taxonomy{
+
+    .content{
+        @include col-span-12;
+
+        @media screen and (min-width: $breakpoint-lg){
+            @include col-span-8;
+            @include col-start-3;
+        }
+
+        .title{
+            h2{
+                line-height: 3.125rem!important;
+                margin-bottom: 0.625rem;
+                @include heading-title-xl
+            }
+        }
+
+        ul{
+            row-gap: 1.25rem;
+            flex-direction: column;
+
+            .list{
+                font-weight: 400;
+            }
+        }
+    }
+}
