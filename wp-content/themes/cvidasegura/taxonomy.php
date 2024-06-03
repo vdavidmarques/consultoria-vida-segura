@@ -6,13 +6,13 @@
 
     <article class="container facilities">
         <div class="content">
-            <div itemprop="articleBody" class="title">
+            <div itemprop="articleBody" class="title scroll-effect ">
                 <?php
                     $queried_object = get_queried_object();
                     echo get_field('facilities-title', $queried_object);
                 ?>
             </div>
-            <ul>
+            <ul class="scroll-effect">
                 <?php
                 $lists = get_field('list', $queried_object);
                 if ($lists) :

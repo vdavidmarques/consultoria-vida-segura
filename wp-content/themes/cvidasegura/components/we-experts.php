@@ -1,4 +1,4 @@
-<article class="we-experts" itemscope itemprop="articleBody">
+<article class="we-experts scroll-effect" itemscope itemprop="articleBody">
     <?php
     $bgImage = get_field("we-experts-image", "63");
     $title = get_field("we-experts-title", "63");

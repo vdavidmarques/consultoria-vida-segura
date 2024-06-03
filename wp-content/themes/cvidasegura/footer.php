@@ -2,10 +2,10 @@
     <footer class="my-20" itemscope itemtype="http://schema.org/WPFooter">
         <div class="pre-footer">
             <div class="container grid grid-cols-12">
-                <div class="menu-footer-items">
+                <div class="menu-footer-items scroll-effect">
                     <?php custom_footer_menu(); ?>
                 </div>
-                <div class="social-networks">
+                <div class="social-networks scroll-effect">
                     <?php
                     $args = array(
                         'name' => 'informacoes',
@@ -32,20 +32,20 @@
                 </div>
 
                 <div class="contact">
-                    <h4 class="title">Entre em contato</h4>
-                    <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber ?>&text=<?php echo $whatsappMessage ?>" class="button button-first">
+                    <h4 class="title scroll-effect">Entre em contato</h4>
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber ?>&text=<?php echo $whatsappMessage ?>" class="scroll-effect button button-first">
                         <img src="<?php echo  get_template_directory_uri() . '/library/icons/whatsapp-consultoria-vida-segura-blue.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" itemprop="image" class="wpp-blue">
                         <img src="<?php echo  get_template_directory_uri() . '/library/icons/whatsapp-consultoria-vida-segura-white.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" itemprop="image" class="wpp-white">
                         Fale por WhatsApp
                     </a>
-                    <a target="_blank" href="mailto:<?php echo $email ?>" class="button button-first email">
+                    <a target="_blank" href="mailto:<?php echo $email ?>" class="scroll-effect button button-first email">
                         <img src="<?php echo  get_template_directory_uri() . '/library/icons/email-consultoria-vida-segura-blue.svg' ?>" alt="Email - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" itemprop="image" class="email-blue">
                         <img src="<?php echo  get_template_directory_uri() . '/library/icons/email-consultoria-vida-segura-white.svg' ?>" alt="Email - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" itemprop="image" class="email-white">
                         Fale por e-mail
                     </a>
                 </div>
 
-                <div class="chris-contact">
+                <div class="chris-contact scroll-effect">
                     <h3 itemscope itemprop="articleBody" class="title">Christiane Barros</h3>
                     <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber ?>&text=<?php echo $whatsappMessage ?>">
                         <?php echo $whatsapp ?>

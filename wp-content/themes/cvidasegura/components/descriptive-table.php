@@ -58,15 +58,15 @@
         }
     ?>
         <div class="tables container grid-cols-12">
-            <div class="title">
+            <div class="title scroll-effect">
                 <?php echo $title ?>
             </div>
             <?php if($image) :?>
-                <div class="image">
+                <div class="image scroll-effect">
                     <img src="<?php echo $imageUrl ?>" alt="<?php echo $imageAlt ?>" itemprop="image" class="w-full object-cover">
                 </div>
             <?php endif; ?>
-            <div class="itens">
+            <div class="itens scroll-effect">
                 <?php
                 if ($tables) :
                     foreach ($tables as $table) :

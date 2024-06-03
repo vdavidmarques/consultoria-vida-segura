@@ -60,7 +60,7 @@ if ($tabs) : ?>
                     if ($packs) {
                         foreach ($packs as $pack) :
                     ?>
-                            <div class="packs">
+                            <div class="packs scroll-effect">
                                 <div class="title"><?php echo $pack['title']; ?></div>
                                 <?php
                                 $iconAndTitlePacks =  $pack['icon-text'];

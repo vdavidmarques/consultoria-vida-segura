@@ -9,7 +9,7 @@
                 <img src="<?php echo $image['url'] ?>" alt="Sobre nós - Consultoria Vida Segura" itemprop="image" class="bg-image">
             </div>
             <div class="content header-top">
-                <div itemprop="articleBody" class="default-heading-title">
+                <div itemprop="articleBody" class="default-heading-title scroll-effect">
                     <?php echo get_field('main-title-about-us'); ?>
                 </div>
             
@@ -31,7 +31,7 @@
                     $facebook = get_field('facebook');
                 ?>
                     <div class="socials-and-menu">
-                        <div class="socials-icons">
+                        <div class="socials-icons scroll-effect">
                             <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber ?>&text=<?php echo $whatsappMessage ?>">
                                 <img src="<?php echo  get_template_directory_uri() . '/library/icons/whatsapp-consultoria-vida-segura-white.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" itemprop="image">
                             </a>

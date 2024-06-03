@@ -1,4 +1,4 @@
-<div class="partners container py-20">
+<div class="scroll-effect partners container py-20">
     <div class="title">
         <?php $title = get_field('partners-title', '63') ?>
         <?php echo $title ?>

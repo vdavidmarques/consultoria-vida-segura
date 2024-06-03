@@ -1,4 +1,4 @@
-<article class="container facilities">
+<article class="container facilities scroll-effect">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <div itemprop="articleBody" class="title">
             <?php echo get_field('facilities-title'); ?>

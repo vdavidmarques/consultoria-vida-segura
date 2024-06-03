@@ -1,4 +1,4 @@
-<article class="call-to-action" itemscope itemprop="articleBody">
+<article class="call-to-action scroll-effect" itemscope itemprop="articleBody">
     <?php
     $args = array(
         'name' => 'informacoes',

@@ -1,14 +1,14 @@
-<ul>
-    <?php
-        $lists = get_field('list');
-        if ($lists) :
-            foreach ($lists as $list) :
-    ?>
+<?php
+$lists = get_field('list');
+if ($lists) :
+?>
+    <ul class="scroll-effect">
+        <?php foreach ($lists as $list) : ?>
             <li class="list">
                 <?php echo $list['item']; ?>
             </li>
-    <?php
+        <?php
         endforeach;
-    endif;
-    ?>
-</ul>
+        ?>
+    </ul>
+<?php endif; ?>

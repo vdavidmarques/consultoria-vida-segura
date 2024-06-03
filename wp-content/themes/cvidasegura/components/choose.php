@@ -14,7 +14,7 @@
                             $icon = $choose['icon'];
                             if ($icon) :
                         ?>
-                                <div class="choosen">
+                                <div class="choosen block">
                                     <div class="circle">
                                         <img src="<?php echo $icon['url'] ?>" alt="<?php echo $icon['alt'] ?>" class="icon" />
                                     </div>

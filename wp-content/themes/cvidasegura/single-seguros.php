@@ -3,19 +3,18 @@
     <?php include get_template_directory() . '/components/main-banner.php'; ?>
 
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <article>
-                <div class="container facilities">
-                    <div itemprop="articleBody" class="title">
-                        <h1 class="main-title"><?php the_title() ?></h1>
-                        <?php echo get_field('facilities-title'); ?>
-                    </div>
-                    <?php include get_template_directory() . '/blocks/icons-and-texts.php'; ?>
+        <article>
+            <div class="container facilities scroll-effect">
+                <div itemprop="articleBody" class="title">
+                    <h1 class="main-title"><?php the_title() ?></h1>
+                    <?php echo get_field('facilities-title'); ?>
                 </div>
+                <?php include get_template_directory() . '/blocks/icons-and-texts.php'; ?>
+            </div>
 
-                <?php include get_template_directory() . '/components/tabs.php'; ?>
+            <?php include get_template_directory() . '/components/tabs.php'; ?>
 
-            </article>
-
+        </article>
     <?php endwhile;
     endif; ?>
 </section>
