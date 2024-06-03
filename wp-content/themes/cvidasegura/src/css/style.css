@@ -476,7 +476,7 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.8;
+  opacity: 1;
   mix-blend-mode: hard-light;
   z-index: 10;
 }
@@ -560,6 +560,9 @@ img {
   color: #1669B1;
   position: relative;
   padding-left: 3.75rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
 }
 @media screen and (min-width: 1024px) {
   .facilities ul .list {
@@ -1234,6 +1237,9 @@ footer .scroll-to-top-btn {
   z-index: 10;
   justify-content: center;
 }
+.swiper-container .swiper-slide .default-heading-title h1, .swiper-container .swiper-slide .default-heading-title h2, .swiper-container .swiper-slide .default-heading-title h3, .swiper-container .swiper-slide .default-heading-title h4, .swiper-container .swiper-slide .default-heading-title p {
+  text-shadow: 1px 1px 1px #002369;
+}
 
 .our-services {
   padding: 5rem 0;
@@ -1868,6 +1874,18 @@ footer .scroll-to-top-btn {
 .single .facilities .title {
   line-height: 2.75rem;
 }
+.single .facilities .title .main-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+@media screen and (min-width: 1024px) {
+  .single .facilities .title .main-title {
+    font-size: 2.1875rem;
+  }
+}
 .single .icon {
   width: 2.5rem;
   height: 2.5rem;
@@ -1920,7 +1938,7 @@ footer .scroll-to-top-btn {
   justify-content: center;
   margin-bottom: 5rem;
 }
-.single .tab .tab-body .descriptions-options .title {
+.single .tab .tab-body .descriptions-options .title, .single .tab .tab-body .descriptions-options h1, .single .tab .tab-body .descriptions-options h2, .single .tab .tab-body .descriptions-options h3, .single .tab .tab-body .descriptions-options h4 {
   text-transform: uppercase;
   font-weight: bold;
   font-family: "Rubik", sans-serif;
@@ -1930,7 +1948,7 @@ footer .scroll-to-top-btn {
   line-height: 2.5rem;
 }
 @media screen and (min-width: 1024px) {
-  .single .tab .tab-body .descriptions-options .title {
+  .single .tab .tab-body .descriptions-options .title, .single .tab .tab-body .descriptions-options h1, .single .tab .tab-body .descriptions-options h2, .single .tab .tab-body .descriptions-options h3, .single .tab .tab-body .descriptions-options h4 {
     font-size: 2.1875rem;
   }
 }
@@ -1974,54 +1992,46 @@ footer .scroll-to-top-btn {
   color: #1669B1;
   border-radius: 0.625rem 0.625rem 0 0;
 }
+@media screen and (min-width: 1280px) {
+  .single .tab .tab-body .packages .packs {
+    min-width: 21.875rem;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .single .tab .tab-body .packages .packs {
+    min-width: 28.125rem;
+  }
+}
 .single .tab .tab-body .packages .packs .title {
-  font-family: "MontSerrat", sans-serif;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
   text-transform: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
   border-radius: 0.625rem 0.625rem 0 0;
   background-color: #1669B1;
   padding: 1.25rem;
   text-align: center;
   color: #fff;
 }
-.single .tab .tab-body .packages .packs .title h1,
-.single .tab .tab-body .packages .packs .title h2,
-.single .tab .tab-body .packages .packs .title h3,
-.single .tab .tab-body .packages .packs .title h4 {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-family: "Rubik", sans-serif;
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
 @media screen and (min-width: 1024px) {
-  .single .tab .tab-body .packages .packs .title h1,
-  .single .tab .tab-body .packages .packs .title h2,
-  .single .tab .tab-body .packages .packs .title h3,
-  .single .tab .tab-body .packages .packs .title h4 {
+  .single .tab .tab-body .packages .packs .title {
     font-size: 1.25rem;
   }
 }
 .single .tab .tab-body .packages .packs p {
   margin-bottom: 10px;
-  font-family: "MontSerrat", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
-}
-@media screen and (min-width: 1024px) {
-  .single .tab .tab-body .packages .packs p {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
 }
 .single .tab .tab-body .packages .packs .content {
   display: flex;
   flex-direction: row;
   column-gap: 0.625rem;
   margin-top: 1.25rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   padding: 0 1.25rem 1.25rem;
 }
 .single .tab .tab-body .packages .packs .content .icon {

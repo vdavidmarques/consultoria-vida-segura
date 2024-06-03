@@ -4,13 +4,16 @@
 .single {
   .facilities .title {
     line-height: 2.75rem;
+
+    .main-title{
+      @include heading-title-xl;
+    }
   }
 
   .icon {
     width: 2.5rem;
     height: 2.5rem;
   }
-
 
   .tab {
     overflow: hidden;
@@ -53,7 +56,7 @@
           justify-content: center;
           margin-bottom: 5rem;
   
-          .title {
+          .title, h1,h2,h3,h4 {
             @include heading-title-xl;
             margin-bottom: 2.5rem;
             line-height: 2.5rem;
@@ -95,17 +98,18 @@
             background-color: $white;
             color: $blue;
             border-radius: 0.625rem 0.625rem 0 0;
-  
-            .title {
-                @include heading-text-sm; 
-                text-transform: none;
+            
+            @media screen and (min-width: $breakpoint-xl) {
+              min-width: 21.875rem;
+            }
+            
+            @media screen and (min-width: $breakpoint-2xl) {
+              min-width: 28.125rem;
+            }
 
-                h1,
-                h2,
-                h3, 
-                h4 {
-                    @include heading-title-lg;
-                }
+            .title {
+                text-transform: none;
+                @include heading-title-lg;               
                 border-radius: 0.625rem 0.625rem 0 0;
                 background-color: $blue;
                 padding: 1.25rem;
@@ -115,7 +119,7 @@
   
             p {
               margin-bottom: 10px;
-              @include heading-text-md; 
+              @include text-base; 
             }
 
             .content {
@@ -123,7 +127,7 @@
               flex-direction: row;
               column-gap: 0.625rem;
               margin-top: 1.25rem;
-              @include text-sm;
+              @include text-base;
               padding: 0 1.25rem 1.25rem;
   
               .icon {
