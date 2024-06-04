@@ -12,13 +12,13 @@ if (have_posts()) : while (have_posts()) : the_post();
 
                 <div class="swiper-container relative overflow-hidden">
                     <div class="swiper-wrapper">
-                        <div class="first-banner swiper-slide">
-                            <?php
+                        <?php
 
-                            foreach ($firstBanners as $firstBanner) :
+                        foreach ($firstBanners as $firstBanner) :
 
-                                if ($firstBanner["main-banner-image"] || $firstBanner["main-banner-image-mobile"]) :
-                            ?>
+                            if ($firstBanner["main-banner-image"] || $firstBanner["main-banner-image-mobile"]) :
+                        ?>
+                                <div class="first-banner swiper-slide">
                                     <div class="bg-blue-hard-light pointer-events-none">&nbsp;</div>
 
                                     <img src="<?php echo $firstBanner["main-banner-image"]['url'] ?>" alt="<?php echo $firstBanner["main-banner-image"]['alt'] ?>" itemprop="image" class="w-full h-full object-cover show-desktop">
@@ -53,11 +53,8 @@ if (have_posts()) : while (have_posts()) : the_post();
                                     <div class="swiper-button-prev arrow-swiper arrow-swiper-prev"></div>
                                     <div class="swiper-button-next arrow-swiper arrow-swiper-next"></div>
                                 <?php endif; ?>
-                            <?php
-                            endforeach;
-
-                            ?>
-                        </div>
+                                </div>
+                            <?php endforeach; ?>
 
                     </div>
             </article>

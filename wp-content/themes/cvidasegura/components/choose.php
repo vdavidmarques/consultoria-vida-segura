@@ -14,7 +14,7 @@
                             $icon = $choose['icon'];
                             if ($icon) :
                         ?>
-                                <div class="choosen block">
+                                <div class="choosen scroll-effect">
                                     <div class="circle">
                                         <img src="<?php echo $icon['url'] ?>" alt="<?php echo $icon['alt'] ?>" class="icon" />
                                     </div>

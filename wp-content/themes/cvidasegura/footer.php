@@ -91,7 +91,7 @@
         <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/health-insurance.min.js" ?>"></script>
     <?php elseif (is_tax()) : ?>
         <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/banner.min.js" ?>"></script>
-    <?php elseif (is_singular()) : ?>
+    <?php elseif (is_singular() && !is_page('sobre-nos')) : ?>
         <script src="<?php echo get_template_directory_uri() . "/library/js/open-tab.min.js" ?>"></script>
     <?php endif; ?>
 
