@@ -1312,6 +1312,11 @@ footer .scroll-to-top-btn {
   width: auto;
   height: 100%;
 }
+@media screen and (min-width: 1024px) {
+  .our-services .service-image .images {
+    max-height: 25rem;
+  }
+}
 .our-services .service-image .images img {
   width: 100%;
   object-fit: cover;

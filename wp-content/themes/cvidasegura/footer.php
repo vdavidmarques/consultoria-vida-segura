@@ -83,7 +83,12 @@
 
     <?php
     $my_post_types_archives = array('planos-de-saude', 'seguros', 'planos-odontologicos', 'planos-funeral');
-    if (is_home('63')) : //homepage
+    //If localhost
+    //if (is_home('63')) : //homepage
+    
+    //If production
+    if (is_home('115')) : //homepage
+
     ?>
         <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/service-image.min.js" ?>"></script>
         <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/banner.min.js" ?>"></script>

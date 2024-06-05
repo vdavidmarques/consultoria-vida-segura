@@ -1,24 +1,24 @@
 <?php
-if (have_posts()) : while (have_posts()) : the_post();
         if (is_home()) :
-            $firstBanners = get_field("first-banner", 63);
+            //If localhost
+            //$firstBanners = get_field("first-banner", 63);
+            //If production
+            $firstBanners = get_field("first-banner", 115);
         else :
             $firstBanners = get_field("first-banner");
         endif;
         $count = 0;
         if ($firstBanners) :
 ?>
-            <article class="main-banner banner py-20">
-
+            <section class="main-banner banner py-20">
                 <div class="swiper-container relative overflow-hidden">
                     <div class="swiper-wrapper">
                         <?php
-
                         foreach ($firstBanners as $firstBanner) :
 
                             if ($firstBanner["main-banner-image"] || $firstBanner["main-banner-image-mobile"]) :
                         ?>
-                                <div class="first-banner swiper-slide">
+                                <div class="swiper-slide">
                                     <div class="bg-blue-hard-light pointer-events-none">&nbsp;</div>
 
                                     <img src="<?php echo $firstBanner["main-banner-image"]['url'] ?>" alt="<?php echo $firstBanner["main-banner-image"]['alt'] ?>" itemprop="image" class="w-full h-full object-cover show-desktop">
@@ -55,11 +55,7 @@ if (have_posts()) : while (have_posts()) : the_post();
                                 <?php endif; ?>
                                 </div>
                             <?php endforeach; ?>
-
                     </div>
-            </article>
-<?php
-        endif;
-    endwhile;
-endif;
-?>
+                </div>
+            </section>
+<?php endif; ?>

@@ -1,8 +1,13 @@
 <article class="we-experts scroll-effect" itemscope itemprop="articleBody">
     <?php
-    $bgImage = get_field("we-experts-image", "63");
-    $title = get_field("we-experts-title", "63");
-    $wppLabelButton = get_field("we-experts-wpp-label", "63");
+    //if localhost
+        // $bgImage = get_field("we-experts-image", "63");
+        // $title = get_field("we-experts-title", "63");
+        // $wppLabelButton = get_field("we-experts-wpp-label", "63");
+    //if production
+        $bgImage = get_field("we-experts-image", "115");
+        $title = get_field("we-experts-title", "115");
+        $wppLabelButton = get_field("we-experts-wpp-label", "115");
     ?>
 
     <div class="blue-bg">&nbsp;</div>

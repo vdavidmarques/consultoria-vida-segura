@@ -14,6 +14,7 @@
 
         /*******************************
         Adding the Options Page in Admin Menu
+        **Create a page called "General Information", then change the ID of this page directly in phpmyadmin to 8
         ********************************/
 
         add_action('admin_menu', 'linked_url');

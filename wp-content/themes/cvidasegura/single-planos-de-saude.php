@@ -22,7 +22,10 @@
 
 <section class="partners container py-20">
     <div class="title">
-        <?php $title = get_field('partners-title', '63') ?>
+        //If localhost
+            <?php /*$title = get_field('partners-title', '63') */?>
+        //If production
+            <?php $title = get_field('partners-title', '115') ?>
         <?php echo $title ?>
     </div>
     <div class="slides">

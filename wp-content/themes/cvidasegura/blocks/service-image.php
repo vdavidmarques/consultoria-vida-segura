@@ -1,6 +1,9 @@
 <div class="service-image">
     <?php
-        $blockOne = get_field('our-services-service-image', '63');       
+        //If localhost
+        //$blockOne = get_field('our-services-service-image', '63');
+        //If production
+        $blockOne = get_field('our-services-service-image', '115');
         $services = $blockOne['our-services-service']; 
     ?>
   
