@@ -23,9 +23,13 @@ if ($query->have_posts()) :
                     <?php while ($query->have_posts()) : $query->the_post(); ?>
                         <?php if (has_post_thumbnail()) : ?>
                             <div class="partners-item swiper-slide">
-                                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" itemprop="name">
+                                <?php if(is_home()): ?>
                                     <?php the_post_thumbnail('thumbnail'); ?>
-                                </a>
+                                <?php else : ?>
+                                    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" itemprop="name">
+                                        <?php the_post_thumbnail('thumbnail'); ?>
+                                    </a>
+                                <?php endif ?>
                             </div>
                         <?php endif; ?>
                     <?php endwhile; ?>
