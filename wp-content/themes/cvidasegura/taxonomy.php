@@ -31,11 +31,11 @@
 
     <div class="partners">
         <div class="title">
-            //If localhost
+            <!-- If localhost -->
                 <?php /*$title = get_field('partners-title', '63') */?>
-            //If production
+            <!-- If production -->
                 <?php $title = get_field('partners-title', '115') ?>
-            <?php echo $title ?>
+                <?php echo $title ?>
         </div>
         <?php if (have_posts()) : ?>
             <div class="slides container">
@@ -54,7 +54,8 @@
                 </div>
             </div>
         <?php else : ?>
-            <p class="mt-20">Nenhum <?php single_term_title(); ?> encontrado.</p>
+            <p class="mt-20">Nenhum produto para <?php single_term_title(); ?> encontrado</p>
+            <p>Podemos lhe ajudar de outras maneiras. Entre em contato</p>
         <?php endif; ?>
     </div>
 
