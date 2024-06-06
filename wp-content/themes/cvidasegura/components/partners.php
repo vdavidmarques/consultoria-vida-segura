@@ -1,3 +1,7 @@
+<!-- 
+    Todos os parceiros inclusos na seção Parceiros, estão sendo mostrados automaticamente através de código implementado.
+    IMPORTANTE: Para que o Parceiro apareça é preciso que o logo(Imagem) esteja aplicado no post
+-->
 <?php
 $args = array(
     'post_type' => 'parceiros',
@@ -11,11 +15,7 @@ if ($query->have_posts()) :
 ?>
     <div class="scroll-effect partners container py-20">
         <div class="title">
-            <!-- if localhost -->
-            <?php /* $title = get_field('partners-title', '63')*/ ?>
-            <!-- if production -->
-            <?php $title = get_field('partners-title', '115') ?>
-            <?php echo $title ?>
+           Nossos produtos
         </div>
         <div class="slides">
             <div class="swiper-container">

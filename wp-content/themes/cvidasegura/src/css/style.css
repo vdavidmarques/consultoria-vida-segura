@@ -1154,7 +1154,7 @@ footer .wpp-float {
   position: fixed;
   z-index: 50;
   animation: bounce 1s infinite;
-  bottom: 8.375rem;
+  bottom: 10.375rem;
   right: 1.25rem;
   display: none;
 }
@@ -1187,7 +1187,7 @@ footer .scroll-to-top-btn {
   background-size: cover !important;
   background-repeat: no-repeat !important;
   position: fixed;
-  bottom: 4.875rem;
+  bottom: 6.875rem;
   right: 1.875rem;
   background: url("../../library/icons/up-arrow.svg");
   width: 1.875rem;
@@ -1197,7 +1197,7 @@ footer .scroll-to-top-btn {
 @media screen and (min-width: 1024px) {
   footer .scroll-to-top-btn {
     right: 2.5rem;
-    bottom: 3.125rem;
+    bottom: 7.125rem;
   }
 }
 
@@ -1713,6 +1713,73 @@ footer .scroll-to-top-btn {
   font-size: 1.125rem;
 }
 
+.depositions {
+  padding: 5rem 0;
+  overflow: hidden;
+}
+@media screen and (min-width: 1024px) {
+  .depositions {
+    padding: 9.375rem 0;
+  }
+}
+.depositions .main-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-bottom: 9.375rem;
+  color: #1669B1;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .depositions .main-title {
+    font-size: 2.1875rem;
+  }
+}
+.depositions .item {
+  display: flex;
+  flex-direction: row;
+  column-gap: 2.5rem;
+  text-align: left;
+}
+.depositions .item .content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.625rem;
+  color: #1669B1;
+}
+@media screen and (min-width: 1024px) {
+  .depositions .item .content {
+    max-width: 21.875rem;
+  }
+}
+.depositions .item .content .name {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+@media screen and (min-width: 1024px) {
+  .depositions .item .content .name {
+    font-size: 2.1875rem;
+  }
+}
+.depositions .item .content .company {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.depositions .item .thumb img {
+  border-radius: 9999px;
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+}
+
 .page-sobre .perfil .header-top {
   position: relative;
   height: auto;
@@ -1936,6 +2003,7 @@ footer .scroll-to-top-btn {
   font-weight: bold;
   border: none;
   margin-top: 1.25rem;
+  cursor: pointer;
 }
 .page-orcamento .form .wpcf7-submit:hover {
   background-color: #002369;

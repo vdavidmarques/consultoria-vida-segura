@@ -1,0 +1,49 @@
+@import '../../helpers/variables.scss';
+@import '../../helpers/mixins.scss';
+
+.depositions{
+    padding: 5rem 0;
+    overflow: hidden;
+    @media screen and (min-width: $breakpoint-lg){
+        padding: 9.375rem 0;
+    }
+    .main-title{
+        @include heading-title-xl;
+        margin-bottom: 9.375rem;
+        color: $blue;
+        text-align: center;
+    }
+
+    .item{
+        display: flex;
+        flex-direction: row;
+        column-gap: 2.5rem;
+        text-align: left;
+
+        .content{
+            display: flex;
+            flex-direction: column;
+            row-gap: 0.625rem;
+            color: $blue;
+            
+            @media screen and (min-width: $breakpoint-lg){
+                max-width: 21.875rem;
+            }
+
+            .name{
+                @include heading-title-xl;
+            }
+    
+            .company{
+                @include heading-title-md;
+            }
+        }
+
+        .thumb img{
+            border-radius: 9999px;
+            width: 10rem;
+            height: 10rem;
+            object-fit: cover;
+        }
+    }
+}
