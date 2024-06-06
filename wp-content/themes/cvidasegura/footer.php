@@ -96,10 +96,16 @@
         <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/health-insurance.min.js" ?>"></script>
     <?php elseif (is_tax()) : ?>
         <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/banner.min.js" ?>"></script>
-    <?php elseif (is_singular() && !is_page('sobre-nos') && !is_page('politica-de-privacidade')) : ?>
+    <?php elseif (is_singular() && !is_page('sobre-nos') && !is_page('politica-de-privacidade') && !is_page('orcamento')) : ?>
         <script src="<?php echo get_template_directory_uri() . "/library/js/open-tab.min.js" ?>"></script>
     <?php endif; ?>
 
+    <?php 
+        if(is_page('orcamento')):
+    ?>
+        <script src="<?php echo get_template_directory_uri() . "/library/js/form-orcamento.js" ?>"></script>
+    <?php endif ?>
+    
     <?php
     $args = array(
         'name' => 'informacoes',

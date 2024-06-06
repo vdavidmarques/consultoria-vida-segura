@@ -241,6 +241,10 @@ body {
   overflow: hidden;
 }
 
+.hidden{
+  display: none;
+}
+
 .grid {
   display: grid;
 }
@@ -421,20 +425,7 @@ img {
 }
 
 .button-primary{
-  width: fit-content;
-  height: fit-content;
-  @include heading-text-sm;
-  text-transform: uppercase;
-  text-decoration: none;
-  background-color: $blue;
-  color: $white;
-  padding: 1.25rem;
-  font-weight: bold;
-
-  &:hover{
-    background-color: $blue-dark;
-    @include transition-colors;
-  }
+  @include button-primary;
 }
 
 .post-not-found{

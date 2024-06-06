@@ -376,6 +376,10 @@ body {
   overflow: hidden;
 }
 
+.hidden {
+  display: none;
+}
+
 .grid {
   display: grid;
 }
@@ -592,6 +596,7 @@ img {
   color: #fff;
   padding: 1.25rem;
   font-weight: bold;
+  border: none;
 }
 .button-primary:hover {
   background-color: #002369;
@@ -1889,6 +1894,54 @@ footer .scroll-to-top-btn {
     grid-column: span 6/span 6;
     margin-top: 0;
   }
+}
+.page-orcamento .form .wpcf7-form-control-wrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.25rem;
+}
+.page-orcamento .form input[type=text],
+.page-orcamento .form input[type=email],
+.page-orcamento .form input[type=tel],
+.page-orcamento .form textarea {
+  border: 1px solid #1669B1;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 0.3125rem;
+  font-family: "Rubik", sans-serif;
+}
+.page-orcamento .form input[type=text]::placeholder,
+.page-orcamento .form input[type=email]::placeholder,
+.page-orcamento .form input[type=tel]::placeholder,
+.page-orcamento .form textarea::placeholder {
+  background-color: #fff;
+  color: #1669B1;
+  font-size: 1rem;
+}
+.page-orcamento .form input[type=radio] {
+  margin-right: 0.3125rem;
+}
+.page-orcamento .form .wpcf7-submit {
+  width: fit-content;
+  height: fit-content;
+  font-family: "MontSerrat", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #1669B1;
+  color: #fff;
+  padding: 1.25rem;
+  font-weight: bold;
+  border: none;
+  margin-top: 1.25rem;
+}
+.page-orcamento .form .wpcf7-submit:hover {
+  background-color: #002369;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .single .facilities .title {
