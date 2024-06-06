@@ -227,8 +227,10 @@ footer{
         @include anime-bounce;
         bottom: 8.375rem;
         right: 1.25rem;
+        display: none;
         
         @media screen and (min-width: $breakpoint-lg) {
+            display: block;
             width: 65px;
             height: 65px;
             right: 2.5rem;

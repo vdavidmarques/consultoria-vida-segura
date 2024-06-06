@@ -560,7 +560,6 @@ img {
   color: #1669B1;
   position: relative;
   padding-left: 3.75rem;
-  height: 2.5rem;
   display: flex;
   align-items: center;
 }
@@ -768,9 +767,7 @@ img {
   left: 0;
   height: 100%;
   width: 100%;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-  padding: 1.5rem;
+  padding: 2.5rem 2.5rem 2.5rem 1.5rem;
   z-index: 30;
   display: none;
   font-weight: bold;
@@ -803,7 +800,6 @@ img {
   display: flex;
   flex-direction: column;
   row-gap: 1.25rem;
-  margin-top: 3.125rem;
 }
 @media screen and (min-width: 1024px) {
   .header-menu-itens .menu-items nav#custom-header-menu ul#custom-header-menu {
@@ -840,52 +836,58 @@ img {
   .header-menu-itens .menu-items nav#custom-header-menu ul#custom-header-menu li.father-item {
     font-size: 0.9375rem;
   }
+  .header-menu-itens .menu-items nav#custom-header-menu ul#custom-header-menu li.father-item:hover::after {
+    content: "";
+    position: absolute;
+    top: 0.9375rem;
+    left: 0;
+    height: 6.875rem;
+    width: 100%;
+  }
+  .header-menu-itens .menu-items nav#custom-header-menu ul#custom-header-menu li.father-item:hover ul.sub-menu-0 {
+    display: flex;
+    row-gap: 5rem;
+    background-color: #fff;
+    position: absolute;
+    top: 20px;
+    width: auto;
+    height: auto;
+    padding-left: 0;
+    padding: 20px;
+    z-index: 10;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  .header-menu-itens .menu-items nav#custom-header-menu ul#custom-header-menu li.father-item:hover ul.sub-menu-0 {
+    column-gap: 5rem;
+    row-gap: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header-menu-itens .menu-items nav#custom-header-menu ul#custom-header-menu li.father-item:hover ul.sub-menu-0 a {
+    margin-bottom: 0.625rem;
+    display: block;
+  }
+  .header-menu-itens .menu-items nav#custom-header-menu ul#custom-header-menu li.father-item:hover ul.sub-menu-1 {
+    display: block;
+  }
+  .header-menu-itens .menu-items nav#custom-header-menu ul#custom-header-menu li.father-item:hover ul.sub-menu-1 a {
+    font-weight: normal;
+    text-transform: none;
+  }
 }
 @media screen and (min-width: 1440px) {
   .header-menu-itens .menu-items nav#custom-header-menu ul#custom-header-menu li.father-item {
     font-size: 16px;
   }
 }
-.header-menu-itens .menu-items nav#custom-header-menu ul#custom-header-menu li.father-item:hover::after {
-  content: "";
-  position: absolute;
-  top: 0.9375rem;
-  left: 0;
-  height: 6.875rem;
-  width: 100%;
-}
-.header-menu-itens .menu-items nav#custom-header-menu ul#custom-header-menu li.father-item:hover ul.sub-menu-0 {
-  display: flex;
-  row-gap: 5rem;
-  background-color: #fff;
-  position: absolute;
-  top: 20px;
-  width: auto;
-  height: auto;
-  padding-left: 0;
-  padding: 20px;
-  z-index: 10;
-  flex-direction: column;
-}
-@media screen and (min-width: 1024px) {
-  .header-menu-itens .menu-items nav#custom-header-menu ul#custom-header-menu li.father-item:hover ul.sub-menu-0 {
-    column-gap: 5rem;
-    row-gap: 0;
-  }
-}
-.header-menu-itens .menu-items nav#custom-header-menu ul#custom-header-menu li.father-item:hover ul.sub-menu-0 a {
-  margin-bottom: 0.625rem;
-  display: block;
-}
-.header-menu-itens .menu-items nav#custom-header-menu ul#custom-header-menu li.father-item:hover ul.sub-menu-1 {
-  display: block;
-}
-.header-menu-itens .menu-items nav#custom-header-menu ul#custom-header-menu li.father-item:hover ul.sub-menu-1 a {
-  font-weight: normal;
-  text-transform: none;
-}
 .header-menu-itens .menu-items nav#custom-header-menu ul#custom-header-menu ul.sub-menu {
   padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.625rem;
+  margin-top: 1.25rem;
 }
 .header-menu-itens .menu-items nav#custom-header-menu ul#custom-header-menu ul.sub-menu li a {
   text-transform: none;
@@ -1149,6 +1151,7 @@ footer .wpp-float {
   animation: bounce 1s infinite;
   bottom: 8.375rem;
   right: 1.25rem;
+  display: none;
 }
 @keyframes bounce {
   0%, 100% {
@@ -1162,6 +1165,7 @@ footer .wpp-float {
 }
 @media screen and (min-width: 1024px) {
   footer .wpp-float {
+    display: block;
     width: 65px;
     height: 65px;
     right: 2.5rem;
@@ -1972,11 +1976,13 @@ footer .scroll-to-top-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 2.5rem;
   flex-direction: column;
+  row-gap: 1.25rem;
 }
 @media screen and (min-width: 1024px) {
   .single .tab .tab-body .descriptions-options .title-and-icon-list {
+    column-gap: 2.5rem;
+    row-gap: 0;
     flex-direction: row;
   }
 }

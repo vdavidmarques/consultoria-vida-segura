@@ -402,10 +402,9 @@ img {
       color: $blue;
       position: relative;
       padding-left: 3.75rem;
-      height: 2.5rem;
       display: flex;
       align-items: center;
-
+      
       &:before {
         content: "";
         background-image: url("../../library/icons/check.svg");
