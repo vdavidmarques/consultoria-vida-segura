@@ -7,6 +7,11 @@
     @media screen and (min-width: $breakpoint-lg){
         padding: 9.375rem 0;
     }
+
+    .swiper-container{
+        height: auto;
+    }
+
     .main-title{
         @include heading-title-xl;
         margin-bottom: 9.375rem;

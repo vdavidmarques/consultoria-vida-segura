@@ -36,4 +36,8 @@
             </div>
         </div>
     </section>
+<?php else : ?>
+    <div class="empty-space">
+        &nbsp;
+    </div>
 <?php endif; ?>
