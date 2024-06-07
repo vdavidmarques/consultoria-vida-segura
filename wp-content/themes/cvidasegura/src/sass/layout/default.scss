@@ -454,3 +454,13 @@ img {
   opacity: 1;
   transform: translateY(0);
 }
+
+.empty-space{
+  display: block;
+  position: relative;
+  height: 5rem;
+  
+  @media screen and (min-width: $breakpoint-lg) {
+    height: 9.375rem;
+  }
+}

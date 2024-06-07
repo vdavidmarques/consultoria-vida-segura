@@ -640,6 +640,17 @@ img {
   transform: translateY(0);
 }
 
+.empty-space {
+  display: block;
+  position: relative;
+  height: 5rem;
+}
+@media screen and (min-width: 1024px) {
+  .empty-space {
+    height: 9.375rem;
+  }
+}
+
 .social-icon img {
   object-fit: cover;
   background-repeat: no-repeat;
@@ -1721,6 +1732,9 @@ footer .scroll-to-top-btn {
   .depositions {
     padding: 9.375rem 0;
   }
+}
+.depositions .swiper-container {
+  height: auto;
 }
 .depositions .main-title {
   text-transform: uppercase;
