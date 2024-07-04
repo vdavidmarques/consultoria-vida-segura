@@ -7,7 +7,18 @@
     <meta itemprop="description" content="Consultoria Vida Segura - Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida">
     <?php wp_head(); ?>
     <title itemprop="name">
-        Consultoria Vida Segura <?php if (wp_title()) :  ' | ' . wp_title(); endif; ?>
+        <?php
+            if(is_home()){
+                echo "";
+            }elseif(is_archive()){
+                echo get_the_archive_title() . ' |';
+            }elseif(is_singular()){
+                echo single_post_title() . ' |';
+            }else{
+                echo get_the_title() . ' |';
+            }
+        ?>
+       Consultoria Vida Segura
     </title>
     <link itemprop="url" href="https://www.consultoriavidasegura.com">
 
