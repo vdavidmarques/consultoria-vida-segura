@@ -62,7 +62,7 @@
                 &copy; <?php echo esc_html(date_i18n(__('Y', 'blankslate'))); ?>
                 <?php echo esc_html(get_bloginfo('name')); ?>
             </div>
-            <a href="https://www.behance.net/viniciusdavidmarques" target="_blank" class="designer">
+            <a href="https://vdavidmarques.github.io/" target="_blank" class="designer">
                 By Vinícius Marques
             </a>
         </div>
