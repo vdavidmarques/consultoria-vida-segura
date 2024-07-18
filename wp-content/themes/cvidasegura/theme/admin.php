@@ -14,7 +14,7 @@
 
         /*******************************
         Adding the Options Page in Admin Menu
-        **Create a page called "General Information", then change the ID of this page directly in phpmyadmin to 8
+        *Create a page called "General Information", then change the ID of this page directly in phpmyadmin to 8
         ********************************/
 
         add_action('admin_menu', 'linked_url');
@@ -57,4 +57,16 @@
             }
             return $title;
         });
+
+        /* Deactivating ContactForm 7 to load at all the pages. It should load only at page-orcamento.php page */
+        add_filter( 'wpcf7_load_js', '__return_false' );
+        add_filter( 'wpcf7_load_css', '__return_false' );     
+
+        function load_recaptcha_script_for_contact_page() {
+            if (is_page('orcamento')) {
+                wp_enqueue_script('google-recaptcha', 'https://www.google.com/recaptcha/api.js');
+            }
+        }
+        add_action('wp_enqueue_scripts', 'load_recaptcha_script_for_contact_page');
+        
 ?>

@@ -1,5 +1,16 @@
-<?php get_header(); ?>
-<?php include 'blocks/breadcrumb.php' ?>
+<?php
+    get_header();
+    
+    if ( function_exists( 'wpcf7_enqueue_scripts' ) ) {
+        wpcf7_enqueue_scripts();
+    }
+    
+    if ( function_exists( 'wpcf7_enqueue_styles' ) ) {
+        wpcf7_enqueue_styles();
+    }
+    
+    include 'blocks/breadcrumb.php' 
+?>
 <section class="page-orcamento container">
     <?php
     $args = array(
@@ -66,4 +77,4 @@
         </div>
         <?php endwhile; ?>
 </section>
-<?php get_footer(); ?>
+<?php get_footer();  ?>
