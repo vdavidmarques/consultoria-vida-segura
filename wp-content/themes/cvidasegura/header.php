@@ -34,18 +34,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <?php if ($show_cookie_message): ?>
-        <div id="cookie-consent">
-            <div class="container content">
-                <p>
-                    Utilizamos cookies para oferecer melhor experiência, melhorar o desempenho, analisar como você interage em nosso site e personalizar conteúdo. Ao utilizar este site, você concorda com o uso de cookies e com nossa Política de Privacidade. <a href="https://consultoriavidasegura.com/politica-de-privacidade/" target="_blank" style="color: white;">Leia mais</a>
-                </p>    
-                <form method="post" style="display: inline;">
-                    <button class="button button-second" id="confirm-cookie" type="submit" >Confirmar</button>
-                </form>
-            </div>
-        </div>
-    <?php endif; ?>
     <header itemscope itemtype="http://schema.org/WPHeader">
         <div class="header-top">
             <div class="socials-and-menu">

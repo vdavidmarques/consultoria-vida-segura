@@ -9,7 +9,7 @@
         wpcf7_enqueue_styles();
     }
     
-    include 'blocks/breadcrumb.php' 
+    include 'blocks/breadcrumb.php'
 ?>
 <section class="page-orcamento container">
     <?php

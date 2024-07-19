@@ -8,10 +8,10 @@
   padding: 12px;
   text-decoration: none;
   @include heading-title-sm;
+  cursor: pointer; 
   @media screen and (min-width: $breakpoint-lg) {
     @include heading-title-md;
   }
-  cursor: pointer;
 }
 
 .button-first {
