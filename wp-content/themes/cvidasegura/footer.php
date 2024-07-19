@@ -71,9 +71,9 @@
                 <img src="<?php echo  get_template_directory_uri() . '/library/icons/whatsapp-consultoria-vida-segura.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" itemprop="image">
             </a>
         </div>
-
+        
         <button class="scroll-to-top-btn" id="scrollToTopBtn">
-          Subir para o topo
+            Subir para o topo
         </button>
     <?php endwhile; ?>
     </footer>
@@ -85,7 +85,7 @@
     $my_post_types_archives = array('planos-de-saude', 'seguros', 'planos-odontologicos', 'planos-funeral');
     //If localhost
     //if (is_home('63')) : //homepage
-    
+
     //If production
     if (is_home('115')) : //homepage
 
@@ -100,12 +100,12 @@
         <script src="<?php echo get_template_directory_uri() . "/library/js/open-tab.min.js" ?>"></script>
     <?php endif; ?>
 
-    <?php 
-        if(is_page('orcamento')):
+    <?php
+    if (is_page('orcamento')) :
     ?>
         <script src="<?php echo get_template_directory_uri() . "/library/js/form-orcamento.js" ?>"></script>
     <?php endif ?>
-    
+
     <?php
     $args = array(
         'name' => 'informacoes',

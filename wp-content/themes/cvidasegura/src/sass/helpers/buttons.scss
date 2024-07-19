@@ -3,6 +3,7 @@
 
 .button{
   @include transition-colors;
+  border: none;
   width: fit-content;
   padding: 12px;
   text-decoration: none;
@@ -10,6 +11,7 @@
   @media screen and (min-width: $breakpoint-lg) {
     @include heading-title-md;
   }
+  cursor: pointer;
 }
 
 .button-first {

@@ -92,9 +92,7 @@ video {
 html {
   scroll-behavior: smooth;
 }
-body {
-  line-height: 1;
-}
+
 a {
   text-decoration-skip-ink: auto;
 }
@@ -173,9 +171,11 @@ section {
 
 body {
   @include font-montserrat;
-  font-size: 1rem; /* 16px */
+  font-size: 1rem;
   line-height: 1.25rem;
   overflow-x: hidden;
+  line-height: 1;
+  position: relative;
 }
 
 [aria-current]:not([aria-current="false"]) {
@@ -463,4 +463,25 @@ img {
   @media screen and (min-width: $breakpoint-lg) {
     height: 9.375rem;
   }
+}
+
+
+#cookie-consent{
+  background-color: $blue-dark;
+  color: $white;
+  padding: 1.25rem 2.5rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 10;
+  
+  .content{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  a{
+      text-decoration: underline;
+  }      
 }
