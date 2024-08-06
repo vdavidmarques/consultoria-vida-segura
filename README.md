@@ -4,7 +4,7 @@
 
 This repository is a Wordpress template for a company specializing in health insurance and life insurance sales. It is built using the following technologies:
 
-- [TailwindCSS](https://tailwindcss.com/)
+- [SASS](https://sass-lang.com/)
 - [PHP](https://www.php.net/)
 - [WordPress](https://wordpress.org/)
 - [JavaScript](https://www.javascript.com/)
@@ -24,4 +24,4 @@ Install all [Wordpress](https://wordpress.org/) presets normally
 To run TailwindCSS, navigate to the `wp-content/themes/cvidasegura` directory and execute the following command after installing Node.js:
 
 ```bash
-npm run starttailwind
+npm run start
