@@ -5,11 +5,13 @@
     ?>
         <article>
             <div class="container facilities">
-                <div itemprop="articleBody" class="title">
-                    <h1 class="main-title">Plano Funerário - <?php the_title() ?></h1>
-                    <?php echo get_field('facilities-title'); ?>
+                <div class="content">
+                    <div itemprop="articleBody" class="title">
+                        <h1 class="main-title">Plano Funerário - <?php the_title() ?></h1>
+                        <?php echo get_field('facilities-title'); ?>
+                    </div>
+                    <?php include get_template_directory() . '/blocks/icons-and-texts.php'; ?>
                 </div>
-                <?php include get_template_directory() . '/blocks/icons-and-texts.php'; ?>
             </div>
 
             <?php include get_template_directory() . '/components/tabs.php'; ?>
