@@ -1,14 +1,20 @@
 <?php
 $lists = get_field('list');
 if ($lists) :
+$count = count($lists);
+    $class = 
+        ($count == 1) ? 'col-1' :
+        (($count == 2) ? 'col-2' :
+        (($count == 3) ? 'col-3' :
+        (($count == 4) ? 'col-4' : 'col-default')));     
 ?>
-    <ul class="scroll-effect">
+    <div class="scroll-effect facilities-list <?php echo $class ?>">
         <?php foreach ($lists as $list) : ?>
-            <li class="list">
+            <div class="list">
                 <?php echo $list['item']; ?>
-            </li>
+            </div>
         <?php
         endforeach;
         ?>
-    </ul>
+    </div>
 <?php endif; ?>

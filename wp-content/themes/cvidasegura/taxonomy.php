@@ -12,10 +12,18 @@
                     echo get_field('facilities-title', $queried_object);
                 ?>
             </div>
-            <div class="scroll-effect facilities-list">
-                <?php
+            <?php
                 $lists = get_field('list', $queried_object);
                 if ($lists) :
+                $count = count($lists);
+                $class = 
+                    ($count == 1) ? 'col-1' :
+                    (($count == 2) ? 'col-2' :
+                    (($count == 3) ? 'col-3' :
+                    (($count == 4) ? 'col-4' : 'col-default')));             
+            ?>
+            <div class="scroll-effect facilities-list <?php echo $class ?>">
+                <?php
                     foreach (array_slice($lists, 0, 4) as $list) :
                 ?>
                     <div class="list">

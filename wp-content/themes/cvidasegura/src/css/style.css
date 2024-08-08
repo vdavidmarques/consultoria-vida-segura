@@ -544,7 +544,6 @@ img {
 @media screen and (min-width: 1024px) {
   .facilities .facilities-list {
     column-gap: 1.25rem;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     margin-top: 0;
   }
 }
@@ -553,7 +552,6 @@ img {
     row-gap: 0;
     margin-left: auto;
     margin-right: auto;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 .facilities .facilities-list .list {
@@ -592,6 +590,31 @@ img {
   display: flex;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 1024px) {
+  .facilities .col-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media screen and (min-width: 1440px) {
+  .facilities .col-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .facilities .col-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .facilities .col-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .facilities .col-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
 }
 .facilities .content {
   grid-column: span 12/span 12;
