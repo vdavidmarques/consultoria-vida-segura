@@ -70,7 +70,7 @@
             'has_archive'        => true,
             'hierarchical'       => false,
             'menu_position'      => null,
-            'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields'),
+            'supports'           => array( 'title', 'thumbnail', 'custom-fields'),
             'menu_icon'          => 'dashicons-heart' //Planos de Saúde
         );
         
@@ -135,7 +135,7 @@
             'has_archive'        => true,
             'hierarchical'       => false,
             'menu_position'      => null,
-            'supports'           => array( 'title', 'editor','thumbnail', 'custom-fields' ),
+            'supports'           => array( 'title', 'thumbnail', 'custom-fields' ),
             'menu_icon'          => 'dashicons-shield'
         );
         
@@ -201,7 +201,7 @@
             'has_archive'        => true,
             'hierarchical'       => false,
             'menu_position'      => null,
-            'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields'),
+            'supports'           => array( 'title', 'thumbnail', 'custom-fields'),
             'menu_icon'          => 'dashicons-smiley' //Planos Odontológicos
         );
         
@@ -240,7 +240,7 @@
             'has_archive'        => true,
             'hierarchical'       => false,
             'menu_position'      => null,
-            'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields'),
+            'supports'           => array( 'title', 'thumbnail', 'custom-fields'),
             'menu_icon'          => 'dashicons-marker' //Planos Funeral
         );
         
