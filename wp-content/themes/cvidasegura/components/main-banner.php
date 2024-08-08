@@ -1,7 +1,7 @@
 <?php
-    $firstBanners = get_field("first-banner", $id);
-    $count = 0;
-    if ($firstBanners) :
+$firstBanners = get_field("first-banner", $id);
+$count = 0;
+if ($firstBanners) :
 ?>
     <article class="main-banner banner py-20">
         <div class="swiper-container relative overflow-hidden">
@@ -30,13 +30,36 @@
                                 echo $firstBanner["main-banner-main-text"];
                             endif;
 
-                            if ($firstBanner['main-banner-button']) : ?>
+                            if ($firstBanner['link-option']) :
+                                $args = array(
+                                    'name' => 'informacoes',
+                                    'post_type' => 'page',
+                                );
 
-                                <a href="<?php echo $firstBanner['main-banner-button']['url'] ?>" itemprop="name" class="mt-6 button button button-second">
-                                    <?php echo $firstBanner['main-banner-button']['title'] ?>
-                                </a>
-
-                            <?php endif; ?>
+                                $query = new WP_Query($args);
+                                while ($query->have_posts()) :
+                                    $query->the_post();
+                                    $whatsapp = get_field('whatsapp');
+                                    $whatsappNumber = get_field('whatsappNumber');
+                            ?>
+                                    <a href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber; ?>&text=Olá, gostaria de mais informações sobre <?php single_post_title(); ?>" target="_blank" itemprop="name" class="mt-6 button button button-second">
+                                        <?php echo $firstBanner['wpp-link']; ?>
+                                    </a>
+                                <?php
+                                endwhile;
+                            else :
+                                if ($firstBanner['main-banner-button']) :
+                                    $url = $firstBanner['main-banner-button']['url'];
+                                    $target = $firstBanner['main-banner-button']['target'] ? $firstBanner['main-banner-button']['target'] : '_self';
+                                    $title = $firstBanner['main-banner-button']['title'];
+                                ?>
+                                    <a href="<?php echo $url ?>" itemprop="name" class="mt-6 button button button-second" target="<?php echo $target?>">
+                                    <?php echo $title ?>
+                                    </a>
+                            <?php
+                                endif;
+                            endif;
+                            ?>
                         </div>
                         <?php
                         $count = count($firstBanners);
