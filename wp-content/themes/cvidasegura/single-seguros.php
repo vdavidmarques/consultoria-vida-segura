@@ -9,7 +9,7 @@
             <div class="container facilities scroll-effect">
                 <div class="content">
                     <div itemprop="articleBody" class="title">
-                        <h1 class="main-title">Seguros - <?php the_title() ?></h1>
+                        <h1 class="main-title">Seguros - <?php single_post_title() ?></h1>
                         <?php echo get_field('facilities-title'); ?>
                     </div>
                     <?php include get_template_directory() . '/blocks/icons-and-texts.php'; ?>
