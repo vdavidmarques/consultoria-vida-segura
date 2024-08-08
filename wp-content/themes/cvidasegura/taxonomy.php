@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<section class="content-area taxonomy">
+<section class="content-area page-taxonomy">
 
     <?php include 'blocks/breadcrumb.php'; ?>
     <?php include 'components/banner.php'; ?>
@@ -12,30 +12,50 @@
                     echo get_field('facilities-title', $queried_object);
                 ?>
             </div>
-            <ul class="scroll-effect">
+            <div class="scroll-effect facilities-list">
                 <?php
                 $lists = get_field('list', $queried_object);
                 if ($lists) :
-                    foreach ($lists as $list) :
+                    foreach (array_slice($lists, 0, 4) as $list) :
                 ?>
-                        <li class="list">
-                            <?php echo $list['item']; ?>
-                        </li>
+                    <div class="list">
+                        <?php echo $list['item']; ?>
+                    </div>
                 <?php
                     endforeach;
                 endif;
                 ?>
-            </ul>
+            </div>
         </div>
     </article>
 
-    <div class="partners">
+    <article class="partners">
         <div class="title">
-            <!-- If localhost -->
-                <?php /*$title = get_field('partners-title', '63') */?>
-            <!-- If production -->
-                <?php $title = get_field('partners-title', '115') ?>
-                <?php echo $title ?>
+        <?php 
+            function checkEnvironment()
+            {
+                $serverUrl = $_SERVER['HTTP_HOST'];
+
+                $productionUrl = 'consultoriavidasegura.com';
+                $localhostUrl = 'localhost';
+
+                if ($serverUrl === $productionUrl) {
+                    return '115';
+                }
+
+                if ($serverUrl === $localhostUrl) {
+                    return '63';
+                }
+
+                return 'Ambiente desconhecido';
+            }
+
+            $environment = checkEnvironment();
+            $id = $environment;
+  
+            $title = get_field('partners-title', $id);
+            echo $title 
+        ?>
         </div>
         <?php if (have_posts()) : ?>
             <div class="slides container">
@@ -57,7 +77,7 @@
             <p class="mt-20">Nenhum produto para <?php single_term_title(); ?> encontrado</p>
             <p>Podemos lhe ajudar de outras maneiras. Entre em contato</p>
         <?php endif; ?>
-    </div>
+    </article>
 
 </section>
 <?php get_footer(); ?>

@@ -535,51 +535,76 @@ img {
   margin-bottom: 2.5rem;
   color: #002369;
 }
-.facilities ul {
-  grid-column: span 12/span 12;
-  display: flex;
-  flex-direction: column;
+.facilities .facilities-list {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
   row-gap: 2.5rem;
+  margin-top: 40px;
 }
 @media screen and (min-width: 1024px) {
-  .facilities ul {
-    row-gap: 0;
-    column-gap: 2.5rem;
-    flex-direction: row;
-    margin-left: auto;
-    margin-right: auto;
+  .facilities .facilities-list {
+    column-gap: 1.25rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 0;
   }
 }
-.facilities ul .list {
-  display: flex;
-  flex-direction: row;
-  text-transform: uppercase;
-  font-weight: bold;
+@media screen and (min-width: 1440px) {
+  .facilities .facilities-list {
+    row-gap: 0;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+.facilities .facilities-list .list {
   font-family: "Rubik", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
-  text-transform: none;
-  color: #1669B1;
+  color: #fff;
+  background-color: #1669B1;
   position: relative;
-  padding-left: 3.75rem;
+  padding: 4.0625rem 1.25rem 1.25rem;
+  border-radius: 1.25rem;
   display: flex;
+  flex-direction: column;
+  text-align: center;
   align-items: center;
 }
+.facilities .facilities-list .list h1, .facilities .facilities-list .list h2, .facilities .facilities-list .list h3, .facilities .facilities-list .list h4, .facilities .facilities-list .list strong {
+  margin-bottom: 0.9375rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
 @media screen and (min-width: 1024px) {
-  .facilities ul .list {
+  .facilities .facilities-list .list {
     font-size: 1.25rem;
   }
 }
-.facilities ul .list:before {
+.facilities .facilities-list .list:before {
   content: "";
-  background-image: url("../../library/icons/check.svg");
+  background-image: url("../../library/icons/check-white.svg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 2.5rem;
   height: 2.5rem;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0.9375rem;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+.facilities .content {
+  grid-column: span 12/span 12;
+  row-gap: 40px;
+}
+@media screen and (min-width: 1024px) {
+  .facilities .content {
+    grid-column: span 10/span 10;
+    grid-column-start: 2;
+    display: flex;
+    row-gap: 80px;
+    flex-direction: column;
+  }
 }
 
 .button-primary {
@@ -1550,15 +1575,15 @@ footer .scroll-to-top-btn {
 }
 
 .partners {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
   text-align: center;
   overflow: hidden;
 }
 @media screen and (min-width: 1024px) {
   .partners {
-    padding-top: 9.375rem;
-    padding-bottom: 9.375rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 }
 .partners .title {

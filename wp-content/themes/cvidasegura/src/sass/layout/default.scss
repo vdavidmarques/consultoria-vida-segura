@@ -385,42 +385,75 @@ img {
     }
   }
 
-  ul {
-    @include col-span-12;
-    display: flex;
-    flex-direction: column;
+  .facilities-list {
+    display: grid;
+    @include grid-cols-1;
     row-gap: 2.5rem;
-
+    margin-top: 40px;
+    
     @media screen and (min-width: $breakpoint-lg) {
+      column-gap: 1.25rem;
+      @include grid-cols-2;
+      margin-top: 0;
+    }
+    
+    @media screen and (min-width: $breakpoint-1_5xl) {
       row-gap: 0;
-      column-gap: 2.5rem;
-      flex-direction: row;
       @include mx-auto;
+      @include grid-cols-4;
     }
 
     .list {
-      display: flex;
-      flex-direction: row;
-      @include heading-title-lg;
-      text-transform: none;
-      color: $blue;
+      @include font-rubik;
+      @include text-base;
+      color: $white;
+      background-color: $blue;
       position: relative;
-      padding-left: 3.75rem;
+      padding: 4.0625rem 1.25rem 1.25rem;
+      border-radius: 1.25rem;
       display: flex;
+      flex-direction: column;
+      text-align: center;
       align-items: center;
       
+      h1, h2, h3,h4, strong{
+        margin-bottom: 0.9375rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      @media screen and (min-width: $breakpoint-lg) {
+        font-size: 1.25rem;
+      }
+
       &:before {
         content: "";
-        background-image: url("../../library/icons/check.svg");
+        background-image: url("../../library/icons/check-white.svg");
         background-repeat: no-repeat;
         background-size: cover;
         width: 2.5rem;
         height: 2.5rem;
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 0.9375rem;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
       }
     }
+  }
+
+  .content{
+    @include col-span-12;
+    row-gap: 40px;
+    
+    @media screen and (min-width: $breakpoint-lg) {
+      @include col-span-10;
+      @include col-start-2;
+      display: flex;
+      row-gap: 80px;
+      flex-direction: column;
+    }
+
   }
 }
 

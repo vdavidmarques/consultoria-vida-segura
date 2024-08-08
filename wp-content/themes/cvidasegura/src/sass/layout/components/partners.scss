@@ -2,14 +2,14 @@
 @import '../../helpers/mixins.scss';
 
 .partners{
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
     text-align: center;
     overflow: hidden;
 
     @media screen and (min-width: $breakpoint-lg) {
-        padding-top: 9.375rem;
-        padding-bottom: 9.375rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
     }
 
     .title{
