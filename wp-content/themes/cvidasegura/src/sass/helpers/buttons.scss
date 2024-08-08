@@ -14,22 +14,21 @@
   }
 }
 
-.button-first {
-  background-color: $white;
-  color: $blue;
-
-  &:hover {
-    background-color: $blue-dark;
-    color: $white!important;
-  }
+.button-first:hover {
+ background-color: $blue-dark;
 }
 
-.button-second{
-  background-color: $white;
-  color: $blue;
+.button-second:hover {
+ background-color: $blue;
+}
 
+.button-first, .button-second {
+  background-color: $white;
+  border: 2px solid $blue;
+  color: $blue;
+  width: fit-content!important;
+  
   &:hover {
-    background-color: $blue;
     color: $white!important;
   }
 }

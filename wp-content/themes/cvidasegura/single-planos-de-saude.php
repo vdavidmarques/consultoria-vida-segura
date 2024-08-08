@@ -1,8 +1,9 @@
 <?php get_header();  ?>
 <section class="single single-planos-de-saude">
-    <?php include get_template_directory() . '/components/main-banner.php'; ?>
-
-    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+    <?php 
+        if (have_posts()) : while (have_posts()) : the_post(); 
+            include get_template_directory() . '/components/main-banner.php'; 
+    ?>
             <article>
                 <div class="container facilities">
                     <div itemprop="articleBody" class="title">
@@ -13,19 +14,37 @@
                 </div>
 
                 <?php include get_template_directory() . '/components/tabs.php'; ?>
-
             </article>
-
     <?php endwhile;
     endif; ?>
 </section>
 
 <section class="partners container py-20">
     <div class="title">
-        <!-- If localhost -->
-            <?php /*$title = get_field('partners-title', '63') */?>
-        <!-- If production -->
-            <?php $title = get_field('partners-title', '115') ?>
+        <?php 
+            function checkEnvironment()
+            {
+                $serverUrl = $_SERVER['HTTP_HOST'];
+
+                $productionUrl = 'consultoriavidasegura.com';
+                $localhostUrl = 'localhost';
+
+                if ($serverUrl === $productionUrl) {
+                    return '115';
+                }
+
+                if ($serverUrl === $localhostUrl) {
+                    return '63';
+                }
+
+                return 'Ambiente desconhecido';
+            }
+
+            $environment = checkEnvironment();
+            $id = $environment;
+        ?>
+       
+        <?php $title = get_field('partners-title', $id) ?>
         <?php echo $title ?>
     </div>
     <div class="slides">

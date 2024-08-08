@@ -1,13 +1,9 @@
 <?php
-    if (is_home()) :
-        $firstBanners = get_field("first-banner", $id);
-    else :
-        $firstBanners = get_field("first-banner");
-    endif;
+    $firstBanners = get_field("first-banner", $id);
     $count = 0;
     if ($firstBanners) :
 ?>
-    <section class="main-banner banner py-20">
+    <article class="main-banner banner py-20">
         <div class="swiper-container relative overflow-hidden">
             <div class="swiper-wrapper">
                 <?php
@@ -16,14 +12,13 @@
                     if ($firstBanner["main-banner-image"] || $firstBanner["main-banner-image-mobile"]) :
                 ?>
                         <div class="swiper-slide">
-                            <div class="bg-blue-hard-light pointer-events-none">&nbsp;</div>
 
                             <img src="<?php echo $firstBanner["main-banner-image"]['url'] ?>" alt="<?php echo $firstBanner["main-banner-image"]['alt'] ?>" itemprop="image" class="w-full h-full object-cover show-desktop">
 
                             <?php if ($firstBanner["main-banner-image-mobile"]) : ?>
                                 <img src="<?php echo $firstBanner["main-banner-image-mobile"]['url'] ?>" alt="<?php echo $firstBanner["main-banner-image-mobile"]['alt'] ?>" itemprop="image" class="w-full h-full object-cover show-mobile">
                             <?php else : ?>
-                                <img src="<?php echo $firstBanner["main-banner-image"]['url'] ?>" alt="<?php echo $firstBanner["main-banner-image"]['alt'] ?>" itemprop="image" class="w-full h-full object-cover">
+                                <img src="<?php echo $firstBanner["main-banner-image"]['url'] ?>" alt="<?php echo $firstBanner["main-banner-image"]['alt'] ?>" itemprop="image" class="w-full h-full object-cover show-mobile">
 
                             <?php endif; ?>
 
@@ -54,5 +49,5 @@
                     <?php endforeach; ?>
             </div>
         </div>
-    </section>
+    </article>
 <?php endif; ?>

@@ -75,21 +75,21 @@
   }
 }
 
-.button-first {
-  background-color: #fff;
-  color: #1669B1;
-}
 .button-first:hover {
   background-color: #002369;
-  color: #fff !important;
 }
 
-.button-second {
-  background-color: #fff;
-  color: #1669B1;
-}
 .button-second:hover {
   background-color: #1669B1;
+}
+
+.button-first, .button-second {
+  background-color: #fff;
+  border: 2px solid #1669B1;
+  color: #1669B1;
+  width: fit-content !important;
+}
+.button-first:hover, .button-second:hover {
   color: #fff !important;
 }
 
@@ -510,17 +510,14 @@ img {
   line-height: 1.75rem;
   color: #1669B1;
   text-align: center;
-  margin-bottom: 2.5rem;
 }
 @media screen and (min-width: 1024px) {
   .facilities .title {
     font-size: 2.1875rem;
   }
 }
-@media screen and (min-width: 1024px) {
-  .facilities .title {
-    margin-bottom: 5rem;
-  }
+.facilities .title h2, .facilities .title h3, .facilities .title h4 {
+  margin-bottom: 20px;
 }
 .facilities .title p {
   font-family: "MontSerrat", sans-serif;
@@ -1243,6 +1240,8 @@ footer .scroll-to-top-btn {
   background-size: cover;
   height: 2.8125rem;
   width: 2.8125rem;
+  border: 1px solid #1669B1;
+  border-radius: 9999px;
 }
 
 .swiper-button-next.arrow-swiper-next, .swiper-button-prev.arrow-swiper-prev {
@@ -1290,6 +1289,9 @@ footer .scroll-to-top-btn {
 }
 .swiper-container .swiper-slide .default-heading-title h1, .swiper-container .swiper-slide .default-heading-title h2, .swiper-container .swiper-slide .default-heading-title h3, .swiper-container .swiper-slide .default-heading-title h4, .swiper-container .swiper-slide .default-heading-title p {
   text-shadow: 1px 1px 1px #002369;
+}
+.swiper-container .swiper-slide p {
+  line-height: 1.3rem;
 }
 
 .our-services {

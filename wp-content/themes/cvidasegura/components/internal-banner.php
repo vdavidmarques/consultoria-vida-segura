@@ -33,7 +33,6 @@
                 <div class="swiper-wrapper">
                     <?php foreach ($banners as $banner) : ?>
                         <div class="swiper-slide">
-                            <div class="bg-blue-hard-light pointer-events-none">&nbsp;</div>
 
                             <?php
                             if ($banner['image']) :

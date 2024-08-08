@@ -13,7 +13,9 @@
   background-size: cover;
   height: 2.8125rem;
   width: 2.8125rem;
-}
+  border: 1px solid $blue;
+  border-radius: 9999px;
+} 
 
 .swiper-button-next.arrow-swiper-next, .swiper-button-prev.arrow-swiper-prev{
    display: none;
@@ -62,6 +64,10 @@
       h1,h2,h3,h4, p{
         text-shadow: 1px 1px 1px $blue-dark;
       }
+    }
+
+    p{
+      line-height: 1.3rem;
     }
 
   }
