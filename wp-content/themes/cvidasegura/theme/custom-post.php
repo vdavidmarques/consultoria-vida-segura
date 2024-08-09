@@ -206,6 +206,32 @@
         );
         
         register_post_type( 'planos-odontologicos', $args );
+
+        // Registrar Taxonomia para Planos odontológicos
+        $labels_taxonomy = array(
+            'name'              => 'Categorias dos Planos odontológicos',
+            'singular_name'     => 'Categoria dos Plano odontológico',
+            'search_items'      => 'Pesquisar Categorias',
+            'all_items'         => 'Todas as Categorias',
+            'parent_item'       => 'Categoria Pai',
+            'parent_item_colon' => 'Categoria Pai:',
+            'edit_item'         => 'Editar Categoria',
+            'update_item'       => 'Atualizar Categoria',
+            'add_new_item'      => 'Adicionar Nova Categoria',
+            'new_item_name'     => 'Novo Nome de Categoria',
+            'menu_name'         => 'Categorias dos Plano odontológico',
+        );
+        
+        $args_taxonomy = array(
+            'hierarchical'      => true,
+            'labels'            => $labels_taxonomy,
+            'show_ui'           => true,
+            'show_admin_column' => true,
+            'query_var'         => true,
+            'rewrite'           => array( 'slug' => 'plano-odontologico' ),
+        );
+        
+        register_taxonomy( 'categoria_planos_odontologicos', 'planos-odontologicos', $args_taxonomy );
     }
     add_action( 'init', 'registrar_planos_odontologicos_custom_post' );
 
