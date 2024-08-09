@@ -11,7 +11,7 @@
             if(is_home()){
                 echo "";
             }elseif(is_archive()){
-                echo get_the_archive_title() . ' |';
+                echo single_cat_title() . ' |';
             }elseif(is_singular()){
                 echo single_post_title() . ' |';
             }else{
@@ -33,7 +33,7 @@
 
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?>>   
     <header itemscope itemtype="http://schema.org/WPHeader">
         <div class="header-top">
             <div class="socials-and-menu">
