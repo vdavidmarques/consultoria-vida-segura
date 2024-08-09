@@ -71,7 +71,7 @@
                 <img src="<?php echo  get_template_directory_uri() . '/library/icons/whatsapp-consultoria-vida-segura.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" itemprop="image">
             </a>
         </div>
-        
+
         <button class="scroll-to-top-btn" id="scrollToTopBtn">
             Subir para o topo
         </button>
@@ -87,48 +87,46 @@
     //if (is_home('63')) : //homepage
 
     //If production
-    if (is_home('115')) : //homepage
-
-    ?>
+    if (is_home('115')) : ?>
         <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/service-image.min.js" ?>"></script>
         <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/banner.min.js" ?>"></script>
     <?php elseif (is_post_type_archive($my_post_types_archives)) : ?>
         <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/health-insurance.min.js" ?>"></script>
     <?php elseif (is_tax() || is_single()) : ?>
         <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/banner.min.js" ?>"></script>
-    <?php elseif (is_singular() && !is_page('sobre-nos') && !is_page('politica-de-privacidade') && !is_page('orcamento')) : ?>
+    <?php elseif (!is_page('sobre-nos') && !is_page('politica-de-privacidade') && !is_page('orcamento') && !is_page('politica-de-privacidade')) : ?>
         <script src="<?php echo get_template_directory_uri() . "/library/js/open-tab.min.js" ?>"></script>
-    <?php endif; ?>
-
-    <?php
-    if (is_page('orcamento')) :
+    <?php elseif (is_page('orcamento')) :
     ?>
         <script src="<?php echo get_template_directory_uri() . "/library/js/form-orcamento.js" ?>"></script>
-    <?php endif ?>
+   <?php
+        endif;
+        
+        $args = array(
+            'name' => 'informacoes',
+            'post_type' => 'page',
+        );
 
-    <?php
-    $args = array(
-        'name' => 'informacoes',
-        'post_type' => 'page',
-    );
+        $query = new WP_Query($args);
+        while ($query->have_posts()) :
+            $query->the_post();
+            $trackingCodes = get_field('tracking-codes');
+            $facebook = $trackingCodes['facebook-code'];
+            $google = $trackingCodes['google-code'];
 
-    $query = new WP_Query($args);
-    while ($query->have_posts()) :
-        $query->the_post();
-        $trackingCodes = get_field('tracking-codes');
-        $facebook = $trackingCodes['facebook-code'];
-        $google = $trackingCodes['google-code'];
+            if ($facebook) :
 
-        if ($facebook) :
+                echo $facebook;
+            endif;
+            if ($google) :
+                echo $google;
+            endif;
+        endwhile;
+        wp_footer(); 
+        if(is_single() || is_singular()):
     ?>
-            <?php echo $facebook ?>
+            <script src="<?php echo get_template_directory_uri() . "/library/js/open-tab.min.js" ?>"></script>
         <?php endif; ?>
-
-        <?php if ($google) : ?>
-            <?php echo $google ?>
-        <?php endif; ?>
-    <?php endwhile; ?>
-    <?php wp_footer(); ?>
     </body>
 
     </html>
