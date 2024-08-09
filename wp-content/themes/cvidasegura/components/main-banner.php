@@ -43,7 +43,13 @@ if ($firstBanners) :
                                     $whatsappNumber = get_field('whatsappNumber');
                             ?>
                                     <a href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber; ?>&text=Olá, gostaria de mais informações sobre <?php single_post_title(); ?>" target="_blank" itemprop="name" class="mt-6 button button button-second">
-                                        <?php echo $firstBanner['wpp-link']; ?>
+                                        <?php 
+                                            if($firstBanner['wpp-link']):
+                                                echo $firstBanner['wpp-link']; 
+                                            else:
+                                        ?>
+                                            Saiba mais
+                                        <?php endif; ?>
                                     </a>
                                 <?php
                                 endwhile;
@@ -54,7 +60,7 @@ if ($firstBanners) :
                                     $title = $firstBanner['main-banner-button']['title'];
                                 ?>
                                     <a href="<?php echo $url ?>" itemprop="name" class="mt-6 button button button-second" target="<?php echo $target?>">
-                                    <?php echo $title ?>
+                                        <?php echo $title ?>
                                     </a>
                             <?php
                                 endif;
