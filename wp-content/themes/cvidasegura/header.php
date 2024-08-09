@@ -10,8 +10,10 @@
         <?php
             if(is_home()){
                 echo "";
-            }elseif(is_archive()){
+            }elseif(is_tax()){
                 echo single_cat_title() . ' |';
+            }elseif(is_archive()){
+                echo get_the_archive_title() . ' |';
             }elseif(is_singular()){
                 echo single_post_title() . ' |';
             }else{
