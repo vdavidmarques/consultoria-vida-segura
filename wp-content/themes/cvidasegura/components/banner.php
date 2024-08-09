@@ -12,8 +12,6 @@
                         <?php
                         if ($banner["main-banner-image"] || $banner["main-banner-image-mobile"]) :
                         ?>
-                            <div class="bg-blue-hard-light pointer-events-none">&nbsp;</div>
-
                             <img src="<?php echo $banner["main-banner-image"] ?>" alt="" itemprop="image" class="w-full h-full object-cover show-desktop">
 
                             <?php if ($banner["main-banner-image-mobile"]) : ?>

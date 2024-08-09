@@ -14,13 +14,14 @@
             </div>
             <?php
                 $lists = get_field('list', $queried_object);
+                //print_r($lists);
                 if ($lists) :
                 $count = count($lists);
                 $class = 
                     ($count == 1) ? 'col-1' :
                     (($count == 2) ? 'col-2' :
                     (($count == 3) ? 'col-3' :
-                    (($count == 4) ? 'col-4' : 'col-default')));             
+                    (($count >= 4) ? 'col-4' : 'col-default')));             
             ?>
             <div class="scroll-effect facilities-list <?php echo $class ?>">
                 <?php
