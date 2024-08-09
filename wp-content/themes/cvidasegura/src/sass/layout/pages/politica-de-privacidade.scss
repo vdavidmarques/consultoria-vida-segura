@@ -1,0 +1,24 @@
+@import '../../helpers/variables.scss';
+@import '../../helpers/mixins.scss';
+
+.page-politica-de-privacidade{
+    display: grid;
+    @include grid-cols-12;
+
+    h1,h2,h3,h4{
+        color: $blue-dark;
+    }
+
+    p{
+        line-height: 1.3rem;
+    }
+
+    article{
+        @include col-span-12;
+
+        @media (min-width: $breakpoint-lg){
+            @include col-span-10;
+            @include col-start-2;
+        }
+    }
+}
