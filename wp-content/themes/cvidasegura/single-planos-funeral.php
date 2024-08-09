@@ -2,6 +2,8 @@
 <section class="single single-planos-funeral">
     <?php if (have_posts()) : while (have_posts()) : the_post(); 
         include get_template_directory() . '/components/main-banner.php';
+        $post      = $wp_query->get_queried_object();
+        $post_id   = $post->ID;
     ?>
         <article>
             <div class="container facilities">
