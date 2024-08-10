@@ -40,7 +40,7 @@
             @media screen and (min-width: $breakpoint-lg) {
                 @include col-span-7;
                 margin-bottom: 0;
-                height: inherit;
+                height: 100%;
             }
 
             img{
