@@ -53,14 +53,14 @@
                     <a target="_blank" href="mailto:<?php echo $email ?>">
                         <?php echo $email ?>
                     </a>
+                    <p itemprop="articleBody"> <?php echo $address ?></p>
                 </div>
             </div>
         </div>
         <div class="container after-footer">
-            <p itemprop="articleBody"> <?php echo $address ?></p>
             <div id="copyright" itemprop="copyrightHolder">
                 &copy; <?php echo esc_html(date_i18n(__('Y', 'blankslate'))); ?>
-                <?php echo esc_html(get_bloginfo('name')); ?>
+                - <?php echo esc_html(get_bloginfo('name')); ?>
             </div>
             <a href="https://baixada-web-studio.great-site.net/" target="_blank" class="designer">
                 By Baixada Web Studio
@@ -90,6 +90,7 @@
     if (is_home('115')) : ?>
         <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/service-image.min.js" ?>"></script>
         <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/banner.min.js" ?>"></script>
+        <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/depositions.min.js" ?>"></script>
     <?php elseif (is_post_type_archive($my_post_types_archives)) : ?>
         <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/health-insurance.min.js" ?>"></script>
     <?php elseif (is_tax() || is_single()) : ?>

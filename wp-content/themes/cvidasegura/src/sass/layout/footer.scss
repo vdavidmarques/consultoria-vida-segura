@@ -208,14 +208,31 @@ footer{
     }
 
     .after-footer{
-        text-align: center;
-        font-size: 0.875rem;
+        font-size: 0.75rem;
         color: $blue;
-        padding: 1.25rem 0;
+        padding: 0.625rem 0;
+        display: grid;
+        @include grid-cols-1;
+        row-gap: 1.25rem;
+        
+        @media screen and (min-width: $breakpoint-lg) {
+            @include grid-cols-2;
+            row-gap: 0;
+        }
 
         .designer{
             @include text-xs;
             color: $blue;
+            display: flex;
+            
+            @media screen and (min-width: $breakpoint-lg) {
+                justify-content: end;
+                align-items: end;
+            }
+        }
+
+        #copyright{
+            line-height: 1.3rem;
         }
     }
 
@@ -226,16 +243,15 @@ footer{
         position: fixed;
         z-index: 50;
         @include anime-bounce;
-        bottom: 10.375rem;
-        right: 1.25rem;
+        bottom: 11.25rem;
+        right: 15px;
         display: none;
         
         @media screen and (min-width: $breakpoint-lg) {
             display: block;
             width: 65px;
             height: 65px;
-            right: 2.5rem;
-            bottom: 6.25rem;
+            right: 15px;
         }
     }
 
@@ -250,14 +266,13 @@ footer{
         background-repeat: no-repeat !important;
         position: fixed;
         bottom: 6.875rem;
-        right: 1.875rem;
+        right: 0.9375rem;
         background: url("../../library/icons/up-arrow.svg");
         width: 1.875rem;
         height: 1.875rem;
         object-fit: contain;
         
         @media screen and (min-width: $breakpoint-lg) {
-            right: 2.5rem;
             bottom: 7.125rem;
         }
     }

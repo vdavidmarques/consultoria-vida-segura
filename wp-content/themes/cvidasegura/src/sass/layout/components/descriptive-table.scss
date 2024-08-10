@@ -2,12 +2,12 @@
 @import '../../helpers/mixins.scss';
 
 .descriptive-table{
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
 
     @media screen and (min-width: $breakpoint-lg) {
-        padding-top: 12.5rem;
-        padding-bottom: 12.5rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
     }
     .tables{
         column-gap: 2.5rem;
