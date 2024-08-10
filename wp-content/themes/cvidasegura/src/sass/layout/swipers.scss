@@ -18,11 +18,7 @@
 } 
 
 .swiper-button-next.arrow-swiper-next, .swiper-button-prev.arrow-swiper-prev{
-   display: none;
-
-    @media screen and (min-width: $breakpoint-lg){
-      display: flex;  
-    }
+  display: flex;
 }
 
 .swiper-button-next.arrow-swiper-next{
@@ -37,13 +33,16 @@
   transform: rotate(180deg);
 }
 
-.swiper-container{
-  position: relative;
+.main-banner .swiper-container, .internal-banner .swiper-container{
   height: 25rem;
-
+  
   @media screen and (min-width: $breakpoint-lg){
     height: 31.25rem;
   }
+}
+
+.swiper-container{
+  position: relative;
 
   .swiper-slide{
     

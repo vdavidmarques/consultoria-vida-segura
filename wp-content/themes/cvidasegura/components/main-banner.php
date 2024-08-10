@@ -3,7 +3,7 @@ $firstBanners = get_field("first-banner", $id);
 $count = 0;
 if ($firstBanners) :
 ?>
-    <article class="main-banner banner py-20">
+    <article class="main-banner banner">
         <div class="swiper-container relative overflow-hidden">
             <div class="swiper-wrapper">
                 <?php

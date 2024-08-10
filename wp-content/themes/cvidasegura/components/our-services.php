@@ -1,4 +1,4 @@
-<section class="scroll-effect our-services py-20 mt-20 lg:mt-[12.5rem]" itemscope itemtype="http://schema.org/Article">
+<section class="scroll-effect our-services mt-20 lg:mt-[12.5rem]" itemscope itemtype="http://schema.org/Article">
     <?php
        
         $introTitle = get_field("intro-main-title", $id);

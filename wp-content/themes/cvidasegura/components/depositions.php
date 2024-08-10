@@ -7,7 +7,7 @@
     if($groups):
 ?>
     <section class="depositions container">
-        <div class="scroll-effect py-20">
+        <div class="scroll-effect">
             <div class="slides">
                 <h3 class="main-title"><?php echo $title; ?></h3>
                 <div class="swiper-container">

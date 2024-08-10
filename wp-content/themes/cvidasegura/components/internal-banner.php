@@ -1,4 +1,4 @@
-<article class="internal-banner banner py-20">
+<article class="internal-banner banner">
     <?php
     $args = array(
         'name' => 'informacoes',

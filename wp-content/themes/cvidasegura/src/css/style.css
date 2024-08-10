@@ -1213,15 +1213,33 @@ footer .pre-footer .chris-contact .title {
   }
 }
 footer .after-footer {
-  text-align: center;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   color: #1669B1;
-  padding: 1.25rem 0;
+  padding: 0.625rem 0;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  row-gap: 1.25rem;
+}
+@media screen and (min-width: 1024px) {
+  footer .after-footer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 0;
+  }
 }
 footer .after-footer .designer {
   font-size: 0.75rem;
   line-height: 1.25rem;
   color: #1669B1;
+  display: flex;
+}
+@media screen and (min-width: 1024px) {
+  footer .after-footer .designer {
+    justify-content: end;
+    align-items: end;
+  }
+}
+footer .after-footer #copyright {
+  line-height: 1.3rem;
 }
 footer .wpp-float {
   width: 2.5rem;
@@ -1230,8 +1248,8 @@ footer .wpp-float {
   position: fixed;
   z-index: 50;
   animation: bounce 1s infinite;
-  bottom: 10.375rem;
-  right: 1.25rem;
+  bottom: 11.25rem;
+  right: 15px;
   display: none;
 }
 @keyframes bounce {
@@ -1249,8 +1267,7 @@ footer .wpp-float {
     display: block;
     width: 65px;
     height: 65px;
-    right: 2.5rem;
-    bottom: 6.25rem;
+    right: 15px;
   }
 }
 footer .scroll-to-top-btn {
@@ -1264,7 +1281,7 @@ footer .scroll-to-top-btn {
   background-repeat: no-repeat !important;
   position: fixed;
   bottom: 6.875rem;
-  right: 1.875rem;
+  right: 0.9375rem;
   background: url("../../library/icons/up-arrow.svg");
   width: 1.875rem;
   height: 1.875rem;
@@ -1272,7 +1289,6 @@ footer .scroll-to-top-btn {
 }
 @media screen and (min-width: 1024px) {
   footer .scroll-to-top-btn {
-    right: 2.5rem;
     bottom: 7.125rem;
   }
 }
@@ -1293,12 +1309,7 @@ footer .scroll-to-top-btn {
 }
 
 .swiper-button-next.arrow-swiper-next, .swiper-button-prev.arrow-swiper-prev {
-  display: none;
-}
-@media screen and (min-width: 1024px) {
-  .swiper-button-next.arrow-swiper-next, .swiper-button-prev.arrow-swiper-prev {
-    display: flex;
-  }
+  display: flex;
 }
 
 .swiper-button-next.arrow-swiper-next {
@@ -1313,14 +1324,17 @@ footer .scroll-to-top-btn {
   transform: rotate(180deg);
 }
 
-.swiper-container {
-  position: relative;
+.main-banner .swiper-container, .internal-banner .swiper-container {
   height: 25rem;
 }
 @media screen and (min-width: 1024px) {
-  .swiper-container {
+  .main-banner .swiper-container, .internal-banner .swiper-container {
     height: 31.25rem;
   }
+}
+
+.swiper-container {
+  position: relative;
 }
 .swiper-container .swiper-slide a {
   margin-top: 24px;
@@ -1626,7 +1640,7 @@ footer .scroll-to-top-btn {
 }
 @media screen and (min-width: 1024px) {
   .partners .title {
-    margin-bottom: 6.25rem;
+    margin-bottom: 5rem;
   }
 }
 .partners .slides img {
@@ -1636,13 +1650,13 @@ footer .scroll-to-top-btn {
 }
 
 .descriptive-table {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 @media screen and (min-width: 1024px) {
   .descriptive-table {
-    padding-top: 12.5rem;
-    padding-bottom: 12.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 }
 .descriptive-table .tables {
@@ -1687,7 +1701,7 @@ footer .scroll-to-top-btn {
   .descriptive-table .tables .image {
     grid-column: span 7/span 7;
     margin-bottom: 0;
-    height: inherit;
+    height: 100%;
   }
 }
 .descriptive-table .tables .image img {
