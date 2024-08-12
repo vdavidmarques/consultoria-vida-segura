@@ -1,26 +1,6 @@
 <?php 
     get_header(); 
-    
-    function checkEnvironment()
-    {
-        $serverUrl = $_SERVER['HTTP_HOST'];
-
-        $productionUrl = 'consultoriavidasegura.com';
-        $localhostUrl = 'localhost';
-
-        if ($serverUrl === $productionUrl) {
-            return '115';
-        }
-
-        if ($serverUrl === $localhostUrl) {
-            return '63';
-        }
-
-        return 'Ambiente desconhecido';
-    }
-
-    $environment = checkEnvironment();
-    $id = $environment;
+    include_once 'services/check-enviroment.php';
 ?>
     <div class="home" itemscope itemtype="http://schema.org/Article">      
         <?php include 'components/main-banner.php'  ?>
