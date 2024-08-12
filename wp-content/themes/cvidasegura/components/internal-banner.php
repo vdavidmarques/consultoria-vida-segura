@@ -10,7 +10,6 @@
         $query->the_post();
         $whatsappNumber = get_field('whatsappNumber');
         $whatsappMessage = get_field('whatsappMessage');
-        $email = get_field('e-mail');
 
         //Checking archive types
         if (is_post_type_archive('planos-de-saude')) {

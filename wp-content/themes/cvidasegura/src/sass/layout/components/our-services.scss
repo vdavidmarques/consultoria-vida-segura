@@ -2,15 +2,14 @@
 @import '../../helpers/mixins.scss';
 
 .our-services{
-    padding: 5rem 0;
-
+    padding: 2.5rem 0;
+    
     @media screen and (min-width: $breakpoint-lg){
-        padding: 8.75rem 0;
+        padding: 5rem 0;
     }
 
     .content-text{
         text-align: center;
-        margin-bottom: 5rem;
                 
         .wrap{
             grid-column: span 12 / span 12;
