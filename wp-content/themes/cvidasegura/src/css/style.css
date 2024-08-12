@@ -1215,7 +1215,8 @@ footer .pre-footer .chris-contact .title {
 footer .after-footer {
   font-size: 0.75rem;
   color: #1669B1;
-  padding: 0.625rem 0;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   row-gap: 1.25rem;
@@ -1809,12 +1810,12 @@ footer .scroll-to-top-btn {
 }
 
 .depositions {
-  padding: 5rem 0;
+  padding: 2.5rem 0;
   overflow: hidden;
 }
 @media screen and (min-width: 1024px) {
   .depositions {
-    padding: 9.375rem 0;
+    padding: 5rem 0;
   }
 }
 .depositions .swiper-container {

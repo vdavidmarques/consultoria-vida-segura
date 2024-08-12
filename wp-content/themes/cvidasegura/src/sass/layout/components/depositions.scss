@@ -2,10 +2,10 @@
 @import '../../helpers/mixins.scss';
 
 .depositions{
-    padding: 5rem 0;
+    padding: 2.5rem 0;
     overflow: hidden;
     @media screen and (min-width: $breakpoint-lg){
-        padding: 9.375rem 0;
+        padding: 5rem 0;
     }
 
     .swiper-container{

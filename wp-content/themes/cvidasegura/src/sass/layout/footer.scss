@@ -210,7 +210,8 @@ footer{
     .after-footer{
         font-size: 0.75rem;
         color: $blue;
-        padding: 0.625rem 0;
+        padding-top: 0.625rem;
+        padding-bottom: 0.625rem;
         display: grid;
         @include grid-cols-1;
         row-gap: 1.25rem;
