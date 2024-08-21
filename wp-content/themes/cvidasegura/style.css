@@ -11,4 +11,4 @@ Requires PHP: 7.0
 CVidaSegura WordPress Theme 2024
 */
 
-@import url('src/css/style.css');
+@import url('dist/library/css/styles.css');

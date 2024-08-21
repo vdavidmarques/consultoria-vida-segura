@@ -524,6 +524,14 @@ img {
   transform: translateY(0);
 }
 
+.ease-in-out{
+  transition: all 0.5s ease-in-out;
+}
+
+.ease-in-out:hover{
+  transform: scale(1.1); 
+}
+
 .empty-space{
   display: block;
   position: relative;
