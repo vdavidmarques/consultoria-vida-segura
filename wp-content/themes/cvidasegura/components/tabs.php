@@ -68,7 +68,7 @@ if ($tabs) : ?>
                                     foreach ($iconAndTitlePacks as $iconAndTitlePack) :
                                 ?>
                                     <div class="content">
-                                        <img src="<?php echo  get_template_directory_uri() . '/library/icons/check.svg' ?>" alt="<?php echo $pack['title']; ?>" class="icon" />
+                                        <img src="<?php echo  get_template_directory_uri() . '/dist/library/icons/check.svg' ?>" alt="<?php echo $pack['title']; ?>" class="icon" />
                                         <?php echo $iconAndTitlePack['text'] ?></p>
                                     </div>
                                 <?php

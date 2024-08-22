@@ -126,7 +126,7 @@
         wp_footer(); 
         if(is_single() || is_singular()):
     ?>
-            <script src="<?php echo get_template_directory_uri() . "/library/js/open-tab.min.js" ?>"></script>
+            <script src="<?php echo get_template_directory_uri() . "/dist/library/js/open-tab.min.js" ?>"></script>
         <?php endif; ?>
     </body>
 
