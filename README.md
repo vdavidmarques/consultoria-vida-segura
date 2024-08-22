@@ -9,7 +9,7 @@ This repository is a Wordpress template for a company specializing in health ins
 - [WordPress](https://wordpress.org/)
 - [JavaScript](https://www.javascript.com/)
 
-## Wordpress nstallation and Setup
+## Wordpress Installation and Setup
 
 Install all [Wordpress](https://wordpress.org/) presets normally
 
@@ -18,10 +18,6 @@ Install all [Wordpress](https://wordpress.org/) presets normally
 - [ACF - Advanced Custom Fields](https://www.advancedcustomfields.com/) - Pro Version Used
 - [SAVE SVG](https://wordpress.org/plugins/safe-svg/)
 - [Contact Form 7](https://contactform7.com/)
-
-### TailwindCSS
-
-To run TailwindCSS, navigate to the `wp-content/themes/cvidasegura` directory and execute the following command after installing Node.js:
 
 ```bash
 npm run start
