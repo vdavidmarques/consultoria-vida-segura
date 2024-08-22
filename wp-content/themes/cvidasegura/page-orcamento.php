@@ -33,21 +33,21 @@
         </div>
         <div class="socials-icons">
             <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber ?>&text=<?php echo $whatsappMessage ?>">
-                <img src="<?php echo  get_template_directory_uri() . '/library/icons/whatsapp-consultoria-vida-segura-blue.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" itemprop="image" class="icon">
+                <img src="<?php echo  get_template_directory_uri() . '/dist/library/icons/whatsapp-consultoria-vida-segura-blue.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" itemprop="image" class="icon">
                 <?php echo $whatsapp; ?>
             </a>
 
             <a target="_blank" href="tel:<?php echo $phone ?>">
-                <img src="<?php echo  get_template_directory_uri() . '/library/icons/phone-consultoria-vida-segura-blue.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" itemprop="image" class="icon">
+                <img src="<?php echo  get_template_directory_uri() . '/dist/library/icons/phone-consultoria-vida-segura-blue.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" itemprop="image" class="icon">
                 <?php echo $phone ?>
             </a>
 
             <a target="_blank" href="mailto:<?php echo $email ?>">
-                <img src="<?php echo  get_template_directory_uri() . '/library/icons/email-consultoria-vida-segura-blue.svg' ?>" alt="Email - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" itemprop="image" class="icon">
+                <img src="<?php echo  get_template_directory_uri() . '/dist/library/icons/email-consultoria-vida-segura-blue.svg' ?>" alt="Email - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" itemprop="image" class="icon">
                 <?php echo $email ?>
             </a>
             <div class="address">
-                <img src="<?php echo  get_template_directory_uri() . '/library/icons/endereco-consultoria-vida-segura-blue.svg' ?>" alt="Endereço - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" itemprop="image" class="icon">
+                <img src="<?php echo  get_template_directory_uri() . '/dist/library/icons/endereco-consultoria-vida-segura-blue.svg' ?>" alt="Endereço - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" itemprop="image" class="icon">
                 <p class="text"><?php echo get_field('address'); ?></p>
             </div>
         </div>

@@ -88,18 +88,18 @@
 
     //If production
     if (is_home('115')) : ?>
-        <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/service-image.min.js" ?>"></script>
-        <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/banner.min.js" ?>"></script>
-        <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/depositions.min.js" ?>"></script>
+        <script src="<?php echo get_template_directory_uri() . "/dist/library/js/swiper/service-image.min.js" ?>"></script>
+        <script src="<?php echo get_template_directory_uri() . "/dist/library/js/swiper/banner.min.js" ?>"></script>
+        <script src="<?php echo get_template_directory_uri() . "/dist/library/js/swiper/depositions.min.js" ?>"></script>
     <?php elseif (is_post_type_archive($my_post_types_archives)) : ?>
-        <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/health-insurance.min.js" ?>"></script>
+        <script src="<?php echo get_template_directory_uri() . "/dist/library/js/swiper/internal-banner.min.js" ?>"></script>
     <?php elseif (is_tax() || is_single()) : ?>
-        <script src="<?php echo get_template_directory_uri() . "/library/js/swiper/banner.min.js" ?>"></script>
+        <script src="<?php echo get_template_directory_uri() . "/dist/library/js/swiper/banner.min.js" ?>"></script>
     <?php elseif (!is_page('sobre-nos') && !is_page('politica-de-privacidade') && !is_page('orcamento') && !is_page('politica-de-privacidade')) : ?>
-        <script src="<?php echo get_template_directory_uri() . "/library/js/open-tab.min.js" ?>"></script>
+        <script src="<?php echo get_template_directory_uri() . "/dist/library/js/open-tab.min.js" ?>"></script>
     <?php elseif (is_page('orcamento')) :
     ?>
-        <script src="<?php echo get_template_directory_uri() . "/library/js/form-orcamento.js" ?>"></script>
+        <script src="<?php echo get_template_directory_uri() . "/dist/library/js/form-orcamento.js" ?>"></script>
    <?php
         endif;
         
