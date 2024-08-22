@@ -48,7 +48,7 @@
         </div>
         <div class="header-menu-itens container">
             <a href="/"> 
-                <img src="<?php echo  get_template_directory_uri() . '/library/images/consultoria-vida-segura-logo.webp' ?>" alt="Consultoria Vida Segura - Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" class="logo" itemprop="image">
+                <img src="<?php echo  get_template_directory_uri() . '/dist/library/images/consultoria-vida-segura-logo.webp' ?>" alt="Consultoria Vida Segura - Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" class="logo" itemprop="image">
             </a>
 
             <div class="menu-items">
