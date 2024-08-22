@@ -12,18 +12,18 @@
         $whatsappMessage = get_field('whatsappMessage');
 
         //Checking archive types
-        if (is_post_type_archive('planos-de-saude')) {
-            $healthInsurance = get_field('health-insurance');
-            $banners = $healthInsurance['banners-health-insurance'];
-        } elseif (is_post_type_archive('seguros')) {
-            $lifeInsurance = get_field('life-insurance');
-            $banners = $lifeInsurance['banners-health-insurance'];
-        } elseif (is_post_type_archive('planos-odontologicos')) {
-            $dentalPlans = get_field('dental-plans');
-            $banners = $dentalPlans['banners-health-insurance'];
-        } elseif (is_post_type_archive('planos-funeral')) {
-            $funeralPlans = get_field('funeral-plans');
-            $banners = $funeralPlans['banners-health-insurance'];
+        $post_types = [
+            'planos-de-saude' => 'health-insurance',
+            'seguros' => 'life-insurance',
+            'planos-odontologicos' => 'dental-plans',
+            'planos-funeral' => 'funeral-plans'
+        ];
+        foreach ($post_types as $post_type => $field) {
+            if (is_post_type_archive($post_type)) {
+                $custom_field = get_field($field);
+                $banners = $custom_field['banners-health-insurance'];
+                break;
+            }
         }
         $count = 0;
         if ($banners) :
