@@ -13,7 +13,7 @@ gulp.task('style', function() {
 
 // Tarefa para minificar JavaScript
 gulp.task('scripts', function() {
-    return gulp.src('library/js/**/*.js') // Caminho dos arquivos JavaScript
+    return gulp.src('src/js/**/*.js') // Caminho dos arquivos JavaScript
         .pipe(terser())
         .pipe(gulp.dest('dist/library/js')); // Pasta de destino dos arquivos minificados
 });
