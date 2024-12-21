@@ -3,7 +3,7 @@ $firstBanners = get_field("first-banner", $id);
 $count = 0;
 if ($firstBanners) :
 ?>
-    <article class="main-banner banner">
+    <section itemscope itemtype="http://schema.org/CreativeServce" class="main-banner banner">
         <div class="swiper-container relative overflow-hidden">
             <div class="swiper-wrapper">
                 <?php
@@ -24,11 +24,11 @@ if ($firstBanners) :
 
                                 <?php endif; ?>
 
-                            <?php endif; ?>
+                    <?php endif; ?>
                             </div>
                             <div class="context">
                                 <div class="content">
-                                    <div class="default-heading-title">
+                                    <div itemprop="headline" class="default-heading-title">
                                         <?php
                                             if ($firstBanner["main-banner-main-text"]) :
                                                 echo $firstBanner["main-banner-main-text"];
@@ -47,7 +47,7 @@ if ($firstBanners) :
                                             $whatsapp = get_field('whatsapp');
                                             $whatsappNumber = get_field('whatsappNumber');
                                     ?>
-                                            <a href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber; ?>&text=Olá, gostaria de mais informações sobre <?php single_post_title(); ?>" target="_blank" itemprop="name" class="mt-6 button button button-first">
+                                            <a href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber; ?>&text=Olá, gostaria de mais informações sobre <?php single_post_title(); ?>" target="_blank" itemprop="url" class="mt-6 button button button-first">
                                                 <?php
                                                 if ($firstBanner['wpp-link']):
                                                     echo $firstBanner['wpp-link'];
@@ -64,7 +64,7 @@ if ($firstBanners) :
                                             $target = $firstBanner['main-banner-button']['target'] ? $firstBanner['main-banner-button']['target'] : '_self';
                                             $title = $firstBanner['main-banner-button']['title'];
                                         ?>
-                                            <a href="<?php echo $url ?>" itemprop="name" class="mt-6 button button button-first" target="<?php echo $target ?>">
+                                            <a href="<?php echo $url ?>" itemprop="url" class="mt-6 button button button-first" target="<?php echo $target ?>">
                                                 <?php echo $title ?>
                                             </a>
                                     <?php
@@ -85,5 +85,5 @@ if ($firstBanners) :
                     <?php endforeach; ?>
             </div>
         </div>
-    </article>
+    </section>
 <?php endif; ?>

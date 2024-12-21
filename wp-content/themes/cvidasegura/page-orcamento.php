@@ -11,7 +11,7 @@
     
     include 'blocks/breadcrumb.php'
 ?>
-<section class="page-orcamento container">
+<section class="page-orcamento container" itemscope itemtype="http://schema.org/ContactPage">
     <?php
         $args = array(
             'name' => 'informacoes',
@@ -28,22 +28,22 @@
             $email = get_field('e-mail');
             $title = get_field('title-budget');
     ?>
-        <div class="title">
+        <div class="title" itemprop="headline">
             <?php echo $title; ?>
         </div>
-        <div class="socials-icons">
-            <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber ?>&text=<?php echo $whatsappMessage ?>">
-                <img src="<?php echo  get_template_directory_uri() . '/dist/library/icons/whatsapp-consultoria-vida-segura-blue.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" itemprop="image" class="icon">
+        <div class="socials-icons"  itemscope itemtype="http://schema.org/Organization">
+            <a target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber ?>&text=<?php echo $whatsappMessage ?>" itemprop="url">
+                <img src="<?php echo  get_template_directory_uri() . '/dist/library/icons/whatsapp-consultoria-vida-segura-blue.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" itemprop="image" class="icon" itemprop="image">
                 <?php echo $whatsapp; ?>
             </a>
 
             <a target="_blank" href="tel:<?php echo $phone ?>">
-                <img src="<?php echo  get_template_directory_uri() . '/dist/library/icons/phone-consultoria-vida-segura-blue.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" itemprop="image" class="icon">
+                <img src="<?php echo  get_template_directory_uri() . '/dist/library/icons/phone-consultoria-vida-segura-blue.svg' ?>" alt="WhatsApp - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" itemprop="image" class="icon" itemprop="image">
                 <?php echo $phone ?>
             </a>
 
-            <a target="_blank" href="mailto:<?php echo $email ?>">
-                <img src="<?php echo  get_template_directory_uri() . '/dist/library/icons/email-consultoria-vida-segura-blue.svg' ?>" alt="Email - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" itemprop="image" class="icon">
+            <a target="_blank" rel="noopener noreferrer" href="mailto:<?php echo $email ?>" itemprop="url">
+                <img src="<?php echo  get_template_directory_uri() . '/dist/library/icons/email-consultoria-vida-segura-blue.svg' ?>" alt="Email - Consultoria Vida Segura | Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida" itemprop="image" class="icon" itemprop="image">
                 <?php echo $email ?>
             </a>
             <div class="address">

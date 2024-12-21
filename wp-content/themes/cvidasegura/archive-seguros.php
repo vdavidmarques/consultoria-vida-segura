@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<section itemscope itemtype="http://schema.org/Article" class="archive-seguros">
+<section itemscope itemtype="http://schema.org/CollectionPage" class="archive-seguros">
 
     <?php
         include 'blocks/breadcrumb.php';

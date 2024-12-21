@@ -1,10 +1,10 @@
 <?php get_header(); ?>
-<section class="content-area page-taxonomy">
+<section class="content-area page-taxonomy" itemscope itemtype="http://schema.org/CollectionPage">
 
     <?php include 'blocks/breadcrumb.php'; ?>
     <?php include 'components/banner.php'; ?>
 
-    <article class="container facilities">
+    <article class="container facilities" itemscope itemtype="http://schema.org/CreativeServce">
         <div class="content">
             <div itemprop="articleBody" class="title scroll-effect ">
                 <?php
@@ -19,7 +19,7 @@
                 $class =
                     ($count == 1) ? 'col-1' : (($count == 2) ? 'col-2' : (($count == 3) ? 'col-3' : (($count >= 4) ? 'col-4' : 'col-default')));
             ?>
-                <div class="scroll-effect facilities-list <?php echo $class ?>">
+                <div class="scroll-effect facilities-list <?php echo $class ?>" itemprop="description">
                     <?php
                     foreach (array_slice($lists, 0, 4) as $list) :
                     ?>
@@ -35,8 +35,8 @@
     </article>
 
     <?php if (have_posts()) : ?>
-        <article class="scroll-effect partners partners-taxonomy container">
-            <div class="title">
+        <article class="scroll-effect partners partners-taxonomy container" itemscope itemtype="http://schema.org/CreativeServce">
+            <div class="title" itemprop="headline">
                 Nossos produtos
             </div>
             <div class="slides">
@@ -44,20 +44,26 @@
                     <div class="partner-list swiper-wrapper">
                         <?php while (have_posts()) : the_post(); ?>
                             <?php if (has_post_thumbnail()) : ?>
-                                <div class="partners-item swiper-slide">
+                                <div class="partners-item swiper-slide" itemscope itemtype="http://schema.org/Product">
                                     <a itemprop="name" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" itemprop="name">
                                         <?php the_post_thumbnail('thumbnail'); ?>
                                     </a>
                                 </div>
-                            <?php endif; ?>
+                            <?php 
+                                endif; 
+                            ?>
                         <?php endwhile; ?>
                     </div>
                 </div>
             </div>
         </article>
     <?php else : ?>
-        <p class="mt-20">Nenhum produto para <?php single_term_title(); ?> encontrado</p>
-        <p>Podemos lhe ajudar de outras maneiras. Entre em contato</p>
+    <article class="scroll-effect partners partners-taxonomy container" itemscope itemtype="http://schema.org/CreativeServce">
+            <div class="title">
+                <p class="mt-20">Nenhum produto para <?php single_term_title(); ?> encontrado</p>
+            </div>
+            <p>Podemos lhe ajudar de outras maneiras. Entre em contato</p>
+        </article>
     <?php endif; ?>
 </section>
 <?php get_footer(); ?>

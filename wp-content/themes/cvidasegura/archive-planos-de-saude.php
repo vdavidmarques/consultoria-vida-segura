@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<section itemscope itemtype="http://schema.org/Article" class="archive-health-insurance">
+<section itemscope itemtype="http://schema.org/CollectionPage" class="archive-health-insurance">
     <?php 
         include 'blocks/breadcrumb.php'; 
         include 'components/internal-banner.php'; 

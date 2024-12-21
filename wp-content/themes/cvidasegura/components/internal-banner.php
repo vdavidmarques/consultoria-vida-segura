@@ -1,4 +1,4 @@
-<article class="internal-banner banner">
+<article class="internal-banner banner" itemscope itemtype="http://schema.org/CreativeServce">
     <?php
     $args = array(
         'name' => 'informacoes',
@@ -53,7 +53,7 @@
 
                             <div class="context">
                                 <div class="content">
-                                    <div class="default-heading-title">
+                                    <div itemprop="headline" class="default-heading-title">
                                         <?php
                                             if ($banner['text']) :
                                                 echo $banner['text'];
@@ -61,12 +61,12 @@
                                         ?>
                                     </div>
                                     <?php if ($banner['botao']) : ?>
-                                        <a href="<?php echo $banner['botao']['url'] ?>" itemprop="name" class="mt-6 button button-first">
+                                        <a href="<?php echo $banner['botao']['url'] ?>" itemprop="url" class="mt-6 button button-first">
                                             <?php echo  $banner['botao']['title'] ?>
                                         </a>
                                         <?php
                                     else : ?>
-                                            <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber ?>&text=<?php echo $whatsappMessage ?>" itemprop="name" class="mt-6 button button-first">
+                                            <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber ?>&text=<?php echo $whatsappMessage ?>" itemprop="url" class="mt-6 button button-first">
                                                 Veja mais
                                             </a>
                                     <?php endif; ?>

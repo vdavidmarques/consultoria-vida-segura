@@ -2,10 +2,12 @@
 
 @mixin font-montserrat {
   font-family: "MontSerrat", sans-serif;
+  font-display: swap; 
 }
 
 @mixin font-rubik {
   font-family: "Rubik", sans-serif;
+  font-display: swap; 
 }
 
 @mixin mx-auto {

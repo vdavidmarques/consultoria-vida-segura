@@ -1,7 +1,7 @@
 <?php
 $tabs = get_field('accordion');
 if ($tabs) : ?>
-    <article class="tab container">
+    <article class="tab container" itemscope itemtype="http://schema.org/FAQPage">
         <div class="headers">
             <?php
                 $index = 0;
@@ -21,8 +21,8 @@ if ($tabs) : ?>
             $index = 0;
             foreach ($tabs as $key=>$tab) : 
         ?>
-            <div id="tab-<?php echo $index; ?>" class="tab-body">
-                <div class="descriptions-options">
+            <div id="tab-<?php echo $index; ?>" class="tab-body" itemscope itemprop="mainEntity" itemtype="http://schema.org/Question">
+                <div class="descriptions-options" itemprop="acceptedAnswer" itemscope itemtype="http://schema.org/Answer">
                     <?php
                     if ($tab['descriptions-options']) :
                         if ($tab['title-and-text']) :

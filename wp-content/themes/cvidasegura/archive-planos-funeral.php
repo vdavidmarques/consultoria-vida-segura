@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<section itemscope itemtype="http://schema.org/Article" class="archive-funeral-plans">
+<section itemscope itemtype="http://schema.org/CollectionPage" class="archive-funeral-plans">
     <?php
         include 'blocks/breadcrumb.php';
         include 'components/internal-banner.php';

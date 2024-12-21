@@ -19,8 +19,8 @@ class CustomPostTypeSlider {
         $query = new WP_Query($args);
         if ($query->have_posts()) :
     ?>
-            <article class="scroll-effect partners container">
-                <div class="title">
+            <article class="scroll-effect partners container" itemscope itemtype="http://schema.org/CreativeServce">
+                <div class="title" itemprop="headline">
                     Nossos produtos
                 </div>
                 <div class="slides">
@@ -28,8 +28,8 @@ class CustomPostTypeSlider {
                         <div class="partners-list swiper-wrapper">
                             <?php while ($query->have_posts()) : $query->the_post(); ?>
                                 <?php if (has_post_thumbnail()) : ?>
-                                    <div class="partners-item swiper-slide">
-                                        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" itemprop="name">
+                                    <div class="partners-item swiper-slide" itemscope itemtype="http://schema.org/Brand">
+                                        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" itemprop="url">
                                             <?php the_post_thumbnail('thumbnail'); ?>
                                         </a>
                                     </div>
@@ -49,8 +49,12 @@ class CustomPostTypeSlider {
                 </div>
             </article>
         <?php else : ?>
-            <p class="mt-20">Nenhum produto para <?php single_term_title(); ?> encontrado</p>  
-            <p>Podemos lhe ajudar de outras maneiras. Entre em contato</p>
+            <article class="scroll-effect partners container" itemscope itemtype="http://schema.org/CreativeServce">
+                <div class="title">
+                    <p class="mt-20">Nenhum produto para <?php single_term_title(); ?> encontrado</p>  
+                </div>
+                <p>Podemos lhe ajudar de outras maneiras. Entre em contato</p>
+            </article>
         <?php endif;
     }
 }

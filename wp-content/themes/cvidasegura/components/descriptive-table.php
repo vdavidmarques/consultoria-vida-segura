@@ -1,4 +1,4 @@
-<article class="descriptive-table">
+<article class="descriptive-table" itemscope itemtype="http://schema.org/CreativeServce">
     <?php
     $args = array(
         'name' => 'informacoes',
@@ -58,7 +58,7 @@
         }
     ?>
         <div class="tables container grid-cols-12">
-            <div class="title scroll-effect">
+            <div class="title scroll-effect" itemprop="headline">
                 <?php echo $title ?>
             </div>
             <?php if($image) :?>
@@ -66,7 +66,7 @@
                     <img src="<?php echo $imageUrl ?>" alt="<?php echo $imageAlt ?>" itemprop="image" class="w-full object-cover">
                 </div>
             <?php endif; ?>
-            <div class="itens scroll-effect">
+            <div class="itens scroll-effect" itemprop="description">
                 <?php
                 if ($tables) :
                     foreach ($tables as $table) :
@@ -78,5 +78,7 @@
                 ?>
             </div>
         </div>
-    <?php endwhile; ?>
+    <?php endwhile; 
+    wp_reset_postdata();
+    ?>
 </article>

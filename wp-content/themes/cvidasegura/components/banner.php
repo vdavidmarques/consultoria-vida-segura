@@ -1,4 +1,4 @@
-<article class="main-banner banner">
+<article itemscope itemtype="http://schema.org/CreativeServce" class="main-banner banner">
     <div class="swiper-container relative overflow-hidden">
         <div class="swiper-wrapper">
             <?php
@@ -10,26 +10,29 @@
             ?>
                     <div class="swiper-slide">
                         <div class="main-banner-pattern">&nbsp;</div>
-                        <div class="image">
-                            <?php
+                        <?php
                             if ($banner["main-banner-image"] || $banner["main-banner-image-mobile"]) :
                             ?>
-                                <img src="<?php echo $banner["main-banner-image"] ?>" alt="" itemprop="image" class="w-full h-full object-cover show-desktop">
-
-                                <?php if ($banner["main-banner-image-mobile"]) : ?>
-                                    <img src="<?php echo $banner["main-banner-image-mobile"] ?>" alt="" itemprop="image" class="w-full h-full object-cover show-mobile">
+                                <div 
+                                    class="image show-desktop w-full h-full object-cover" 
+                                    style="background-image: url(<?php echo $banner["main-banner-image"] ?>)"
+                                >
+                                    &nbsp;
+                                </div>
+                                    <?php if ($banner["main-banner-image-mobile"]) : ?>
+                                    <div style="background-image:url(<?php echo $banner["main-banner-image-mobile"] ?>)" class="w-full h-full object-cover show-mobile">
+                                    &nbsp;
+                                    </div>
 
                                 <?php else : ?>
-
-                                    <img src="<?php echo $banner["main-banner-image"] ?>" alt="" itemprop="image" class="w-full h-full object-cover show-mobile">
+                        
+                                    <div style="background-image:url(<?php echo $banner['main-banner-image'] ?>)" class="w-full h-full object-cover show-mobile">
 
                                 <?php endif; ?>
-
-                            <?php endif; ?>
-                        </div>
+                        <?php endif; ?>
                         <div class="context">
                             <div class="content">
-                                <div class="default-heading-title">
+                                <div itemprop="headline" class="default-heading-title">
                                     <?php
                                     if ($banner["main-banner-main-text"]) :
                                         echo  $banner["main-banner-main-text"];
@@ -37,7 +40,7 @@
 
                                 </div>
                                 <?php if ($banner['main-banner-button']) : ?>
-                                    <a href="<?php echo $banner['main-banner-button']['url'] ?>" itemprop="name" class="mt-6 button button button-first">
+                                    <a href="<?php echo $banner['main-banner-button']['url'] ?>" itemprop="url" class="mt-6 button button button-first">
                                         <?php echo $banner['main-banner-button']['text'] ?>
                                     </a>
                                 <?php endif; ?>

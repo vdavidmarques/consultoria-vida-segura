@@ -4,32 +4,25 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width">
-    <meta itemprop="description" content="Consultoria Vida Segura - Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida">
+    <meta itemprop="description" content="Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida. Oferecemos uma ampla diversidade de produtos e serviços em assistência médica">
     <?php wp_head(); ?>
     <title itemprop="name">
         <?php
             if(is_home()){
-                echo "";
+                echo get_the_title(63) . ' | ';
             }elseif(is_tax()){
-                echo single_cat_title() . ' |';
+                echo single_cat_title() . ' | ';
             }elseif(is_archive()){
-                echo get_the_archive_title() . ' |';
+                echo get_the_archive_title() . ' | ';
             }elseif(is_singular()){
-                echo single_post_title() . ' |';
+                echo single_post_title() . ' | ';
             }else{
-                echo get_the_title() . ' |';
+                echo get_the_title() . ' | ';
             }
+            echo 'Consultoria Vida Segura';
         ?>
-       Consultoria Vida Segura
     </title>
     <link itemprop="url" href="https://www.consultoriavidasegura.com">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 

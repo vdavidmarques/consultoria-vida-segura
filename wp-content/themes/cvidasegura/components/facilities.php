@@ -1,6 +1,6 @@
-<article class="container facilities scroll-effect">
+<article class="container facilities scroll-effect"  itemscope itemtype="http://schema.org/CreativeServce">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <div itemprop="articleBody" class="title">
+        <div itemprop="headline" class="title">
             <?php echo get_field('facilities-title'); ?>
         </div>
         <?php include get_template_directory() . '/blocks/icons-and-texts.php'; ?>

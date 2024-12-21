@@ -46,21 +46,21 @@
                 </div>
 
                 <div class="chris-contact scroll-effect">
-                    <h3 itemscope itemprop="articleBody" class="title">Christiane Barros</h3>
+                    <h3 itemscope itemprop="name" class="title">Christiane Barros</h3>
                     <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber ?>&text=<?php echo $whatsappMessage ?>">
                         <?php echo $whatsapp ?>
                     </a>
                     <a target="_blank" href="mailto:<?php echo $email ?>">
                         <?php echo $email ?>
                     </a>
-                    <p itemprop="articleBody"> <?php echo $address ?></p>
+                    <p itemprop="name"> <?php echo $address ?></p>
                 </div>
             </div>
         </div>
         <div class="container after-footer">
             <div id="copyright" itemprop="copyrightHolder">
                 &copy; <?php echo esc_html(date_i18n(__('Y', 'blankslate'))); ?>
-                - <?php echo esc_html(get_bloginfo('name')); ?>
+                - <?php wp_title(); ?>
             </div>
             <a href="https://baixada-web-studio.great-site.net/" target="_blank" class="designer">
                 By Baixada Web Studio
