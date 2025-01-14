@@ -4,7 +4,6 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width">
-    <meta itemprop="description" content="Empresa especializa em Planos de Saúde, odontológicos e funeral e Seguros de vida. Oferecemos uma ampla diversidade de produtos e serviços em assistência médica">
     <?php wp_head(); ?>
     <title itemprop="name">
         <?php

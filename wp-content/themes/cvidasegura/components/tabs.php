@@ -1,7 +1,7 @@
 <?php
 $tabs = get_field('accordion');
 if ($tabs) : ?>
-    <article class="tab container" itemscope itemtype="http://schema.org/FAQPage">
+    <article class="tab container" itemscope itemtype="http://schema.org/ItemList">
         <div class="headers">
             <?php
                 $index = 0;

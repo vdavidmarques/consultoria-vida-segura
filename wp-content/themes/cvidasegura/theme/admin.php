@@ -61,4 +61,29 @@
         /* Deactivating ContactForm 7 to load at all the pages. It should load only at page-orcamento.php page */
         add_filter( 'wpcf7_load_js', '__return_false' );
         add_filter( 'wpcf7_load_css', '__return_false' );
+
+        /*******************************
+        Defining meta description
+        ********************************/
+        function metadescription_head_meta()
+        {
+        ?>
+            <meta itemprop="description" content="<?php echo get_the_excerpt(); ?>">
+        <?php
+        }
+        add_action('wpseo_head', 'metadescription_head_meta', 999);
+
+        /*******************************
+        Disabling Feed RSS
+        ********************************/
+
+        function disable_feeds() {
+            wp_die(__('Feeds não estão disponíveis neste site.')); 
+        }
+        add_action('do_feed', 'disable_feeds', 1);
+        add_action('do_feed_rdf', 'disable_feeds', 1);
+        add_action('do_feed_rss', 'disable_feeds', 1);
+        add_action('do_feed_rss2', 'disable_feeds', 1);
+        add_action('do_feed_atom', 'disable_feeds', 1);
+        
 ?>
