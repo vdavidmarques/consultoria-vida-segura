@@ -26,7 +26,6 @@ mkdir backend
 - Extract it into your backend directory.
 - Configure the wp-config.php file with your database credentials.
 
-``
 ### 2. Install WordPress Plugins
 WP REST API: This will enable WordPress to interact with the React and Laravel setup.
 ACF (Advanced Custom Fields): For creating custom content fields within WordPress.
