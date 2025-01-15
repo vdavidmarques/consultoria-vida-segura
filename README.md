@@ -17,8 +17,8 @@ To run this project, make sure you have the following:
 ### 0. Create those folders
 
 ````bash
-git clone https://github.com/yourusername/blank-wordpress-template.git
-cd blank-wordpress-template
+git clone git@github.com:vdavidmarques/consultoria-vida-segura.git
+cd consultoria-vida-segura
 mkdir backend
 ````
 ### 1. Install WordPress
