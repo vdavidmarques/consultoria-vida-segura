@@ -27,16 +27,13 @@ mkdir backend
 - Configure the wp-config.php file with your database credentials.
 
 ### 2. Install WordPress Plugins
-WP REST API: This will enable WordPress to interact with the React and Laravel setup.
-ACF (Advanced Custom Fields): For creating custom content fields within WordPress.
-Safe SVG: Allows the safe upload and use of SVG files in WordPress.
-Contact Form 7
+- ACF PRO (Advanced Custom Fields): For creating custom content fields within WordPress.
+- Safe SVG: Allows the safe upload and use of SVG files in WordPress.
+- Contact Form 7
+
 You can install these plugins directly via the WordPress admin dashboard or download and place them in the wp-content/plugins directory.
 
 - Active the theme and all the presets plugins
-- Urls examples at rest api
-/index.php?rest_route=/wp/v2/pages&slug=homepage
-/index.php?rest_route=/wp/v2/pages&slug=pages&slug=about
 
 ### 5. Run the Project
 
