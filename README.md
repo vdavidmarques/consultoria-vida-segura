@@ -1,23 +1,45 @@
-# Cvidasegura - Health Insurance and Life Insurance Sales Company Template
+# Consultoria Vida Segura WordPress Template
 
-## Overview
+Official website for Consultoria Vida Segura products and services. Insurance, Health Plans and consortium. Adapted to the specific needs of the client.
 
-This repository is a Wordpress template for a company specializing in health insurance and life insurance sales. It is built using the following technologies:
+## 🚀 Features
+- **WordPress** serves as the CMS with ACF, WP REST API, and Safe SVG plugins.
 
-- [SASS](https://sass-lang.com/)
-- [PHP](https://www.php.net/)
-- [WordPress](https://wordpress.org/)
-- [JavaScript](https://www.javascript.com/)
+## 🛠️ Requirements
+To run this project, make sure you have the following:
 
-## Wordpress Installation and Setup
+- **Node.js**: Version 16 or above
+- **PHP**: Version 7.4 or above
+- **WordPress**: Latest version
+- **MySQL**: Database for WordPress
 
-Install all [Wordpress](https://wordpress.org/) presets normally
+## 📦 Installation
+### 0. Create those folders
 
-### Required Plugins
+````bash
+git clone git@github.com:vdavidmarques/consultoria-vida-segura.git
+cd consultoria-vida-segura
+mkdir backend
+````
+### 1. Install WordPress
+- Download the latest version of WordPress.
+- Extract it into your backend directory.
+- Configure the wp-config.php file with your database credentials.
 
-- [ACF - Advanced Custom Fields](https://www.advancedcustomfields.com/) - Pro Version Used
-- [SAVE SVG](https://wordpress.org/plugins/safe-svg/)
-- [Contact Form 7](https://contactform7.com/)
+### 2. Install WordPress Plugins
+WP REST API: This will enable WordPress to interact with the React and Laravel setup.
+ACF (Advanced Custom Fields): For creating custom content fields within WordPress.
+Safe SVG: Allows the safe upload and use of SVG files in WordPress.
+Contact Form 7
+You can install these plugins directly via the WordPress admin dashboard or download and place them in the wp-content/plugins directory.
 
-```bash
-npm run start
+- Active the theme and all the presets plugins
+- Urls examples at rest api
+/index.php?rest_route=/wp/v2/pages&slug=homepage
+/index.php?rest_route=/wp/v2/pages&slug=pages&slug=about
+
+### 5. Run the Project
+
+````bash
+cd frontend
+npm start
