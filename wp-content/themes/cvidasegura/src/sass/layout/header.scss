@@ -159,14 +159,6 @@
           margin-top: 0;
         }
 
-        @media screen and (min-width: $breakpoint-1_5xl) {
-          column-gap: 1.5rem;
-        }
-
-        @media screen and (min-width: $breakpoint-2xl) {
-          column-gap: 4rem;
-        }
-
         li a {
           color: $blue;
           text-decoration: none;

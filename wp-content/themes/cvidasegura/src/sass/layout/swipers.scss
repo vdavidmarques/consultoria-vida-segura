@@ -116,11 +116,7 @@
 
       @media screen and (min-width: $breakpoint-lg) {
         height: 31.25rem;
-        @include col-span-5;
-      }
-
-      @media screen and (min-width: $breakpoint-xl) {
-        @include col-span-6;
+        @include col-span-8;
       }
     }
 
@@ -135,16 +131,11 @@
       background-color: $blue;
 
       @media screen and (min-width: $breakpoint-lg) {
-        @include col-span-6;
+        @include col-span-4;
         background-color: inherit;
       }
 
-      @media screen and (min-width: $breakpoint-xl) {
-        @include col-span-5;
-      }
-
       @media screen and (min-width: $breakpoint-1_5xl) {
-        @include col-start-8;
         padding-right: 2.5rem;
       }
 

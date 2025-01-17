@@ -24,3 +24,16 @@ function carregar_fontes_assincronas()
 }
 add_action('wp_enqueue_scripts', 'carregar_fontes_assincronas');
 
+
+/*******************************
+    Get ID by Slug
+ ********************************/
+
+ function get_page_id_by_slug($slug)
+ {
+     $page = get_page_by_path($slug, OBJECT, 'page');
+     if ($page) {
+         return $page->ID;
+     }
+     return 0;
+ }
