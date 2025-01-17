@@ -5,11 +5,11 @@
   object-fit: cover;
   background-repeat: no-repeat;
   fill: $white;
-  width: 1.75rem; /* 28px */
-  height: 1.75rem; /* 28px */
+  width: 1.75rem;
+  height: 1.75rem;
   @media screen and (min-width: $breakpoint-lg) {
-    width: 2rem; /* 32px */
-    height: 2rem; /* 32px */
+    width: 2rem;
+    height: 2rem;
   }
 }
 
@@ -247,13 +247,13 @@
     }
 
     .bg-close-menu-mobile {
-      @include btn-menu-mobile;
       position: absolute;
       top: 1.75rem;
       right: 1rem;
       width: 2.25rem;
       height: 2.25rem;
       background: url("../../library/icons/close-menu-icon.svg");
+      @include btn-menu-mobile;
 
       @media screen and (min-width: $breakpoint-lg) {
         display: none;

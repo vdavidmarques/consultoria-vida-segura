@@ -26,10 +26,10 @@
                 color: $white;
                 padding: 1.25rem;
                 cursor: pointer;
-                @include heading-title-lg;
                 border: none;
                 outline: none;
                 transition: background-color 0.3s;
+                @include heading-title-lg;
         
                 &:hover,
                 &.active {
@@ -57,9 +57,9 @@
           margin-bottom: 5rem;
   
           .title, h1,h2,h3,h4 {
-            @include heading-title-xl;
             margin-bottom: 2.5rem;
             line-height: 2.5rem;
+            @include heading-title-xl;
           }
   
           .title-and-icon-list {
@@ -111,12 +111,12 @@
 
             .title {
                 text-transform: none;
-                @include heading-title-lg;               
                 border-radius: 0.625rem 0.625rem 0 0;
                 background-color: $blue;
                 padding: 1.25rem;
                 text-align: center;
                 color: $white;
+                @include heading-title-lg;               
             }
   
             p {
@@ -129,8 +129,8 @@
               flex-direction: row;
               column-gap: 0.625rem;
               margin-top: 1.25rem;
-              @include text-base;
               padding: 0 1.25rem 1.25rem;
+              @include text-base;
   
               .icon {
                 width: 1.5625rem;

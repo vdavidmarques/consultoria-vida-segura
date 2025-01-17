@@ -2,13 +2,13 @@
 @import './mixins.scss';
 
 .button{
-  @include transition-colors;
   border: none;
   width: fit-content;
   padding: 12px;
   text-decoration: none;
-  @include heading-title-sm;
   cursor: pointer; 
+  @include transition-colors;
+  @include heading-title-sm;
   @media screen and (min-width: $breakpoint-lg) {
     @include heading-title-md;
   }

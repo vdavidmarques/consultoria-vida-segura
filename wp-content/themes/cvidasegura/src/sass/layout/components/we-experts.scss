@@ -51,21 +51,21 @@
     }
 
     .content{
-        @include col-span-12;
         background-color: $blue;
         color: $white;
         z-index: 20;
         row-gap: 2.5rem;
         padding: 5rem 1rem;
+        @include col-span-12;
 
         @media screen and (min-width: $breakpoint-lg) {
-            @include col-span-5;
-            @include col-start-7;
             display: flex;
             justify-content: center;
             flex-direction: column;
             align-items: baseline;
             padding-left: 2.5rem;
+            @include col-span-5;
+            @include col-start-7;
         }
 
         @media screen and (min-width: $breakpoint-1_5xl) {

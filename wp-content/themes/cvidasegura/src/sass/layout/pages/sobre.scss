@@ -75,11 +75,11 @@
                     flex-direction: column;
 
                     h1, h2, h3, h4 {
-                        @include font-rubik;
                         font-weight: bold;
                         font-size: 2.25rem;
                         line-height: 2.5rem;
                         color: $blue;
+                        @include font-rubik;
                     }
 
                     p{

@@ -13,10 +13,10 @@
     }
 
     .main-title{
-        @include heading-title-xl;
         margin-bottom: 9.375rem;
         color: $blue;
         text-align: center;
+        @include heading-title-xl;
     }
 
     .item{

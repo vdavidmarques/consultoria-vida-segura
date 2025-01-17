@@ -13,9 +13,9 @@
     }
 
     .title{
-        @include heading-title-2xl;
         color: $blue;
         margin-bottom: 2.5rem;
+        @include heading-title-2xl;
 
         @media screen and (min-width: $breakpoint-lg) {
             margin-bottom: 5rem;

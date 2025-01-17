@@ -28,9 +28,9 @@
         }
 
         .title{
-            @include heading-title-xl;
             line-height: 2.8125rem;
             color: $white;
+            @include heading-title-xl;
 
             @media screen and (min-width: $breakpoint-lg) {
                 max-width: 30rem;

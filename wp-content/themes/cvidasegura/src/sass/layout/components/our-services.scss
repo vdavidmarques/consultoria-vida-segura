@@ -20,9 +20,9 @@
             }
 
             .title{
-                @include heading-title-2xl;
                 margin-bottom: 2rem;
                 color: $blue;
+                @include heading-title-2xl;
             }
 
             .text{
@@ -101,10 +101,10 @@
             overflow: hidden;
                       
             @media screen and (min-width: $breakpoint-lg){
-                @include col-span-6;
                 grid-template-columns: repeat(6, minmax(0, 1fr));
                 padding: 0 0.625rem;
                 height: 25rem;
+                @include col-span-6;
             }
  
             @media screen and (min-width: $breakpoint-1_5xl){
@@ -135,8 +135,8 @@
                     }
                     .title{
                         color: $white;
-                        @include heading-titles;
                         font-size: 1.125rem;
+                        @include heading-titles;
                         
                         @media screen and (min-width: $breakpoint-1_5xl){
                             @include heading-title-lg;
@@ -145,8 +145,8 @@
                 }
                 .text{
                     padding: 0.875rem;
-                    @include text-sm;
                     text-align: center;
+                    @include text-sm;
                 }
             }
         }

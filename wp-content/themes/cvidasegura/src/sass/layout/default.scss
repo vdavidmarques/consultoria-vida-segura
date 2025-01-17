@@ -170,12 +170,12 @@ section {
 }
 
 body {
-  @include font-montserrat;
   font-size: 1rem;
   line-height: 1.25rem;
   overflow-x: hidden;
   line-height: 1;
   position: relative;
+  @include font-montserrat;
 }
 
 [aria-current]:not([aria-current="false"]) {
@@ -183,8 +183,8 @@ body {
 }
 
 .container {
-  @include mx-auto;
   padding: 0 16px;
+  @include mx-auto;
   @include w-full;
 
   @media screen and (min-width: $breakpoint-sm) {
@@ -374,10 +374,10 @@ img {
   }
 
   .title {
-    @include col-span-12;
-    @include heading-title-xl;
     color: $blue;
     text-align: center;
+    @include col-span-12;
+    @include heading-title-xl;
 
     h2, h3,h4{
       margin-bottom: 20px;
@@ -385,8 +385,8 @@ img {
 
 
     p{
-      @include heading-text-md;
       text-transform: none;
+      @include heading-text-md;
     }
 
     .main-title{
@@ -397,9 +397,9 @@ img {
 
   .facilities-list {
     display: grid;
-    @include grid-cols-1;
     row-gap: 2.5rem;
     margin-top: 40px;
+    @include grid-cols-1;
     
     @media screen and (min-width: $breakpoint-lg) {
       column-gap: 1.25rem;
@@ -412,8 +412,6 @@ img {
     }
 
     .list {
-      @include font-rubik;
-      @include text-base;
       color: $white;
       background-color: $blue;
       position: relative;
@@ -423,6 +421,8 @@ img {
       flex-direction: column;
       text-align: center;
       align-items: center;
+      @include font-rubik;
+      @include text-base;
       
       h1, h2, h3,h4, strong{
         margin-bottom: 0.9375rem;
@@ -479,15 +479,15 @@ img {
   }
 
   .content{
-    @include col-span-12;
     row-gap: 40px;
+    @include col-span-12;
     
     @media screen and (min-width: $breakpoint-lg) {
-      @include col-span-10;
-      @include col-start-2;
       display: flex;
       row-gap: 80px;
       flex-direction: column;
+      @include col-span-10;
+      @include col-start-2;
     }
 
   }
@@ -508,8 +508,8 @@ img {
   padding-bottom: 5rem;
 
   .entry-title{
-    @include heading-title-lg;
     color: $blue-dark;
+    @include heading-title-lg;
   }
 }
 

@@ -33,8 +33,8 @@ footer{
         }
         
         .menu-footer-items{
-            @include col-span-12;
             text-align: center;
+            @include col-span-12;
     
             @media screen and (min-width: $breakpoint-lg) {
                 @include col-span-3;
@@ -59,7 +59,6 @@ footer{
         }
 
         .social-networks{
-            @include col-span-12;
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -67,13 +66,14 @@ footer{
             row-gap: 1.25rem;
             margin: 2.5rem 0;
             column-gap: 1.25rem;
+            @include col-span-12;
             
             
             @media screen and (min-width: $breakpoint-lg) {
-                @include col-span-1;
                 flex-direction: column;
                 margin: 0;
                 column-gap:0;
+                @include col-span-1;
             }
 
             img{
@@ -84,22 +84,22 @@ footer{
         }
 
         .contact{
-            @include col-span-12;
             display: flex;
             flex-direction: column;
             align-items: center;
             row-gap: 1.25rem;
             margin-bottom: 40px;
+            @include col-span-12;
 
             @media screen and (min-width: $breakpoint-lg){
-                @include col-span-3;
                 margin-bottom: 0;
                 transform: translateX(1.5625rem);
+                @include col-span-3;
             }
             
             @media screen and (min-width: $breakpoint-xl) {
-                @include col-span-4;
                 transform: translateX(0);
+                @include col-span-4;
             }
 
             .title{
@@ -119,7 +119,6 @@ footer{
             }
 
             a{
-                @include heading-titles;
                 font-size: 15px;
                 display: flex;
                 flex-direction: row;
@@ -127,6 +126,7 @@ footer{
                 justify-content: center;
                 column-gap: 0.625rem;
                 width: fit-content;
+                @include heading-titles;
                 
                 @media screen and (min-width: $breakpoint-lg) {
                     width: 100%;
@@ -166,12 +166,13 @@ footer{
         }
 
         .chris-contact{
-            @include col-span-12;
             display: flex;
             flex-direction: column;
             align-items: center;
             row-gap: 1rem;
             font-weight: 700;
+            @include col-span-12;
+
             @media screen and (min-width: $breakpoint-lg){
                 @include col-span-5;
                 @include col-start-9;
@@ -193,12 +194,12 @@ footer{
             }
 
             .title{
-                @include heading-titles;
-                @include text-xl;
-                line-height: 1.5rem; /* 24px */
+                line-height: 1.5rem; 
                 color: $white!important;
                 margin-bottom: 0.625rem;
                 text-transform: uppercase;
+                @include heading-titles;
+                @include text-xl;
                 
                 @media screen and (min-width: $breakpoint-lg) {
                   font-size: 25px;
@@ -213,18 +214,18 @@ footer{
         padding-top: 0.625rem;
         padding-bottom: 0.625rem;
         display: grid;
-        @include grid-cols-1;
         row-gap: 1.25rem;
+        @include grid-cols-1;
         
         @media screen and (min-width: $breakpoint-lg) {
-            @include grid-cols-2;
             row-gap: 0;
+            @include grid-cols-2;
         }
 
         .designer{
-            @include text-xs;
             color: $blue;
             display: flex;
+            @include text-xs;
             
             @media screen and (min-width: $breakpoint-lg) {
                 justify-content: end;
@@ -243,10 +244,10 @@ footer{
         object-fit: contain;
         position: fixed;
         z-index: 50;
-        @include anime-bounce;
         bottom: 11.25rem;
         right: 15px;
         display: none;
+        @include anime-bounce;
         
         @media screen and (min-width: $breakpoint-lg) {
             display: block;
