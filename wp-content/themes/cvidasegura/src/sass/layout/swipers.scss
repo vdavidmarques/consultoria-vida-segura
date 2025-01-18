@@ -122,6 +122,13 @@
       @media screen and (min-width: $breakpoint-xl) {
         @include col-span-7;
       }
+
+      .show-mobile{
+        height: 26.625rem;
+        @media screen and (min-width: $breakpoint-lg) {
+          height: inherit;
+        }
+      }
     }
 
     .context {

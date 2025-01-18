@@ -1,69 +1,54 @@
-<div class="service-image">
+<div class="container our-services--services">
     <?php
-        $blockOne = get_field('our-services-service-image', $id);
-        $services = $blockOne['our-services-service']; 
+    function exibir_todos_planos_de_saude()
+    {
+        $args = array(
+            'post_type'      => 'planos-de-saude',
+            'tax_query'      => array(
+                array(
+                    'taxonomy' => 'categoria_planos-de-saude',
+                    'field'    => 'term_id',
+                    'operator' => 'EXISTS',
+                ),
+            ),
+            'posts_per_page' => -1,
+        );
+
+        $query = new WP_Query($args);
+    
+        $termos_exibidos = array();
+
+        if ($query->have_posts()) {           
+            while ($query->have_posts()) {
+                $query->the_post();
+    
+                $terms = get_the_terms(get_the_ID(), 'categoria_planos-de-saude');
+
+                if ($terms && !is_wp_error($terms)) {
+                    foreach ($terms as $term) {
+                        if (!in_array($term->term_id, $termos_exibidos)) {
+                            $termos_exibidos[] = $term->term_id;
+                            $term_link = get_term_link($term);
+                            echo '<article class="our-services--services--list">';
+                            echo '<h3 class="our-services--services--list--title">Plano de Saúde - ' . esc_html($term->name) . '</h3>';
+                            echo '<p class="our-services--services--list--description">' . esc_html($term->description) . '</p>';
+                            echo '<div class="our-services--services--list--term">';
+                            echo '<h4 class="our-services--services--list--term-title">Plano de saúde</h4>';
+                            echo '<a href="' . esc_url($term_link) . '" class="our-services--services--list--link" itemprop="url">';
+                            echo 'Conheça mais</a>';
+                            echo '</div>';
+                            echo '</article>';
+                        }
+                    }
+                }
+            }
+            wp_reset_postdata();
+        } else {
+            echo '<p>Nenhum plano de saúde encontrado.</p>';
+        }
+    }
+
+    exibir_todos_planos_de_saude();
     ?>
-  
-    <div class="images image-1">
-        <?php if($blockOne['image']): ?>
-            <img src="<?php echo $blockOne['image']['url']; ?>" alt="<?php echo $blockOne['image']['alt']; ?>" itemprop="image">
-        <?php endif; ?>
-    </div>
 
-    <div class="services-cards swiper-container">
-        <div class="swiper-wrapper">
-            <?php 
-                if($services):
-                    foreach( $services as $service ) : 
-                ?>   
-                
-                    <article class="service-1 card swiper-slide" itemscope itemtype="http://schema.org/Service">
-                        <?php 
-                            if($service['link-option']) :
-                                $args = array(
-                                    'name' => 'informacoes',
-                                    'post_type' => 'page',
-                                );
-                
-                                $query = new WP_Query($args);
-                                while ($query->have_posts()) :
-                                $query->the_post();
-                                $whatsapp = get_field('whatsapp');
-                                $whatsappNumber = get_field('whatsappNumber');
-                                $whatsappMessage = get_field('whatsappMessage');
-                        ?>
-
-                                <a target="_blank" rel="noopener noreferrer"  href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber ?>&text=<?php echo $whatsappMessage ?>" itemprop="url">
-                                    <span class="header">
-                                        <img src="<?php echo $service['icone'] ?>" alt="<?php echo $service['texto'] ?>"  itemprop="image" class="icon">
-                                        <h2 class="title" itemprop="name"><?php echo $service['title'] ?></h2>
-                                    </span>
-                                    <p class="text" itemprop="description"><?php echo $service['texto'] ?></p>
-                                </a> 
-                
-                            <?php 
-                                endwhile;
-                                wp_reset_postdata();
-                                else :  
-                            ?>
-                                <a target="_blank" rel="noopener noreferrer" href="<?php echo $service['link']['url']; ?>" itemprop="url">
-                                    <span class="header">
-                                        <img src="<?php echo $service['icone'] ?>" alt="<?php echo $service['texto'] ?>" itemprop="image" class="icon">
-                                        <h2 class="title" itemprop="name"><?php echo $service['title'] ?></h2>
-                                    </span>
-                                    <p class="text" itemprop="description"><?php echo $service['texto'] ?></p>
-                                </a> 
-                        <?php endif; ?>
-                    </article>
-                <?php 
-                    endforeach;
-                endif;
-            ?>
-        </div>
-    </div>
-    <div class="images show-desktop image-2">
-        <?php if($blockOne['image-2']): ?>
-            <img src="<?php echo $blockOne['image-2']['url']; ?>" alt="<?php echo $blockOne['image-2']['alt']; ?>" itemprop="image">
-        <?php endif; ?>
-    </div>
 </div>
