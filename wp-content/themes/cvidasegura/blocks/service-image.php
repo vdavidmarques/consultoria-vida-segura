@@ -2,11 +2,23 @@
     <?php
     function exibir_todos_planos_de_saude()
     {
+        $post_type = null;
+        $taxonomy = null;
+
+        if (is_post_type_archive('planos-de-saude')) {
+            $post_type = 'planos-de-saude';
+            $taxonomy = 'categoria_planos-de-saude';
+        } elseif (is_post_type_archive('planos-odontologicos')) {
+            $post_type = 'planos-odontologicos';
+            $taxonomy = 'categoria_planos_odontologicos';
+        } else {
+            return;
+        }
         $args = array(
-            'post_type'      => 'planos-de-saude',
+            'post_type'      => $post_type,
             'tax_query'      => array(
                 array(
-                    'taxonomy' => 'categoria_planos-de-saude',
+                    'taxonomy' => $taxonomy,
                     'field'    => 'term_id',
                     'operator' => 'EXISTS',
                 ),
@@ -22,7 +34,7 @@
             while ($query->have_posts()) {
                 $query->the_post();
     
-                $terms = get_the_terms(get_the_ID(), 'categoria_planos-de-saude');
+                $terms = get_the_terms(get_the_ID(), $taxonomy);
 
                 if ($terms && !is_wp_error($terms)) {
                     foreach ($terms as $term) {

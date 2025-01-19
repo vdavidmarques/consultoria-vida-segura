@@ -1,6 +1,10 @@
 @import "../../helpers/variables.scss";
 @import "../../helpers/mixins.scss";
 
+.home .our-services.insurance-services{
+  background-color: $white;
+}
+
 .our-services {
   padding: 3.75rem 0;
   background-color: $gray-light;
@@ -140,9 +144,9 @@
     }
   }
 
-  &.insurance-services {
-    background-color: $white;
-
+  &.insurance-services {   
+    background-color: $gray-light;
+    
     .our-services--content {
       &--description {
         color: $blue-dark;
