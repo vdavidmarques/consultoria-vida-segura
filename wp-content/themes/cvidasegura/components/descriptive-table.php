@@ -33,7 +33,7 @@
             $tables = $funeralPlans['image-list-item'];
         }
     ?>
-        <div class="tables container grid-cols-12">
+        <div class="tables container">
             <div class="title scroll-effect default-heading-title" itemprop="headline">
                 <?php echo $title ?>
             </div>

@@ -14,25 +14,21 @@ if ($firstBanners) :
                         <div class="swiper-slide">
                             <div class="main-banner-pattern">&nbsp;</div>
                             <div class="image">
-
                                 <img src="<?php echo $firstBanner["main-banner-image"]['url'] ?>" alt="<?php echo $firstBanner["main-banner-image"]['alt'] ?>" itemprop="image" class="w-full h-full object-cover show-desktop">
-
                                 <?php if ($firstBanner["main-banner-image-mobile"]) : ?>
                                     <img src="<?php echo $firstBanner["main-banner-image-mobile"]['url'] ?>" alt="<?php echo $firstBanner["main-banner-image-mobile"]['alt'] ?>" itemprop="image" class="w-full h-full object-cover show-mobile">
                                 <?php else : ?>
                                     <img src="<?php echo $firstBanner["main-banner-image"]['url'] ?>" alt="<?php echo $firstBanner["main-banner-image"]['alt'] ?>" itemprop="image" class="w-full h-full object-cover show-mobile">
-
                                 <?php endif; ?>
-
-                    <?php endif; ?>
+                            <?php endif; ?>
                             </div>
                             <div class="context">
                                 <div class="content">
                                     <div itemprop="headline" class="default-heading-title">
                                         <?php
-                                            if ($firstBanner["main-banner-main-text"]) :
-                                                echo $firstBanner["main-banner-main-text"];
-                                            endif;
+                                        if ($firstBanner["main-banner-main-text"]) :
+                                            echo $firstBanner["main-banner-main-text"];
+                                        endif;
                                         ?>
                                     </div>
                                     <?php if ($firstBanner['link-option']) :

@@ -2,145 +2,24 @@
 @import "../../helpers/mixins.scss";
 
 .single {
-  .facilities .title {
-    line-height: 2.75rem;
+  &--descriptive-table{
+    background-color: $gray-light;
 
-    .main-title{
-      @include heading-title-xl;
+    .itens{
+      .text{
+        line-height: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.25rem;
+
+        h1,h2,h3,h4{
+          font-weight: 900;
+          font-size: 1.25rem;
+          line-height: 24px;
+          @include font-rubik;
+        }
+      }
     }
   }
-
-  .icon {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-
-  .tab {
-    overflow: hidden;
-        
-        .headers{
-            display: flex;
-            flex-direction: row;
-            .tab-header {
-                background-color: $blue;
-                color: $white;
-                padding: 1.25rem;
-                cursor: pointer;
-                border: none;
-                outline: none;
-                transition: background-color 0.3s;
-                @include heading-title-lg;
-        
-                &:hover,
-                &.active {
-                    background-color: $blue-dark;
-                }
-            }     
-        }
-  
-      .tab-body {
-        background-color: $blue-dark;
-        color: $white;
-        padding: 2.5rem;
-        clear: both;
-        display: none;
-
-        @media screen and (min-width: $breakpoint-lg) {
-            padding: 5rem;
-        }
-  
-        .descriptions-options {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          margin-bottom: 5rem;
-  
-          .title, h1,h2,h3,h4 {
-            margin-bottom: 2.5rem;
-            line-height: 2.5rem;
-            @include heading-title-xl;
-          }
-  
-          .title-and-icon-list {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            row-gap: 1.25rem;
-            
-            @media screen and (min-width: $breakpoint-lg) {
-              column-gap: 2.5rem;
-              row-gap: 0;
-              flex-direction: row;
-            }
-
-            .icon-text {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              column-gap: 0.625rem;
-              @include heading-title-md;
-            }
-          }
-        }
-  
-        .packages {
-          display: flex;
-          flex-direction: column;
-          row-gap: 2.5rem;
-  
-          @media screen and (min-width: $breakpoint-lg) {
-            flex-direction: row;
-            column-gap: 1.25rem;
-            row-gap: 0;
-          }
-  
-          .packs {
-            background-color: $white;
-            color: $blue;
-            border-radius: 0.625rem 0.625rem 0 0;
-            
-            @media screen and (min-width: $breakpoint-xl) {
-              min-width: 21.875rem;
-            }
-            
-            @media screen and (min-width: $breakpoint-2xl) {
-              min-width: 28.125rem;
-            }
-
-            .title {
-                text-transform: none;
-                border-radius: 0.625rem 0.625rem 0 0;
-                background-color: $blue;
-                padding: 1.25rem;
-                text-align: center;
-                color: $white;
-                @include heading-title-lg;               
-            }
-  
-            p {
-              margin-bottom: 10px;
-              @include text-base; 
-            }
-
-            .content {
-              display: flex;
-              flex-direction: row;
-              column-gap: 0.625rem;
-              margin-top: 1.25rem;
-              padding: 0 1.25rem 1.25rem;
-              @include text-base;
-  
-              .icon {
-                width: 1.5625rem;
-                height: 1.5625rem;
-                transform: translateY(0.3125rem);
-              }
-            }
-          }
-        }
-    }
-    
-  }
+ 
 }
