@@ -4,57 +4,33 @@
 .descriptive-table{
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+    color: $blue;
 
     @media screen and (min-width: $breakpoint-lg) {
         padding-top: 5rem;
         padding-bottom: 5rem;
     }
+
     .tables{
-        column-gap: 2.5rem;
-        display: block;
+        display: grid;
+        @include grid-cols-12;
+        align-items: center;
+        row-gap: 3.75rem;
         
-        @media screen and (min-width: $breakpoint-lg) {
-            display: grid;
-        }
-
         .title{
-            color: $blue;
-            text-align: center;
-            margin-bottom: 2.5rem;
-            @include col-span-12;
-            @include heading-title-xl;
-            
-            @media screen and (min-width: $breakpoint-lg) {
-                margin-bottom: 6.25rem;
-                line-height: 2.5rem;
-                @include col-span-8;
-                @include col-start-3;
-            }
-        }
+            padding-left: 5.3125rem;
 
-        .image{
-            margin-bottom: 2.5rem;
-            height: 25rem;
+            strong{
+                color: $blue-dark;
+            }
+
             @include col-span-12;
+            @extend %logo;
 
             @media screen and (min-width: $breakpoint-lg) {
-                margin-bottom: 0;
-                height: 100%;
-                @include col-span-7;
-            }
-
-            img{
-                height: 25rem;
-                position: absolute;
-                left: 0;
-
-                @media screen and (min-width: $breakpoint-lg) {
-                    height: 40.625rem;
-                    position: relative;
-                }
+                @include col-span-5;
             }
         }
-    
         .itens{
             display: flex;
             flex-direction: column;
@@ -62,41 +38,22 @@
             @include col-span-12;
             
             @media screen and (min-width: $breakpoint-lg) {
-                justify-content: center;
-                row-gap: 3.125rem;
-                @include col-span-5;
+                @include col-span-7;
+                @include col-start-7;
             }
 
-            .icon{
-               position: relative;
-               
-               p{
-                    strong {
+            .text{
+                p{
+                    line-height: 1.25rem;
+                    strong{
                         display: block;
                         text-transform: uppercase;
+                        margin-bottom: 10px;
+                        font-weight: 900;
+                        @include font-rubik;
+                        color: $blue-dark;
                     }
-               }
-               
-               &:before{
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                background-image: url('../../library/icons/plano-de-saude-importancia.svg');
-                width: 3.75rem;
-                height: 3.75rem;
-                background-repeat: no-repeat;
-                background-size: contain;
-               }
-            }
-
-
-            .text p{
-                strong{
-                    font-weight: 700;
                 }
-                padding-left: 5rem;
-                line-height: 1.5rem;
             }
         }
     }

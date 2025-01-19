@@ -14,34 +14,39 @@
         @include grid-cols-12;
 
         .description{
-            @include col-span-12;
             text-align: center;
             display: flex;
             flex-direction: column;
             row-gap: 1.25rem;
             align-items: center;
+            max-width: 37.5rem;
+            @include col-span-12;
             
             @media screen and (min-width: $breakpoint-lg) {
                 @include col-span-8;
-                @include col-start-3;
+                @include col-start-4;
             }
         }
 
         .title{
-            line-height: 2.8125rem;
+            line-height: 2.8125rem!important;
             color: $white;
             @include heading-title-xl;
-
-            @media screen and (min-width: $breakpoint-lg) {
-                max-width: 30rem;
-            }
         }
+
         p{
             @include text-lg;
         }
 
         .button-green, .button-white{
-            font-size: 1.125rem;
+            font-size: 18px;
+            border-radius: 1.875rem;
+            padding: 1.125rem;
+
+            @media screen and (min-width: $breakpoint-lg) {
+                padding: 1.5625rem;
+                font-size: 2.5rem;
+            }
         }
     }
 }

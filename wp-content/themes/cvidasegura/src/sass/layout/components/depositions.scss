@@ -4,6 +4,8 @@
 .depositions{
     padding: 2.5rem 0;
     background-color: $gray-light;
+    overflow: hidden;
+    
     @media screen and (min-width: $breakpoint-lg) {
         padding-bottom: 6.25rem;
     }

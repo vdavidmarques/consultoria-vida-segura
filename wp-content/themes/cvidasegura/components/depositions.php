@@ -1,4 +1,4 @@
-    <section class="depositions container" itemscope itemtype="http://schema.org/CreativeServce">
+    <section class="depositions" itemscope itemtype="http://schema.org/CreativeServce">
         <div class="container">
             <div class="default-heading-title depositions--title">
                 <h2 itemprop="headline"><strong>Nossos</strong> clientes</h2>
