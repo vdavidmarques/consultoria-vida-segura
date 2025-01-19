@@ -4,6 +4,7 @@
         include 'blocks/breadcrumb.php';
         include 'components/internal-banner.php';
         include 'components/descriptive-table.php';
+        include 'components/our-services.php';
         include 'components/call-to-action.php';
 
         require_once 'components/partners.php';
