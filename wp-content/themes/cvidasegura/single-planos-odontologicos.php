@@ -2,25 +2,32 @@
 <?php get_header();  ?>
 <section class="single single-planos-odontologicos" itemscope itemtype="http://schema.org/Product">
     <?php 
-        if (have_posts()) : while (have_posts()) : the_post(); 
-        include get_template_directory() . '/components/main-banner.php'; 
-        $post      = $wp_query->get_queried_object();
-        $post_id   = $post->ID; 
+        include get_template_directory() . '/components/banner.php'; 
+        if (have_posts()) : while (have_posts()) : the_post();
+        if(get_field('facilities-desc')):
     ?>
-        <article>
-            <div class="container facilities">
-                <div class="content">
-                    <div itemprop="articleBody" class="title">
-                        <h1 itemprop="name" class="main-title">Plano odontológico - <?php single_post_title() ?></h1>
-                        <?php echo get_field('facilities-title'); ?>
+        <article class="descriptive-table single--descriptive-table" itemscope itemtype="http://schema.org/CreativeServce">
+            <div class="container tables">
+                <div class="title scroll-effect default-heading-title" itemprop="name">                    
+                    <h1 itemprop="name" class="main-title"><strong>Plano odontológico</strong> <br/><?php single_post_title() ?></h1>
+                        <?php single_post_title(); ?>
+                </div>
+                <div class="itens scroll-effect" itemprop="description">
+                    <div class="text">
+                        <?php echo get_field('facilities-desc'); ?>
                     </div>
-                    <?php include get_template_directory() . '/blocks/icons-and-texts.php'; ?>
                 </div>
             </div>
-            <?php include get_template_directory() . '/components/tabs.php'; ?>
         </article>
-    <?php endwhile;
-    endif; ?>
+    <?php 
+        endif;
+        endwhile;
+    endif; 
+
+    echo '<section>';
+        include 'components/call-to-action-singles.php';
+    echo '</section>';
+    ?>
 </section>
 
 <section>

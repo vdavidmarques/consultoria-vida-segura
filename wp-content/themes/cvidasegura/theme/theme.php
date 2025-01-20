@@ -9,7 +9,7 @@ add_action('wp_enqueue_scripts', function () {
         wp_enqueue_style('style', get_template_directory_uri() . '/style.css', array(), '1.0.0');
 
         wp_enqueue_script('script-js', get_template_directory_uri() . "/dist/library/js/scripts.min.js", array('jquery'), null, true);
-        wp_enqueue_script('partners', get_template_directory_uri() . "/dist/library/js/swiper/partners.min.js", array('jquery'), null, true);
+        wp_enqueue_script('partners', get_template_directory_uri() . "/dist/library/js/swiper/partners-swiper.min.js", array('jquery'), null, true);
     }
 });
 

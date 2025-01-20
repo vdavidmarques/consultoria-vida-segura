@@ -29,7 +29,7 @@
         }
 
     ?>
-        <article class="container our-services--content grid grid-cols-12" itemscope itemtype="http://schema.org/CreativeServce">
+        <article class="container our-services--content" itemscope itemtype="http://schema.org/CreativeServce">
             <div class="our-services--content--title default-heading-title" itemprop="headline"><?php echo $ourServiceMainTitle ?></div>
             <p itemprop="our-services--content--description" class="our-services--content--description"><?php echo $ourDervicesDescription ?> </p>
         </article>

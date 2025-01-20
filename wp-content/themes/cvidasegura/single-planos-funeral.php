@@ -1,33 +1,35 @@
 <?php get_header();  ?>
 <section class="single single-planos-funeral" itemscope itemtype="http://schema.org/Product">
-    <?php if (have_posts()) : while (have_posts()) : the_post(); 
-        include get_template_directory() . '/components/main-banner.php';
-        $post      = $wp_query->get_queried_object();
-        $post_id   = $post->ID;
+    <?php
+    include get_template_directory() . '/components/banner.php';
+    if (have_posts()) : while (have_posts()) : the_post();
     ?>
-        <article>
-            <div class="container facilities">
-                <div class="content">
-                    <div itemprop="articleBody" class="title">
-                        <h1 itemprop="name" class="main-title">Plano Funerário - <?php single_post_title() ?></h1>
-                        <?php echo get_field('facilities-title'); ?>
+            <article class="descriptive-table single--descriptive-table" itemscope itemtype="http://schema.org/CreativeServce">
+                <div class="container tables">
+                    <div class="title scroll-effect default-heading-title" itemprop="name">
+                        <h1 itemprop="name" class="main-title">Plano Funerário <br /> <?php single_post_title() ?></h1>
                     </div>
-                    <?php include get_template_directory() . '/blocks/icons-and-texts.php'; ?>
+                    <div class="itens scroll-effect" itemprop="description">
+                        <div class="text">
+                            <?php echo get_field('facilities-desc'); ?>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <?php include get_template_directory() . '/components/tabs.php'; ?>
-
-        </article>
+            </article>
     <?php endwhile;
-    endif; ?>
+    endif; 
+    
+    echo '<section>';
+    include 'components/call-to-action-singles.php';
+    echo '</section>';
+    ?>
 </section>
 
 <section>
-   <?php
-        require_once 'components/partners.php';
-        $slider = new CustomPostTypeSlider('planos-funeral');
-        $slider->display_slider();
+    <?php
+    require_once 'components/partners.php';
+    $slider = new CustomPostTypeSlider('planos-funeral');
+    $slider->display_slider();
     ?>
 </section>
 

@@ -22,4 +22,20 @@
     }
   }
  
+  &--related-service{
+    .our-services,.our-services--services--list{
+      @include col-span-12;
+
+    }
+    
+    .our-services--services--list{
+      @media screen and (min-width: $breakpoint-lg) {
+        @include col-span-1; 
+      }
+      
+      .our-services--services--list--term{
+        position: relative;
+      }
+    }
+  }
 }

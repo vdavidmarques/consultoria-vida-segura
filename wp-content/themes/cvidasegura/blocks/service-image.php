@@ -1,6 +1,6 @@
 <div class="container our-services--services">
     <?php
-    function exibir_todos_planos_de_saude()
+    function exibir_todos_os_servicos()
     {
         $post_type = null;
         $taxonomy = null;
@@ -60,7 +60,7 @@
         }
     }
 
-    exibir_todos_planos_de_saude();
+    exibir_todos_os_servicos();
     ?>
 
 </div>

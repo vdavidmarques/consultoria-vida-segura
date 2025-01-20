@@ -22,6 +22,11 @@
         }
     }
 
+    .swiper-wrapper
+    {
+    transition-timing-function: linear;
+    }
+
     .slides{
       
         img{

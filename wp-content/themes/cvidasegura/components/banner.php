@@ -26,7 +26,7 @@
 
                                 <?php else : ?>
                         
-                                    <div style="background-image:url(<?php echo $banner['main-banner-image'] ?>)" class="w-full h-full object-cover show-mobile">
+                                    <div style="background-image:url(<?php echo $banner['main-banner-image'] ?>)" class="w-full h-full object-cover show-mobile"></div>
 
                                 <?php endif; ?>
                         <?php endif; ?>

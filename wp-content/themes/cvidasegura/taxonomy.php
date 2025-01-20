@@ -1,16 +1,15 @@
 <?php get_header(); ?>
 <section class="content-area page-taxonomy" itemscope itemtype="http://schema.org/CollectionPage">
 
-    <?php include 'blocks/breadcrumb.php'; ?>
     <?php include 'components/banner.php'; ?>
 
-    <article class="container facilities" itemscope itemtype="http://schema.org/CreativeServce">
-        <div class="content">
-            <div itemprop="articleBody" class="title scroll-effect ">
+    <article class="descriptive-table single--descriptive-table" itemscope itemtype="http://schema.org/CreativeServce">
+        <div class="container tables">
+            <div class="title scroll-effect default-heading-title" itemprop="name">     
                 <?php
                 $queried_object = get_queried_object();
                 echo get_field('facilities-title', $queried_object);
-                ?>
+                ?>              
             </div>
             <?php
             $lists = get_field('list', $queried_object);
@@ -19,11 +18,11 @@
                 $class =
                     ($count == 1) ? 'col-1' : (($count == 2) ? 'col-2' : (($count == 3) ? 'col-3' : (($count >= 4) ? 'col-4' : 'col-default')));
             ?>
-                <div class="scroll-effect facilities-list <?php echo $class ?>" itemprop="description">
+                <div class="scroll-effect itens <?php echo $class ?>" itemprop="description">
                     <?php
                     foreach (array_slice($lists, 0, 4) as $list) :
                     ?>
-                        <div class="list">
+                        <div class="text">
                             <?php echo $list['item']; ?>
                         </div>
                 <?php
@@ -49,8 +48,8 @@
                                         <?php the_post_thumbnail('thumbnail'); ?>
                                     </a>
                                 </div>
-                            <?php 
-                                endif; 
+                            <?php
+                            endif;
                             ?>
                         <?php endwhile; ?>
                     </div>
@@ -58,7 +57,7 @@
             </div>
         </article>
     <?php else : ?>
-    <article class="scroll-effect partners partners-taxonomy container" itemscope itemtype="http://schema.org/CreativeServce">
+        <article class="scroll-effect partners partners-taxonomy container" itemscope itemtype="http://schema.org/CreativeServce">
             <div class="title">
                 <p class="mt-20">Nenhum produto para <?php single_term_title(); ?> encontrado</p>
             </div>

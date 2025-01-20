@@ -2,7 +2,7 @@
 <section class="single single-planos-de-saude" itemscope itemtype="http://schema.org/Product">
     <?php
     if (have_posts()) : while (have_posts()) : the_post();
-            include get_template_directory() . '/components/main-banner.php';
+            include get_template_directory() . '/components/banner.php';
             if(get_field('facilities-desc')):
     ?>
             <article class="descriptive-table single--descriptive-table" itemscope itemtype="http://schema.org/CreativeServce">
@@ -25,7 +25,7 @@
     include 'components/call-to-action-singles.php';
     ?>
 </section>
-
+<?php include 'components/related-service.php'; ?>
 <section>
     <?php
     $postID = $post->ID;
