@@ -5,18 +5,18 @@
             include get_template_directory() . '/components/banner.php';
             if(get_field('facilities-desc')):
     ?>
-            <article class="descriptive-table single--descriptive-table" itemscope itemtype="http://schema.org/CreativeServce">
-                <div class="tables container">
-                    <div class="title scroll-effect default-heading-title" itemprop="name">
-                        <h1 itemprop="name" class="main-title"><strong>Planos de Saúde</strong> <br/> <?php single_post_title() ?></h1>
-                    </div>
-                    <div class="itens scroll-effect" itemprop="description">
-                        <div class="text">
-                            <?php echo get_field('facilities-desc'); ?>
-                        </div>
+        <article class="descriptive-table single--descriptive-table" itemscope itemtype="http://schema.org/CreativeServce">
+            <div class="tables container">
+                <div class="title scroll-effect default-heading-title" itemprop="name">
+                    <h1 itemprop="name" class="main-title"><strong>Planos de Saúde</strong> <br/> <?php single_post_title() ?></h1>
+                </div>
+                <div class="itens scroll-effect" itemprop="description">
+                    <div class="text">
+                        <?php echo get_field('facilities-desc'); ?>
                     </div>
                 </div>
-            </article>
+            </div>
+        </article>
     <?php
         endif;
         endwhile;

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="single single-seguros" itemscope itemtype="http://schema.org/Product">
     <?php
-    include get_template_directory() . '/components/banner.php';
+    include get_template_directory() . '/components/main-banner.php';
     if (have_posts()) : while (have_posts()) : the_post();
         if(get_field('facilities-desc')):
     ?>

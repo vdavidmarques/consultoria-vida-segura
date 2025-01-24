@@ -5,7 +5,7 @@
         $post_type = null;
         $taxonomy = null;
 
-        if (is_post_type_archive('planos-de-saude')) {
+        if (is_post_type_archive('planos-de-saude') || is_home()) {
             $post_type = 'planos-de-saude';
             $taxonomy = 'categoria_planos-de-saude';
         } elseif (is_post_type_archive('planos-odontologicos')) {
