@@ -148,14 +148,6 @@
   }
 }
 
-@mixin w-full {
-  width: 100%;
-}
-
-@mixin h-full {
-  width: 100%;
-}
-
 @mixin grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -301,13 +293,13 @@
   }
 }
 
-%logo{
-  &::before{
-    content: '';
+%logo {
+  &::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url('../../library/images/consultoria-vida-segura-logo-curto.svg');
+    background-image: url("../../library/images/consultoria-vida-segura-logo-curto.svg");
     width: 5.25rem;
     height: 5.25rem;
     background-repeat: no-repeat;
@@ -315,7 +307,7 @@
   }
 }
 
-%new-heading-title{
+%new-heading-title {
   font-size: 1.5625rem;
   padding-left: 5.25rem;
   position: relative;
@@ -331,5 +323,19 @@
 
   strong {
     color: $blue-dark;
+  }
+}
+
+%banner-heights {
+  @media screen and (min-width: $breakpoint-lg) {
+    height: 500px;
+  }
+
+  .show-mobile {
+    height: 26.625rem;
+    
+    @media screen and (min-width: $breakpoint-lg) {
+      height: inherit;
+    }
   }
 }

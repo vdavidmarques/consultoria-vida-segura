@@ -11,13 +11,17 @@
     }
 
     &--title{
+        margin-bottom: 2.5rem;
+        color: $blue;
         @extend %new-heading-title;
         @extend %logo;
-        color: $blue;
-        margin-bottom: 2.5rem;
     }
 
     &--slides{
+        .swiper-container{
+            overflow: hidden;
+        }
+
         .list{
             .item{	
                 display: flex;
@@ -26,7 +30,7 @@
                 column-gap: 2.5rem;
                 row-gap: 2.5rem;
 
-                @media screen and (min-width: $breakpoint-lg) {
+                @media screen and (min-width: $breakpoint-xl) {
                     flex-direction: row;
                 }
     

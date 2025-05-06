@@ -9,8 +9,8 @@
     background-image: url("../../library/icons/arrow-right-circle.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 2.8125rem;
-    width: 2.8125rem;
+    height: 2.1875rem;
+    width: 2.1875rem;
     border: 1px solid $blue;
     border-radius: 9999px;
   }
@@ -22,154 +22,13 @@
 }
 
 .swiper-button-next.arrow-swiper-next {
-  right: 1.875rem;
+  right: 0;
 }
 
 .swiper-button-prev.arrow-swiper-prev {
-  left: 1.875rem;
+  left: 0;
 }
 
 .arrow-swiper-prev::after {
   transform: rotate(180deg);
-}
-
-.banner .default-heading-title {
-  h1,
-  h2,
-  h3 {
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-  }
-
-  p {
-    @media screen and (min-width: $breakpoint-lg) {
-      line-height: 1.5rem;
-    }
-  }
-}
-
-.main-banner .swiper-container,
-.internal-banner .swiper-container {
-  position: relative;
-  height: 100%;
-
-  @media screen and (min-width: $breakpoint-lg) {
-    height: 500px;
-  }
-}
-
-.banner .swiper-container {
-  .swiper-slide {
-    display: grid;
-    @include grid-cols-12;
-
-    .main-banner-pattern,
-    .main-banner-pattern-2 {
-      pointer-events: none;
-      background-repeat: no-repeat;
-      z-index: 10;
-      position: absolute;
-      left: 0;
-      width: 100%;
-      height: 100%;
-
-      @media screen and (min-width: $breakpoint-lg) {
-        display: block;
-      }
-    }
-    .main-banner-pattern-2 {
-      background-image: url(../../library/icons/main-banner-pattern-2.svg);
-      height: 2.5rem;
-      bottom: 0;
-      display: none;
-
-      @media screen and (min-width: $breakpoint-lg) {
-        bottom: -0.125rem;
-        display: block;
-      }
-    }
-
-    .main-banner-pattern {
-      top: 0;
-      background-size: contain;
-      background-image: url(../../library/icons/main-banner-pattern-mobile.svg);
-      
-      @media screen and (min-width: $breakpoint-lg) {
-        background-position-x: -120px;
-        background-size: cover;
-        background-image: url(../../library/icons/main-banner-pattern.svg);
-      }
-
-      @media screen and (min-width: $breakpoint-xl) {
-        background-position-x: 100px;
-      }
-
-      @media screen and (min-width: $breakpoint-2xl) {
-        background-position-x: 400px;
-      }
-    } 
-
-    .image {
-      @include col-span-12;
-      -webkit-transform: scaleX(-1);
-      transform: scaleX(-1);
-
-      @media screen and (min-width: $breakpoint-lg) {
-        height: 31.25rem;
-        @include col-span-8;
-      }
-
-      @media screen and (min-width: $breakpoint-xl) {
-        @include col-span-7;
-      }
-
-      .show-mobile{
-        height: 26.625rem;
-        @media screen and (min-width: $breakpoint-lg) {
-          height: inherit;
-        }
-      }
-    }
-
-    .context {
-      position: relative;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      z-index: 10;
-      background-color: $blue;
-      @include col-span-12;
-
-      @media screen and (min-width: $breakpoint-lg) {
-        background-color: inherit;
-        @include col-span-4;
-      }
-
-    
-      @media screen and (min-width: $breakpoint-1_5xl) {
-        padding-right: 2.5rem;
-      }
-
-      .content {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        row-gap: 1.25rem;
-        padding: 2.5rem 1rem;
-
-        @media screen and (min-width: $breakpoint-lg) {
-          padding: 0;
-        }
-
-        .default-heading-title {
-          color: $white;
-        }
-
-        p {
-          line-height: 1.3rem;
-        }
-      }
-    }
-  }
 }

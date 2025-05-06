@@ -1,4 +1,4 @@
-<article class="internal-banner banner" itemscope itemtype="http://schema.org/CreativeServce">
+<article class="banner internal-banner" itemscope itemtype="http://schema.org/CreativeServce">
     <?php
     $args = array(
         'name' => 'informacoes',
@@ -28,12 +28,11 @@
         $count = 0;
         if ($banners) :
     ?>
-            <div class="swiper-container relative overflow-hidden">
+            <div class="container swiper-container">
                 <div class="swiper-wrapper">
                     <?php foreach ($banners as $banner) : ?>
                         <div class="swiper-slide">
-                            <div class="main-banner-pattern">&nbsp;</div>
-                            <div class="image">
+                            <div class="banner--image">
                                 <?php
                                 if ($banner['image']) :
                                     if ($banner['image']['alt']) {
@@ -51,28 +50,27 @@
                                 <?php endif; ?>
                             </div>
 
-                            <div class="context">
-                                <div class="content">
+                            <div class="banner--context">
+                                <div class="banner--context--content">
                                     <div itemprop="headline" class="default-heading-title">
                                         <?php
                                             if ($banner['text']) :
                                                 echo $banner['text'];
                                             endif;
                                         ?>
-                                    </div>
-                                    <?php if ($banner['botao']) : ?>
-                                        <a href="<?php echo $banner['botao']['url'] ?>" itemprop="url" class="mt-6 button button-first">
-                                            <?php echo  $banner['botao']['title'] ?>
-                                        </a>
-                                        <?php
-                                    else : ?>
-                                            <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber ?>&text=<?php echo $whatsappMessage ?>" itemprop="url" class="mt-6 button button-first">
-                                                Veja mais
+                                        <?php if ($banner['botao']) : ?>
+                                            <a href="<?php echo $banner['botao']['url'] ?>" itemprop="url" class="mt-6 button button-first">
+                                                <?php echo  $banner['botao']['title'] ?>
                                             </a>
-                                    <?php endif; ?>
+                                            <?php
+                                        else : ?>
+                                                <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber ?>&text=<?php echo $whatsappMessage ?>" itemprop="url" class="mt-6 button button-first">
+                                                    Veja mais
+                                                </a>
+                                        <?php endif; ?>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="main-banner-pattern-2">&nbsp;</div>
                             <?php
                             $count = count($banners);
                             if ($count > 1) :
