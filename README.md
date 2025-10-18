@@ -18,8 +18,8 @@ To run this project, make sure you have the following:
 
 ````bash
 git clone git@github.com:vdavidmarques/consultoria-vida-segura.git
-cd consultoria-vida-segura
-mkdir backend
+cd wp-content/theme/cvidasegura
+npm install
 ````
 ### 1. Install WordPress
 - Download the latest version of WordPress.
@@ -27,7 +27,7 @@ mkdir backend
 - Configure the wp-config.php file with your database credentials.
 
 ### 2. Install WordPress Plugins
-- ACF PRO (Advanced Custom Fields): For creating custom content fields within WordPress.
+- ACF (Advanced Custom Fields): For creating custom content fields within WordPress.
 - Safe SVG: Allows the safe upload and use of SVG files in WordPress.
 - Contact Form 7
 
@@ -38,5 +38,4 @@ You can install these plugins directly via the WordPress admin dashboard or down
 ### 5. Run the Project
 
 ````bash
-cd frontend
 npm start
