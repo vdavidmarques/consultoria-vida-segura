@@ -1,0 +1,134 @@
+@import "../../helpers/variables.scss";
+@import "../../helpers/mixins.scss";
+
+.banner {
+  .swiper-container {
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+
+    @media screen and (min-width: $breakpoint-lg) {
+      padding-left: 1.875rem;
+      padding-right: 1.875rem;
+    }
+
+    @media screen and (min-width: $breakpoint-1_5xl) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .swiper-slide {
+      @media screen and (min-width: $breakpoint-lg) {
+        height: 37.5rem;
+        cursor: pointer;
+
+        &:hover{
+          .banner--context{
+            opacity: 1; 
+            visibility: visible; 
+          }
+        }
+      }
+
+
+      .banner--image {
+        @media screen and (min-width: $breakpoint-lg) {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 37.5rem;
+        }
+
+        .show-desktop {
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        .show-mobile {
+          height: 26.625rem;
+        }
+      }
+
+      .banner--context {
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 10;
+        padding: 2.5rem 1rem;
+
+        @media screen and (min-width: $breakpoint-lg) {
+          justify-content: end;
+          margin-top: 0;
+          padding: 0;
+          opacity: 0; 
+          visibility: hidden; 
+          transition: opacity 0.8s ease, transform 0.5s ease;
+          @include col-span-4;                
+        }
+
+        @media screen and (min-width: $breakpoint-1_5xl) {
+          padding-right: 2.5rem;
+        }
+
+
+        &--content {
+          display: grid;
+          position: relative;
+          @include grid-cols-12;
+          background-image: inherit;
+
+          .default-heading-title {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+            row-gap: 1.25rem;
+            font-size: 1.5625rem;
+            color: $blue;
+            @include col-span-12;
+
+            strong {
+              color: $blue-dark;
+            }
+
+            @media screen and (min-width: $breakpoint-lg) {
+              color: $white;
+              background-size: cover;
+              background-image: url(../../library/icons/main-banner-pattern.svg);
+              font-size: 2.5rem;
+              padding-top: 3.125rem;
+              padding-bottom: 1.875rem;
+              padding-left: 2.5rem;
+              @include col-span-7;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+              line-height: 1.875rem;
+              @media screen and (min-width: $breakpoint-lg) {
+                width: 75%;
+              }
+            }
+
+            p {
+              font-size: 0.875rem;
+              line-height: 1.25rem;
+              @media screen and (min-width: $breakpoint-lg) {
+                width: 60%;
+              }
+            }
+          }
+        }
+      }
+
+     
+    }
+  }
+}
