@@ -1,4 +1,4 @@
-<article class="banner internal-banner" itemscope itemtype="http://schema.org/CreativeServce">
+<section class="banner internal-banner main-banner" itemscope itemtype="http://schema.org/CreativeServce">
     <?php
     $args = array(
         'name' => 'informacoes',
@@ -32,24 +32,6 @@
                 <div class="swiper-wrapper">
                     <?php foreach ($banners as $banner) : ?>
                         <div class="swiper-slide">
-                            <div class="banner--image">
-                                <?php
-                                if ($banner['image']) :
-                                    if ($banner['image']['alt']) {
-                                        $alt = $banner['image']['alt'];
-                                    } else {
-                                        $alt = 'Consultoria Vida segura';
-                                    }
-                                ?>
-                                    <img src="<?php echo $banner['image']['url'] ?>" alt="<?php echo $alt ?>" itemprop="image" class="w-full h-full object-cover show-desktop ease-in-out">
-                                <?php endif; ?>
-                                <?php if ($banner["image-mobile"]) : ?>
-                                    <img src="<?php echo $banner['image-mobile']['url'] ?>" alt="<?php echo $banner['image-mobile']['alt'] ?>" itemprop="image" class="w-full h-full object-cover show-mobile ease-in-out">
-                                <?php else : ?>
-                                    <img src="<?php echo $banner["image"]['url'] ?>" alt="<?php echo $alt ?>" itemprop="image" class="w-full h-full object-cover ease-in-out">
-                                <?php endif; ?>
-                            </div>
-
                             <div class="banner--context">
                                 <div class="banner--context--content">
                                     <div itemprop="headline" class="default-heading-title">
@@ -59,18 +41,44 @@
                                             endif;
                                         ?>
                                         <?php if ($banner['botao']) : ?>
-                                            <a href="<?php echo $banner['botao']['url'] ?>" itemprop="url" class="mt-6 button button-first">
-                                                <?php echo  $banner['botao']['title'] ?>
+                                            <a href="<?php echo esc_url($banner['botao']['url']); ?>" itemprop="url" class="mt-6 button button-first">
+                                                <?php echo esc_html($banner['botao']['title']); ?>
                                             </a>
                                             <?php
                                         else : ?>
-                                                <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber ?>&text=<?php echo $whatsappMessage ?>" itemprop="url" class="mt-6 button button-first">
+                                                <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo esc_attr($whatsappNumber); ?>&text=<?php echo urlencode($whatsappMessage); ?>" itemprop="url" class="mt-6 button button-first">
                                                     Veja mais
                                                 </a>
                                         <?php endif; ?>
                                     </div>
                                 </div>
                             </div>
+                            <div class="banner--image">
+                                <?php
+                                if ($banner['image']) :
+                                    $alt = $banner['image']['alt'] ? esc_attr($banner['image']['alt']) : 'Consultoria Vida segura';
+                                ?>
+                                    <div
+                                        class="image show-desktop w-full h-full object-cover"
+                                        style="background-image: url(<?php echo esc_url($banner['image']['url']); ?>)">
+                                        &nbsp;
+                                    </div>
+                                <?php endif; ?>
+                                <?php if ($banner["image-mobile"]) : ?>
+                                     <div
+                                        class="image show-mobile w-full h-full object-cover"
+                                        style="background-image: url(<?php echo esc_url($banner['image-mobile']['url']); ?>)">
+                                        &nbsp;
+                                    </div>
+                                <?php elseif($banner['image']) : ?>
+                                     <div
+                                        class="image show-mobile w-full h-full object-cover"
+                                        style="background-image: url(<?php echo esc_url($banner['image']['url']); ?>)">
+                                        &nbsp;
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+
                             <?php
                             $count = count($banners);
                             if ($count > 1) :
@@ -84,5 +92,6 @@
         <?php
         endif;
     endwhile;
-        ?>
-</article>
+    wp_reset_postdata();
+    ?>
+</section>

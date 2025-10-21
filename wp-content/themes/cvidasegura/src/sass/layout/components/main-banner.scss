@@ -1,52 +1,51 @@
 @import "../../helpers/variables.scss";
 @import "../../helpers/mixins.scss";
 
-.banner {
+.main-banner {
+  @media (min-width: $breakpoint-xl){
+    background-image: url('../../library/images/bgGradient.jpg');
+    background-size: cover;
+    background-position: center center;
+  }
   .swiper-container {
     overflow: hidden;
     padding-left: 0;
     padding-right: 0;
 
-    @media screen and (min-width: $breakpoint-lg) {
-      padding-left: 1.875rem;
-      padding-right: 1.875rem;
-    }
-
-    @media screen and (min-width: $breakpoint-1_5xl) {
-      padding-left: 0;
-      padding-right: 0;
+    .swiper-wrapper{
+      @media (min-width: $breakpoint-xl){
+        align-items: center;
+        min-height: 480px;
+      }
     }
 
     .swiper-slide {
-      @media screen and (min-width: $breakpoint-lg) {
-        height: 37.5rem;
-        cursor: pointer;
+      display: flex;
+      flex-direction: column-reverse;
 
-        &:hover{
-          .banner--context{
-            opacity: 1; 
-            visibility: visible; 
-          }
-        }
+      @media (min-width: $breakpoint-xl) {
+        display: grid;
+        @include grid-cols-12;  
       }
 
-
       .banner--image {
-        @media screen and (min-width: $breakpoint-lg) {
-          position: absolute;
-          bottom: 0;
-          width: 100%;
-          height: 37.5rem;
+        @media (min-width: $breakpoint-xl){
+          @include col-span-6;
+          @include col-start-7;
+          height: 21.4375rem;
         }
 
         .show-desktop {
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center;
+          border-radius: 4px;
         }
 
         .show-mobile {
           height: 26.625rem;
+          background-size: cover;
+          background-position: center;
         }
       }
 
@@ -57,52 +56,37 @@
         flex-direction: column;
         justify-content: center;
         z-index: 10;
-        padding: 2.5rem 1rem;
-
-        @media screen and (min-width: $breakpoint-lg) {
-          justify-content: end;
-          margin-top: 0;
-          padding: 0;
-          opacity: 0; 
-          visibility: hidden; 
-          transition: opacity 0.8s ease, transform 0.5s ease;
-          @include col-span-4;                
+        padding: 2.5rem 1rem;            
+        
+        @media (min-width: $breakpoint-xl){        
+          @include col-span-5;
         }
-
-        @media screen and (min-width: $breakpoint-1_5xl) {
-          padding-right: 2.5rem;
-        }
-
 
         &--content {
           display: grid;
           position: relative;
-          @include grid-cols-12;
           background-image: inherit;
+          color: $blue;        
+          @include grid-cols-12;
+          
+          @media (min-width: $breakpoint-xl){
+            color: $white;
+          }
 
           .default-heading-title {
             height: 100%;
             display: flex;
             flex-direction: column;
             align-items: baseline;
-            row-gap: 1.25rem;
-            font-size: 1.5625rem;
-            color: $blue;
+            row-gap: 20px;
             @include col-span-12;
-
-            strong {
-              color: $blue-dark;
-            }
-
-            @media screen and (min-width: $breakpoint-lg) {
-              color: $white;
-              background-size: cover;
-              background-image: url(../../library/icons/main-banner-pattern.svg);
-              font-size: 2.5rem;
-              padding-top: 3.125rem;
-              padding-bottom: 1.875rem;
-              padding-left: 2.5rem;
-              @include col-span-7;
+            
+            .tag{
+              background-color: $white;
+              border-radius: 4px;
+              font-size: 14px;
+              color: $blue;
+              padding: 5px 10px;
             }
 
             h1,
@@ -112,16 +96,27 @@
             h5,
             h6 {
               line-height: 1.875rem;
-              @media screen and (min-width: $breakpoint-lg) {
-                width: 75%;
+
+              @media (min-width: $breakpoint-xl){
+                font-size: 2.1875rem;
+                font-weight: 900; 
+                line-height: 2.1875rem;
               }
+              
             }
 
             p {
-              font-size: 0.875rem;
+              font-size: 16px;
               line-height: 1.25rem;
-              @media screen and (min-width: $breakpoint-lg) {
-                width: 60%;
+              font-weight: 300;              
+            }
+
+            .button-first{
+              @media (min-width: $breakpoint-xl){
+                border-radius: 4px;
+                font-weight: 900;
+                color: $blue-dark;
+                border: inherit;
               }
             }
           }

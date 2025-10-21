@@ -12,20 +12,13 @@ if ($firstBanners) :
                     if ($firstBanner["main-banner-image"] || $firstBanner["main-banner-image-mobile"]) :
                 ?>
                         <div class="swiper-slide">
-                           
-                            <div class="banner--image">
-                                <img src="<?php echo $firstBanner["main-banner-image"]['url'] ?>" alt="<?php echo $firstBanner["main-banner-image"]['alt'] ?>" itemprop="image" class="show-desktop">                              
-                                <?php if ($firstBanner["main-banner-image-mobile"]) : ?>
-                                    <img src="<?php echo $firstBanner["main-banner-image-mobile"]['url'] ?>" alt="<?php echo $firstBanner["main-banner-image-mobile"]['alt'] ?>" itemprop="image" class="show-mobile">
-                                <?php else : ?>
-                                    <img src="<?php echo $firstBanner["main-banner-image"]['url'] ?>" alt="<?php echo $firstBanner["main-banner-image"]['alt'] ?>" itemprop="image" class="show-mobile">
-                                <?php endif; ?>
-                            <?php endif; ?>
-                            </div>
                             <div class="banner--context">
                                 <div class="banner--context--content">
                                     <div itemprop="headline" class="default-heading-title">
                                         <?php
+                                        if($firstBanner["tag"]):
+                                            echo '<h4 class="tag">' . $firstBanner["tag"] . '</h4>';
+                                        endif;
                                         if ($firstBanner["main-banner-main-text"]) :
                                             echo $firstBanner["main-banner-main-text"];
                                         endif;
@@ -56,7 +49,7 @@ if ($firstBanners) :
                                         else :
                                             if ($firstBanner['main-banner-button']) :
                                                 $url = $firstBanner['main-banner-button']['url'];
-                                                $target = $firstBanner['main-banner-button']['target'] ? $firstBanner['main-banner-button']['target'] : '_self';
+                                                $target = $firstBanner['main-banner-button']['target'] ? $firstBanner['main-banner-button']['target'] : '_self';                                                
                                                 $title = $firstBanner['main-banner-button']['title'];
                                             ?>
                                                 <a href="<?php echo $url ?>" itemprop="url" class="button button-first" target="<?php echo $target ?>">
@@ -68,6 +61,15 @@ if ($firstBanners) :
                                         ?>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="banner--image">
+                                <img src="<?php echo $firstBanner["main-banner-image"]['url'] ?>" alt="<?php echo $firstBanner["main-banner-image"]['alt'] ?>" itemprop="image" class="show-desktop">
+                                <?php if ($firstBanner["main-banner-image-mobile"]) : ?>
+                                    <img src="<?php echo $firstBanner["main-banner-image-mobile"]['url'] ?>" alt="<?php echo $firstBanner["main-banner-image-mobile"]['alt'] ?>" itemprop="image" class="show-mobile">
+                                <?php else : ?>
+                                    <img src="<?php echo $firstBanner["main-banner-image"]['url'] ?>" alt="<?php echo $firstBanner["main-banner-image"]['alt'] ?>" itemprop="image" class="show-mobile">
+                                <?php endif; ?>
+                            <?php endif; ?>
                             </div>
                             <?php
                             $count = count($firstBanners);
